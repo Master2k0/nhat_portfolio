@@ -1,7 +1,7 @@
 "use client"
 
 import QualityImage from "@/src/components/qualityImage"
-import { cn } from "@/src/lib/utils"
+import { cn } from "@/libs/utils"
 import * as AccordionPrimitive from "@radix-ui/react-accordion"
 import * as React from "react"
 

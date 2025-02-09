@@ -106,6 +106,10 @@ export const siteConfig = {
         setKey: {
             href: '/api/set-key',
             as: 'Set Key'
+        },
+        notFound: {
+            href: '*',
+            as: 'Not Found'
         }
     }
 }
@@ -116,6 +120,7 @@ export const SidebarItems: ISidebarItem[] = [
     {
         id: 'home',
         href: siteConfig.pageList.home.href,
+        name: 'Home',
         status: {
             normal: {
                 icon: '/home/icons/ha.svg',
@@ -134,6 +139,7 @@ export const SidebarItems: ISidebarItem[] = [
     {
         id: 'projectHighlights',
         href: siteConfig.pageList.projectHighlights.href,
+        name: 'Project Highlights',
         status: {
             normal: {
                 icon: '/home/icons/ba.svg',
@@ -152,6 +158,7 @@ export const SidebarItems: ISidebarItem[] = [
     {
         id: 'caseStudies',
         href: siteConfig.pageList.caseStudies.href,
+        name: 'Case study',
         status: {
             normal: {
                 icon: '/home/icons/la.svg',
@@ -170,6 +177,7 @@ export const SidebarItems: ISidebarItem[] = [
     {
         id: 'about',
         href: siteConfig.pageList.about.href,
+        name: 'About me',
         status: {
             normal: {
                 icon: '/home/icons/cn.svg',

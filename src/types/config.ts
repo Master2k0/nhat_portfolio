@@ -6,6 +6,7 @@ export type IItem = {
 export type ISidebarItem = {
   id: string;
   href: string;
+  name: string;
   status: {
     normal: IItem;
     hover: IItem;
