@@ -1,6 +1,6 @@
 "use client"
 
-import QualityImage from "@/src/components/qualityImage"
+// import QualityImage from "@/src/components/qualityImage"
 import { cn } from "@/libs/utils"
 import * as AccordionPrimitive from "@radix-ui/react-accordion"
 import * as React from "react"
@@ -39,12 +39,13 @@ const AccordionTrigger = React.forwardRef<
     >
       {children}
       <div className="relative grow-0 shrink-0 size-4 lg:size-6">
-        <QualityImage
+        {/* <QualityImage
           fill
           src="/chevron-down-gradient.svg"
           alt="chevron-down"
           className={cn("transform transition-transform", iconClassName)}
-        />
+        /> */}
+        {iconClassName}
       </div>
     </AccordionPrimitive.Trigger>
   </AccordionPrimitive.Header>

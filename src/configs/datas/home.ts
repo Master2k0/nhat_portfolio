@@ -4,6 +4,9 @@ export const DataHome = {
     position: "Product Designer",
     description:
       "With 2+ years of experience designing intuitive interfaces for pharmaceutical e-commerce platforms, I’ve boosted user engagement and satisfaction, helping attract nearly 200,000 users. I specialize in crafting seamless user journeys that enhance usability and align with business goals for impactful digital experiences.",
+    imageMobile: "/home/images/mobi-hero.webp",
+    imagePC: "/home/images/hero.webp",
+    avatar: "/home/images/avatar.png",
   },
   experience: {
     name: "Experience",

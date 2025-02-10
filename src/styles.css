@@ -77,6 +77,10 @@
     -webkit-text-fill-color: transparent;
   }
 
+  .bg-gradient {
+    background: linear-gradient(211deg, #666 0%, #000 50.04%);
+  }
+
   .bg-gradient-2 {
     @apply bg-gradient-to-r from-[#CE80FF] via-[#80F0FF] to-[#B1FF80];
   }
@@ -88,4 +92,17 @@
   .section-border-half {
     @apply bg-gradient-to-br from-[#4F4F4F] via-block-bg to-block-bg p-px;
   }
+
+  .green-gradient {
+    @apply visa-[#2BA657] bg-gradient-to-r from-[#288169] to-[#2CB355];
+  }
+}
+
+.section-wrapper::after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(135deg, #666 0%, #000 50.04%);
+  /* clip-path: xywh(0 0 100% 100% round 20px 0); */
 }
