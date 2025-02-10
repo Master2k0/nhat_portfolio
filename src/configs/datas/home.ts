@@ -61,19 +61,27 @@ export const DataHome = {
       {
         icon: "/home/icons/li.svg",
         name: "LinkedIn",
+        href: "https://www.linkedin.com/in/nhatwork",
       },
       {
         icon: "/home/icons/gm.svg",
         name: "Email",
+        href: "mailto:nhatnguyen.wk@gmail.com",
       },
       {
         icon: "/home/icons/be.svg",
         name: "Behance",
+        href: "https://www.behance.net/nhat_nguyen_work",
       },
       {
         icon: "/home/icons/db.svg",
         name: "Dribbble",
+        href: "https://dribbble.com/nhatnguyen_wk",
       },
     ],
+  },
+  resume: {
+    text: "My resume",
+    href: "https://drive.google.com/file/d/1NtQrQSp3dCASxeqFD2CXemCV07IPNSOZ/view?usp=drive_link",
   },
 };

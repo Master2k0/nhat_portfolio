@@ -2,6 +2,7 @@ import { SectionWrapper } from "@/components/sections-wrapper";
 import { DataHome } from "@/configs/datas/home";
 import HomePageTitle from "./components/home-page-title";
 import { cn } from "@/libs/utils";
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
@@ -18,7 +19,7 @@ function Home() {
         </div>
       </SectionWrapper>
 
-      <SectionWrapper divClassName="p-5 lg:p-7">
+      <SectionWrapper >
         <HomePageTitle value={DataHome.experience.name} />
         <div className="mt-6 flex flex-col justify-between gap-y-3">
           {DataHome.experience.data.map((item, index) => (
@@ -55,90 +56,66 @@ function Home() {
           ))}
         </div>
       </SectionWrapper>
-      {/* 
-    <SectionWrapper>
-        <HomePageTitle value="Tools I use" />
-        <div className="mt-6 text-d9 text-sm">
-            These are the tools I use to design, prototype, and collaborate effectively.
-        </div>
-        <div className="mt-4 flex items-center gap-x-4">
-            <div className="size-[60px] bg-0f grid place-items-center rounded-[8px]">
-                <Figma size={30} />
-            </div>
-            <div className="size-[60px] bg-0f grid place-items-center rounded-[8px]">
-                <div className="relative w-8 h-[23.93px]">
-                    <Image
-                        fill
-                        src="/home/icons/ps.svg"
-                        alt="Photoshop"
-                    />
-                </div>
-            </div>
-            <div className="size-[60px] bg-0f grid place-items-center rounded-[8px]">
-                <div className="relative w-8 h-[28.02px]">
-                    <Image
-                        fill
-                        src="/home/icons/ai.svg"
-                        alt="AI"
-                    />
-                </div>
-            </div>
-        </div>
-    </SectionWrapper>
 
-    <SectionWrapper>
-        <HomePageTitle value="Contact me via" />
-        <div className="mt-6 grid grid-cols-2 gap-3 flex-1">
-            <Link
-                to={siteConfig.contact.linkedin.href} target="_blank"
-                className="rounded-[12px] bg-3a flex flex-col justify-center items-center gap-2 transition-colors hover:bg-[#0A66C2] h-[87px]"
-            >
-                <Image
-                    src="/home/icons/li.svg"
-                    alt="Linkedin"
-                    width={24}
-                    height={24}
-                />
-                <div className="text-sm font-semibold">Linkedin</div>
-            </Link>
-            <Link
-                href={siteConfig.contact.email.href} target="_blank"
-                className="rounded-[12px] bg-3a flex flex-col justify-center items-center gap-2 transition-colors hover:bg-[#C71610] h-[87px]"
-            >
-                <Image
-                    src="/home/icons/gm.svg"
-                    alt="Email"
-                    width={24}
-                    height={24}
-                />
-                <div className="text-sm font-semibold">Email</div>
-            </Link>
-            <Link
-                href={siteConfig.contact.behance.href} target="_blank"
-                className="rounded-[12px] bg-3a flex flex-col justify-center items-center gap-2 transition-colors hover:bg-[#0057FF] h-[87px]"
-            >
-                <Image
-                    src="/home/icons/be.svg"
-                    alt="Behance"
-                    width={24}
-                    height={24}
-                />
-                <div className="text-sm font-semibold">Behance</div>
-            </Link>
-            <Link
-                href={siteConfig.contact.dribble.href} target="_blank"
-                className="rounded-[12px] bg-3a flex flex-col justify-center items-center gap-2 transition-colors hover:bg-[#EA4C89] h-[87px]"
-            >
-                <Image
-                    src="/home/icons/db.svg"
-                    alt="Dribble"
-                    width={24}
-                    height={24}
-                />
-                <div className="text-sm font-semibold">Dribble</div>
-            </Link>
+      <SectionWrapper>
+        <div className="flex flex-col gap-4 lg:flex-row lg:gap-7">
+          <div className="flex flex-col gap-6">
+            <HomePageTitle value={DataHome.toolIUse.text} />
+            <div className="mt-6 text-gravel-100 text-14m lg:text-20m text-sm">
+              {DataHome.toolIUse.content}
+            </div>
+          </div>
+          <div className="mt-4 flex items-center gap-x-4 lg:gap-x-3">
+            <div className="size-[60px] lg:size-[174px] lg:rounded-[10.5px] bg-background grid place-items-center rounded-[8px]">
+              <img
+                src={DataHome.toolIUse.icon.figma}
+                alt="Figma"
+              />
+              {/* <Figma size={30} /> */}
+            </div>
+            <div className=" flex items-center gap-x-4 lg:flex-col gap-y-3">
+              <div className="size-[60px] lg:size-[81px]  bg-background  lg:rounded-[10.5px] bg-0f grid place-items-center rounded-[8px]">
+                <div className="relative w-8 h-[23.93px]">
+                  <img
+                    src={DataHome.toolIUse.icon.ps}
+                    alt="Photoshop"
+                  />
+                </div>
+              </div>
+              <div className="size-[60px] bg-background lg:size-[81px] lg:rounded-[10.5px] grid place-items-center rounded-[8px]">
+                <div className="relative w-8 h-[28.02px]">
+                  <img
+                    src={DataHome.toolIUse.icon.ai}
+                    alt="AI"
+                  />
+                </div>
+              </div>
+
+            </div>
+          </div>
         </div>
-    </SectionWrapper> */}
+      </SectionWrapper>
+
+      <SectionWrapper>
+        <HomePageTitle value={DataHome.contact.text} />
+        <div className="mt-6 lg:mt-7 grid grid-cols-2 gap-4 flex-1 lg:flex  lg:items-center lg:gap-[14.6px]">
+          {DataHome.contact.socials.map((item, index) => (
+            <Link
+              to={item.href} target="_blank"
+              className="rounded-[12px] w-full lg:rounded-[14.6px] bg-gravel-800 flex flex-col justify-center items-center gap-2 transition-colors hover:bg-[#0A66C2] h-[87px]"
+              key={index}
+            >
+              <img
+                src={item.icon}
+                alt="Linkedin"
+                width={24}
+                height={24}
+              />
+              <div className="text-14m lg:text-18m text-gravel-25 ">{item.name}</div>
+            </Link>
+          ))}
+        </div>
+      </SectionWrapper>
     </div>
   );
 }

@@ -1,15 +1,14 @@
 import { Outlet } from "react-router-dom";
 import SideBar from "./sidebar";
 
-function Layout () {
+function Layout() {
 
     return (
-        <div className="flex flex-col lg:flex-row-reverse w-full ">
-            <div className="w-full h-[calc(100vh-68px)] lg:w-[calc(100vw-100px)] lg:h-screen bg-background px-4">
-                <Outlet/>
+        <div className="w-full ">
+            <div className=" p-20 lg:ml-[100px]   lg:h-screen bg-background">
+                <Outlet />
             </div>
-
-            <SideBar/>
+            <SideBar />
         </div>
     )
 }
