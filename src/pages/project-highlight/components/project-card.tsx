@@ -20,7 +20,6 @@ function ProjectCard({
   title,
   description,
   isReady,
-  href,
   className = "",
   imgClassName = "",
   titleClassName = "",
