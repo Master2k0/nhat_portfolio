@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
 import SideBar from "./sidebar";
-
+import { SpeedInsights } from "@vercel/speed-insights/next";
 function Layout() {
   return (
     <div className="no-scrollbar w-full">
@@ -10,6 +10,7 @@ function Layout() {
         </div>
       </div>
       <SideBar />
+      <SpeedInsights />
     </div>
   );
 }
