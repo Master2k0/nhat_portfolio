@@ -9,13 +9,13 @@ import Corner from "./components/corner";
 function Home() {
   const isLargeScreen = useResponsiveProps({ lg: true });
   return (
-    <div className="pb-10 pt-5 flex flex-col gap-5 3xl:gap-4">
-      <div className="flex flex-col gap-5 3xl:flex-row 3xl:gap-7 justify-between">
+    <div className=" flex flex-col gap-5 3xl:gap-4">
+      <div className="flex flex-col gap-5 lg:gap-3 lg:flex-row 3xl:gap-5 justify-between">
         <div className="flex ">
           <div className="lg:max-w-[432px] 3xl:max-w-[613px] w-full">
-            <SectionWrapper wrapperClassName=" w-full lg:rounded-tr-none lg:pr-0 3xl:rounded-tr-none 3xl:pr-0 h-fit " >
+            <SectionWrapper wrapperClassName=" w-full lg:rounded-tr-none lg:h-[450px] 3xl:h-auto lg:pr-0 3xl:rounded-tr-none 3xl:pr-0 h-fit " divClassName="lg:p-[18px] lg:h-[450px] 3xl:h-auto" >
               <div className="relative  pl-[38px] pr-[37px] w-full max-w-[326px] rounded-[20px] lg:max-w-[396px] lg:px-[43.5px] bg-gradient h-full 3xl:max-w-[557px] 3xl:px-[40.5px]">
-                <img src={DataHome.person.avatar} className="w-full aspect-[251/326] 3xl:aspect-[476/618]" alt="Hero Image" />
+                <img src={DataHome.person.avatar} className="w-full aspect-[251/326] lg:aspect-[308/400] 3xl:aspect-[476/618]" alt="Hero Image" />
               </div>
               {
                 !isLargeScreen && (
@@ -32,19 +32,19 @@ function Home() {
             </SectionWrapper>
 
           </div>
-          <div className={cn("flex flex-col justify-between gap-4", {
+          <div className={cn("flex flex-col  gap-4 lg:gap-3 3xl:gap-4", {
             'hidden': !isLargeScreen
           })}>
-            <SectionWrapper wrapperClassName={cn("overflow-visible lg:rounded-tl-none lg:rounded-bl-none 3xl:rounded-tl-none 3xl:rounded-bl-none  lg:bg-none lg:bg-block-bg lg:pl-0 3xl:pl-0 relative")} divClassName="lg:rounded-tl-none lg:rounded-bl-none  lg:bg-none lg:px-[19px] 3xl:px-[27px] 3xl:rounded-tl-none 3xl:rounded-bl-none">
-              <h1 className="text-20b 3xl:text-32b  mt-6 font-bold 3xl:mt-0 text-gravel-25">{DataHome.person.name}</h1>
+            <SectionWrapper wrapperClassName={cn("overflow-visible lg:rounded-tl-none lg:rounded-bl-none lg:max-w-[276px] 3xl:rounded-tl-none 3xl:rounded-bl-none 3xl:max-w-[425px]  lg:bg-none lg:bg-block-bg lg:pl-0 3xl:pl-0 relative")} divClassName="lg:rounded-tl-none lg:rounded-bl-none  lg:bg-none lg:p-[19px] 3xl:px-[27px] 3xl:rounded-tl-none 3xl:rounded-bl-none">
+              <h1 className="text-20b 3xl:text-32b  mt-6 font-bold lg:mt-0 text-gravel-25">{DataHome.person.name}</h1>
               <h2 className="text-14s 3xl:text-18s mt-2 font-semibold text-gravel-300">{DataHome.person.position}</h2>
-              <p className="text-14r 3xl:text-20r mt-4 text-gravel-100 max-w-[369px] w-full">{DataHome.person.description}</p>
+              <p className="text-14r lg:text-12r 3xl:text-20r mt-4 lg:mb-[38px] 3xl:mb-0 3xl:mt-6 text-gravel-100 max-w-[369px] w-full">{DataHome.person.description}</p>
               <Corner />
             </SectionWrapper>
             <Link to={DataHome.resume.href} target="_blank">
-              <SectionWrapper wrapperClassName="ml-4 h-[191px]" divClassName="h-[191px] flex flex-col items-center justify-center">
-                <div className="bg-gradient-2 text-base  grid  place-items-center rounded-[12px] text-16s font-semibold 3xl:bg-none 3xl:text-32b">
-                  <p className="3xl:text-gradient">{DataHome.resume.text}</p>
+              <SectionWrapper wrapperClassName="ml-4  lg:h-[126px] 3xl:h-[191px]" divClassName=" lg:h-[126px] 3xl:h-[191px] flex flex-col items-center justify-center">
+                <div className="bg-gradient-2 text-base  grid  place-items-center rounded-[12px] text-16s font-semibold lg:bg-none lg:text-20b 3xl:text-32b">
+                  <p className="lg:text-gradient">{DataHome.resume.text}</p>
                 </div>
               </SectionWrapper>
             </Link>
@@ -52,9 +52,9 @@ function Home() {
           </div>
         </div>
 
-        <SectionWrapper wrapperClassName="3xl:h-[674px] 3xl:max-w-[600px] w-full" divClassName="3xl:h-[672px]">
+        <SectionWrapper wrapperClassName="lg:max-w-[380px] 3xl:h-[674px] 3xl:max-w-[600px] w-full h-fit" divClassName="3xl:h-[672px]">
           <HomePageTitle value={DataHome.experience.name} />
-          <div className="mt-6 3xl:mt-7 flex flex-col justify-between gap-y-3">
+          <div className="mt-6 3xl:mt-7 flex flex-col justify-between gap-y-3 lg:gap-y-[6.5px]">
             {DataHome.experience.data.map((item, index) => (
               <div
                 key={index}
@@ -65,7 +65,7 @@ function Home() {
                 <div className="relative size-[41px] shrink-0 grow-0 3xl:size-[65px]">
                   <img src={item.icon} alt="Company Logo" />
                 </div>
-                <div className="text-xs flex flex-1 flex-col justify-between gap-2">
+                <div className="text-xs flex flex-1 flex-col justify-between gap-2 lg:gap-1">
                   <div className="flex justify-between gap-x-2 text-12s text-gravel-25 3xl:text-20s">
                     {item.name.includes("-") ? (
                       <div className="flex gap-1 3xl:gap-[15px]">
@@ -78,9 +78,9 @@ function Home() {
                     ) : (
                       <p>{item.name}</p>
                     )}
-                    <p className="3xl:text-18m">{item.role}</p>
+                    <p className=" 3xl:text-18m">{item.role}</p>
                   </div>
-                  <div className="text-12n 3xl:text-16n mt-auto flex justify-between gap-x-2 text-gravel-300">
+                  <div className="text-12r lg:text-10r 3xl:text-16r mt-auto flex justify-between gap-x-2 text-gravel-300">
                     <div>{item.date}</div>
                     {!!item.mode && <div className="">{item.mode}</div>}
                   </div>
@@ -90,7 +90,7 @@ function Home() {
           </div>
         </SectionWrapper>
       </div>
-      <div className="flex flex-col gap-5 3xl:flex-row 3xl:gap-4 flex-1">
+      <div className="flex flex-col gap-5 lg:flex-row 3xl:gap-4 flex-1">
         <SectionWrapper wrapperClassName="h-fit">
           <div className="flex flex-col gap-4 3xl:flex-row 3xl:gap-7">
             <div className="flex flex-col gap-6 3xl:gap-[6px]">

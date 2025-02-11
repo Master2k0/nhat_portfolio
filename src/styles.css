@@ -4,6 +4,7 @@
 
 * {
   font-family: "Poppins", sans-serif;
+  /* Hide scrollbar for Chrome, Safari and Opera */
 }
 @layer base {
   :root {
@@ -95,6 +96,15 @@
 
   .green-gradient {
     @apply visa-[#2BA657] bg-gradient-to-r from-[#288169] to-[#2CB355];
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
   }
 }
 
