@@ -290,6 +290,7 @@ export default {
     },
     screens: {
       ...defaultTheme.screens,
+      "3xl": "1920px",
     },
     extend: {
       colors: {

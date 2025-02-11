@@ -1,7 +1,7 @@
 import type { PropsWithChildren } from "react";
 
 //* Define all breakpoints use in the application
-export type Breakpoint = "xxs" | "xs" | "sm" | "md" | "lg" | "xl" | "xxl";
+export type Breakpoint = "xxs" | "xs" | "sm" | "md" | "lg" | "xl" | "2xl" | "3xl";
 
 export type ScreenSizeMap = Record<Breakpoint, number>;
 

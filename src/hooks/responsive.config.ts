@@ -6,8 +6,9 @@ export const defaultBreakpoints: Readonly<ScreenSizeMap> = {
   sm: 692,
   md: 768,
   lg: 1024,
-  xl: 1920,
-  xxl: 2560,
+  xl: 1280,
+  "2xl": 1536,
+  "3xl": 1920,
 };
 
 /**
@@ -15,4 +16,4 @@ export const defaultBreakpoints: Readonly<ScreenSizeMap> = {
  * * the responsiveArray sorts in descending order:
  * * xxl > xl > lg > md > sm > xs > xxs
  */
-export const responsiveArray: Breakpoint[] = ["xxs", "xs", "sm", "md", "lg", "xl", "xxl"];
+export const responsiveArray: Breakpoint[] = ["xxs", "xs", "sm", "md", "lg", "xl", "2xl", "3xl"];

@@ -103,6 +103,4 @@
   display: block;
   width: 20px;
   height: 20px;
-  background: linear-gradient(135deg, #666 0%, #000 50.04%);
-  /* clip-path: xywh(0 0 100% 100% round 20px 0); */
 }
