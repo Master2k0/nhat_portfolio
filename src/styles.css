@@ -82,6 +82,35 @@
     background: linear-gradient(211deg, #666 0%, #000 50.04%);
   }
 
+  .hover-bg-gradient {
+    transition: all 0.3s ease-in-out;
+  }
+
+  .hover-bg-gradient::after {
+    content: "";
+    position: absolute;
+    top: 50%; /* Adjust position */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150%;
+    height: 150%; /* Height of the glow */
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+    background: none;
+    z-index: -1;
+    pointer-events: none;
+  }
+
+  .hover-bg-gradient:hover::after {
+    opacity: 1;
+    background: radial-gradient(circle at 30% 35%, #ce80ff 0%, transparent 30%),
+      radial-gradient(circle at 70% 35%, #b1ff80 0%, transparent 30%),
+      radial-gradient(circle at 50% 70%, #80f0ff 0%, transparent 30%);
+    filter: blur(50px);
+    z-index: -1;
+    pointer-events: none;
+  }
+
   .bg-gradient-2 {
     @apply bg-gradient-to-r from-[#CE80FF] via-[#80F0FF] to-[#B1FF80];
   }

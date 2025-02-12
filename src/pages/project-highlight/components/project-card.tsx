@@ -1,6 +1,8 @@
 // import { useToast } from "@/hooks/use-toast";
 import BorderGradientWrapper from "@/components/border-gradient-wrapper";
+import { toast } from "@/hooks/use-toast";
 import { cn } from "@/libs/utils";
+import { useLocation, useNavigate } from "react-router-dom";
 // import { useAppContext } from "@/src/providers/app-provider";
 
 interface ProjectCardProps {
@@ -20,6 +22,7 @@ function ProjectCard({
   title,
   description,
   isReady,
+  href,
   className = "",
   imgClassName = "",
   titleClassName = "",
@@ -28,28 +31,27 @@ function ProjectCard({
   // const router = useRouter()
   // const { toast } = useToast()
   // const { keyValue, onChangeOpenPasswordDialog, onChangeCbUrl } = useAppContext()
-
+  const navigate = useNavigate();
   return (
     <BorderGradientWrapper
       className={cn(
-        "  rounded-[16px] w-full md:rounded-[24px] z lg:rounded-[32px]",
+        "hover:hover-bg-gradient hover-bg-gradient relative w-full overflow-visible rounded-[16px] md:rounded-[24px] lg:rounded-[32px]",
         className,
       )}
     >
       <div className="h-full overflow-hidden rounded-[16px] bg-block-bg md:rounded-[24px] lg:rounded-[32px]">
-        <div
-          className={cn(
-            "relative h-[153px] w-full overflow-hidden md:h-[229.5px] lg:h-[306px]",
-            imgClassName,
-          )}
-        >
-          <img src={img} alt={title} className="object-cover" />
+        <div className={cn("relative w-full overflow-hidden", imgClassName)}>
+          <img
+            src={img}
+            alt={title}
+            className="aspect-[358/201] object-cover xl:aspect-[350/198] 3xl:aspect-[532/300]"
+          />
         </div>
-        <div className="h-full px-5 py-4 md:px-8 md:py-5 lg:px-10 lg:py-6">
-          <div className="space-y-2 text-center">
+        <div className="px-5 py-4 xl:px-6 xl:py-3 3xl:px-10 3xl:py-5">
+          <div className="flex flex-col gap-1 text-center 3xl:gap-2">
             <div
               className={cn(
-                "text-xs md:text-lg lg:text-2xl line-clamp-1 font-bold text-gravel-25 md:font-semibold lg:font-bold",
+                "line-clamp-1 text-16b font-bold text-gravel-25 md:font-semibold lg:font-bold xl:text-14b 3xl:text-20b",
                 titleClassName,
               )}
             >
@@ -57,14 +59,14 @@ function ProjectCard({
             </div>
             <div
               className={cn(
-                "lg:text-lg md:text-sm line-clamp-2 text-pretty text-2xs text-gravel-100",
+                "line-clamp-2 text-pretty text-12r text-gravel-100 xl:text-10r 3xl:text-16r",
                 descClassName,
               )}
             >
               {description}
             </div>
           </div>
-          <div className="mt-2 flex justify-center md:mt-4 lg:mt-5">
+          <div className="mt-4 flex justify-center md:mt-4 lg:mt-5 xl:mt-3 3xl:mt-5">
             <button
               type="button"
               onClick={() => {
@@ -74,16 +76,16 @@ function ProjectCard({
                   //     onChangeOpenPasswordDialog(true);
                   //     return;
                   // }
-                  //   router.push(href);
+                  navigate(href);
                   return;
                 }
-                // return toast({
-                //   description:
-                //     "The project is not ready for viewing, but you can contact me to see the preview ~ 😄",
-                // });
+                return toast({
+                  description:
+                    "The project is not ready for viewing, but you can contact me to see the preview ~ 😄",
+                });
               }}
               className={cn(
-                "md:text-sm text-xs h-8 w-[104px] rounded-[4px] text-2xs font-semibold md:h-[44px] md:w-[139px] md:rounded-[5.82px] lg:rounded-[8px]",
+                "h-9 rounded-[5.26px] px-4 text-12s xl:h-8 xl:px-6 xl:text-10s 3xl:h-11 3xl:rounded-[7.88px] 3xl:text-14s",
                 isReady ? "bg-gradient-2 text-26" : "bg-gravel-800 text-gravel-500",
               )}
             >
