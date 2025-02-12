@@ -32,7 +32,7 @@ function ProjectCard({
   return (
     <BorderGradientWrapper
       className={cn(
-        "h-[267px] w-[272px] rounded-[16px] md:h-[394.5px] md:w-[408px] md:rounded-[24px] lg:h-[516px] lg:w-[544px] lg:rounded-[32px]",
+        "  rounded-[16px] w-full md:rounded-[24px] z lg:rounded-[32px]",
         className,
       )}
     >

@@ -131,7 +131,7 @@ function Home() {
               </div>
               <div className="flex items-center gap-x-4 3xl:gap-x-3">
                 <div className="grid size-[60px] place-items-center rounded-[8px] bg-background xl:size-[138px] 3xl:size-[174px] 3xl:rounded-[10.5px]">
-                  <img src={DataHome.toolIUse.icon.figma} alt="Figma" />
+                  <img src={DataHome.toolIUse.icon.figma} alt="Figma" className="xl:w-[54px] xl:aspect-54/78 3xl:w-[70px] aspect-70/100" />
                   {/* <Figma size={30} /> */}
                 </div>
                 <div className="flex items-center gap-x-4 gap-y-3 xl:flex-col">

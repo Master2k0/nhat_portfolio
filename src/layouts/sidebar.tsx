@@ -61,7 +61,7 @@ function SidebarItemsRender({ item }: SidebarItemsProps) {
 function SideBar() {
     return (
         <div className="fixed bottom-0 left-0 z-50 bg-block-bg w-full h-[68px] lg:left-0  lg:w-[100px] lg:h-screen">
-            <div className="grid grid-cols-4 h-full lg:flex lg:flex-col lg:justify-start lg:items-center lg:pt-[80px]">
+            <div className="grid grid-cols-4 h-full lg:flex lg:flex-col lg:justify-center lg:items-center ">
                 {SidebarItems.map((item) => (
                     <SidebarItemsRender key={item.id} item={item} />
                 ))}
