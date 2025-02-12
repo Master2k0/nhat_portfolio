@@ -2,7 +2,7 @@
 import BorderGradientWrapper from "@/components/border-gradient-wrapper";
 import { toast } from "@/hooks/use-toast";
 import { cn } from "@/libs/utils";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 // import { useAppContext } from "@/src/providers/app-provider";
 
 interface ProjectCardProps {
