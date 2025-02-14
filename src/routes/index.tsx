@@ -1,5 +1,7 @@
 import { siteConfig } from "@/configs";
 import { Layout } from "@/layouts";
+import AboutMe from "@/pages/about-me";
+import CaseStudies from "@/pages/case-studies";
 import Home from "@/pages/home";
 import ProjectHighlight from "@/pages/project-highlight";
 import { createBrowserRouter, RouteObject } from "react-router-dom";
@@ -30,12 +32,12 @@ const publicRoutes: RouteObject[] = [
   },
   {
     path: siteConfig.pageList.caseStudies.href,
-    element: <div>About</div>,
+    element: <CaseStudies />,
     children: caseStudiesChildren,
   },
   {
     path: siteConfig.pageList.about.href,
-    element: <div>About</div>,
+    element: <AboutMe />,
   },
 ];
 

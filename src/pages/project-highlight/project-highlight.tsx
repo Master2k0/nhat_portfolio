@@ -1,6 +1,5 @@
+import ProjectCard from "@/components/project-card";
 import { ProjectHighLights } from "@/configs/datas/project-highlight";
-import ProjectCard from "./components/project-card";
-
 function ProjectHighlight() {
   return (
     <main className="container mx-auto flex flex-col gap-8 3xl:gap-10">
