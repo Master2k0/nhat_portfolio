@@ -259,6 +259,34 @@ export default {
           fontWeight: "700",
         },
       ],
+      "28r": [
+        "28px",
+        {
+          lineHeight: "42px",
+          fontWeight: "400",
+        },
+      ],
+      "28m": [
+        "28px",
+        {
+          lineHeight: "42px",
+          fontWeight: "500",
+        },
+      ],
+      "28s": [
+        "28px",
+        {
+          lineHeight: "42px",
+          fontWeight: "600",
+        },
+      ],
+      "28b": [
+        "28px",
+        {
+          lineHeight: "42px",
+          fontWeight: "700",
+        },
+      ],
       "32r": [
         "32px",
         {
