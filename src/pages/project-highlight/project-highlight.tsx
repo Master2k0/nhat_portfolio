@@ -1,5 +1,6 @@
 import ProjectCard from "@/components/project-card";
 import { ProjectHighLights } from "@/configs/datas/project-highlight";
+import { Outlet } from "react-router-dom";
 function ProjectHighlight() {
   return (
     <main className="container mx-auto flex flex-col gap-8 3xl:gap-10">
@@ -11,6 +12,7 @@ function ProjectHighlight() {
           <ProjectCard key={project.id} className="w-full !flex-1" {...project} />
         ))}
       </div>
+      <Outlet />
     </main>
   );
 }

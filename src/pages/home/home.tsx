@@ -8,7 +8,6 @@ import Corner from "./components/corner";
 
 function Home() {
   const isLargeScreen = useResponsiveProps({ xl: true });
-  console.log(isLargeScreen);
   return (
     <div className="flex w-full flex-col gap-5 3xl:gap-4">
       <div className="flex flex-col justify-between gap-5 xl:flex-row xl:gap-3 3xl:gap-5">
