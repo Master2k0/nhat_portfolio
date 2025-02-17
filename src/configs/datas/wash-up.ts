@@ -8,7 +8,8 @@ export const WashUp = {
   ],
   vehicleWashApp: {
     section1: {
-      title: "Washup - Vehicle wash app",
+      title: "Vehicle wash app",
+      pcTitle: "Washup - Vehicle wash app",
       content: [
         "Washup is a mobile app that makes motorbike and car care effortless. Connect with top car wash services near you and book a wash anytime, anywhere, with just a few taps.",
         "For motorbike owners, Washup offers a unique feature: A specialized toolkit that allows technicians to wash motorbikes anywhere you want. This portable device, worn on the technician's back, uses just 2 litres of water and completes a wash in only 10 minutes.",

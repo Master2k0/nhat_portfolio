@@ -14,6 +14,7 @@ import { useResponsiveProps } from "@/hooks/responsive.hook";
 import { LayoutProjectSection } from "@/layouts";
 import { cn } from "@/libs/utils";
 import { useState } from "react";
+import TabOne from "./components/tab-one";
 
 function TabsController() {
   const isLargeScreen = useResponsiveProps({ xl: true });
@@ -24,11 +25,11 @@ function TabsController() {
         {!isLargeScreen ? (
           <SectionWrapper
             wrapperClassName={cn(
-              "relative w-full overflow-visible  xl:rounded-[28px] rounded-[20px] xl:max-w-[600px] 3xl:max-w-[1064px] h-fit rounded-bl-none rounded-br-none !pr-0 !pb-0 xl:pr-[1px] xl:pb-[1px]",
+              "relative w-full overflow-visible  xl:rounded-[8px]  rounded-[20px] xl:max-w-[600px] 3xl:max-w-[1064px] h-fit rounded-bl-none lg:rounded-bl-none lg:rounded-br-none rounded-br-none !pr-0 !pb-0 xl:pr-[1px] xl:pb-[1px]",
             )}
-            divClassName="flex flex-col gap-6 pl-[15px] pr-[16px] pt-[19px] py-[20px] xl:p-[15px] xl:rounded-[28px] 3xl:p-[27px] height-fit rounded-bl-none rounded-br-none "
+            divClassName="flex flex-col gap-4 xl:gap-6 pl-[15px] pr-[16px] pt-[19px] pb-0 xl:py-[20px] xl:p-[15px] xl:rounded-[8px] 3xl:p-[27px] height-fit rounded-bl-none rounded-br-none  "
           >
-            <div className="flex items-center justify-between">
+            <div className="flex flex-wrap items-center justify-between">
               <p className="text-20b text-gravel-300">Wash Up</p>
               <Drawer>
                 <DrawerTrigger asChild>
@@ -84,15 +85,18 @@ function TabsController() {
                 </DrawerContent>
               </Drawer>
             </div>
+            <div className="border-dash-custom w-full" data-type="separator" />
           </SectionWrapper>
         ) : (
           <SectionWrapper
-            wrapperClassName={cn("relative w-full overflow-visible  xl:rounded-[8px] h-fit ")}
-            divClassName="flex flex-col gap-6  xl:rounded-[8px] height-fit "
+            wrapperClassName={cn(
+              "relative w-full overflow-visible   xl:rounded-[8px] 3xl:rounded-[8px] h-fit ",
+            )}
+            divClassName="flex flex-col gap-6  xl:rounded-[8px] 3xl:rounded-[8px] height-fit xl:p-0 3xl:p-0 xl:h-[100px] "
           >
-            <TabsList>
+            <TabsList className="h-full">
               <TabsTrigger
-                className="[state=active]:xl:text-gravel-25 flex h-[44px] w-full justify-between px-4 text-14r xl:h-auto xl:text-18s xl:text-gravel-300"
+                className="[state=active]:xl:text-gravel-25 flex h-[44px] w-full justify-between px-4 text-14r xl:mx-auto xl:block xl:h-auto xl:w-full xl:text-18s xl:text-gravel-300"
                 value={"Vehicle wash app"}
                 onClick={() => setTabsActive("Vehicle wash app")}
               >
@@ -102,7 +106,7 @@ function TabsController() {
                 )}
               </TabsTrigger>
               <TabsTrigger
-                className="[state=active]:xl:text-gravel-25 flex h-[44px] w-full justify-between px-4 text-14r xl:h-auto xl:text-18s xl:text-gravel-300"
+                className="[state=active]:xl:text-gravel-25 flex h-[44px] w-full justify-between px-4 text-14r xl:mx-auto xl:block xl:h-auto xl:w-full xl:text-18s xl:text-gravel-300"
                 value={"Insurance Feature"}
                 onClick={() => setTabsActive("Insurance Feature")}
               >
@@ -112,7 +116,7 @@ function TabsController() {
                 )}
               </TabsTrigger>
               <TabsTrigger
-                className="[state=active]:xl:text-gravel-25 flex h-[44px] w-full justify-between px-4 text-14r xl:h-auto xl:text-18s xl:text-gravel-300"
+                className="[state=active]:xl:text-gravel-25 flex h-[44px] w-full justify-between px-4 text-14r xl:mx-auto xl:block xl:h-auto xl:w-full xl:text-18s xl:text-gravel-300"
                 value={"Technician app"}
                 onClick={() => setTabsActive("Technician app")}
               >
@@ -122,7 +126,7 @@ function TabsController() {
                 )}
               </TabsTrigger>
               <TabsTrigger
-                className="[state=active]:xl:text-gravel-25 flex h-[44px] w-full justify-between px-4 text-14r xl:h-auto xl:text-18s xl:text-gravel-300"
+                className="[state=active]:xl:text-gravel-25 flex h-[44px] w-full justify-between px-4 text-14r xl:mx-auto xl:block xl:h-auto xl:w-full xl:text-18s xl:text-gravel-300"
                 value={"Technician Order"}
                 onClick={() => setTabsActive("Technician Order")}
               >
@@ -144,7 +148,7 @@ function TabsComponent() {
   return (
     <>
       <TabsContent className="text-gravel-25" value="Vehicle wash app">
-        haha
+        <TabOne />
       </TabsContent>
       <TabsContent className="text-gravel-25" value="Insurance Feature">
         hehe
