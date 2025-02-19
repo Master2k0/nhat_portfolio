@@ -52,7 +52,6 @@ function TableOfContents({ listIds }: TableOfContentsProps) {
     if (section) {
       section.scrollIntoView({ behavior: "smooth", block: "center" });
     }
-    setActiveId(id);
   };
   return (
     <div
@@ -62,14 +61,19 @@ function TableOfContents({ listIds }: TableOfContentsProps) {
       )}
     >
       {listIds.map((data) => (
-        <div className="h-16 px-5">
+        <div className="flex h-16 items-center gap-x-3 px-5" onClick={() => handleClick(data.id)}>
+          <span
+            className={cn(
+              "block size-2 rounded-full",
+              activeId === data.id ? "bg-gravel-25" : "bg-transparent",
+            )}
+          />
           <p
             key={data.id}
             className={cn(
               "shadow-text cursor-pointer text-18r hover:text-gravel-25",
               activeId === data.id ? "text-gravel-25" : "text-gravel-500",
             )}
-            onClick={() => handleClick(data.id)}
           >
             {data.title}
           </p>
