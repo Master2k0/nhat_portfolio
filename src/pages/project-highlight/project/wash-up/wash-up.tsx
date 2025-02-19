@@ -15,10 +15,21 @@ import { LayoutProjectSection } from "@/layouts";
 import { cn } from "@/libs/utils";
 import { useState } from "react";
 import TabOne from "./components/tab-one";
+import TabTwo from "./components/tab-two";
 
-function TabsController() {
+export type CurrentTab =
+  | "Vehicle wash app"
+  | "Insurance Feature"
+  | "Technician app"
+  | "Technician Order";
+
+type TabsControllerProps = {
+  setCurrentTab: (tab: CurrentTab) => void;
+  currentTab: CurrentTab;
+};
+
+function TabsController({ currentTab, setCurrentTab }: TabsControllerProps) {
   const isLargeScreen = useResponsiveProps({ xl: true });
-  const [tabsActive, setTabsActive] = useState("Vehicle wash app");
   return (
     <div>
       <Tabs defaultValue="Vehicle wash app">
@@ -44,40 +55,40 @@ function TabsController() {
                     <TabsTrigger
                       className="[state=active]:xl:text-gravel-25 flex h-[44px] w-full justify-between px-4 text-14r xl:h-auto xl:text-18s xl:text-gravel-300"
                       value={"Vehicle wash app"}
-                      onClick={() => setTabsActive("Vehicle wash app")}
+                      onClick={() => setCurrentTab("Vehicle wash app")}
                     >
                       Vehicle wash app
-                      {!isLargeScreen && tabsActive === "Vehicle wash app" && (
+                      {!isLargeScreen && currentTab === "Vehicle wash app" && (
                         <img alt="" src="/vehicle-wash-app/icons/check.svg" />
                       )}
                     </TabsTrigger>
                     <TabsTrigger
                       className="[state=active]:xl:text-gravel-25 flex h-[44px] w-full justify-between px-4 text-14r xl:h-auto xl:text-18s xl:text-gravel-300"
                       value={"Insurance Feature"}
-                      onClick={() => setTabsActive("Insurance Feature")}
+                      onClick={() => setCurrentTab("Insurance Feature")}
                     >
                       Insurance Feature
-                      {!isLargeScreen && tabsActive === "Insurance Feature" && (
+                      {!isLargeScreen && currentTab === "Insurance Feature" && (
                         <img alt="" src="/vehicle-wash-app/icons/check.svg" />
                       )}
                     </TabsTrigger>
                     <TabsTrigger
                       className="[state=active]:xl:text-gravel-25 flex h-[44px] w-full justify-between px-4 text-14r xl:h-auto xl:text-18s xl:text-gravel-300"
                       value={"Technician app"}
-                      onClick={() => setTabsActive("Technician app")}
+                      onClick={() => setCurrentTab("Technician app")}
                     >
                       Technician app
-                      {!isLargeScreen && tabsActive === "Technician app" && (
+                      {!isLargeScreen && currentTab === "Technician app" && (
                         <img alt="" src="/vehicle-wash-app/icons/check.svg" />
                       )}
                     </TabsTrigger>
                     <TabsTrigger
                       className="[state=active]:xl:text-gravel-25 flex h-[44px] w-full justify-between px-4 text-14r xl:h-auto xl:text-18s xl:text-gravel-300"
                       value={"Technician Order"}
-                      onClick={() => setTabsActive("Technician Order")}
+                      onClick={() => setCurrentTab("Technician Order")}
                     >
                       Technician Order
-                      {!isLargeScreen && tabsActive === "Technician Order" && (
+                      {!isLargeScreen && currentTab === "Technician Order" && (
                         <img alt="" src="/vehicle-wash-app/icons/check.svg" />
                       )}
                     </TabsTrigger>
@@ -96,42 +107,42 @@ function TabsController() {
           >
             <TabsList className="h-full">
               <TabsTrigger
-                className="[state=active]:xl:text-gravel-25 flex h-[44px] w-full justify-between px-4 text-14r xl:mx-auto xl:block xl:h-auto xl:w-full xl:text-18s xl:text-gravel-300"
+                className="[state=active]:xl:text-gravel-25 shadow-text flex h-[44px] w-full justify-between px-4 text-14r hover:text-gravel-25 xl:mx-auto xl:block xl:h-auto xl:w-full xl:text-18s xl:text-gravel-300"
                 value={"Vehicle wash app"}
-                onClick={() => setTabsActive("Vehicle wash app")}
+                onClick={() => setCurrentTab("Vehicle wash app")}
               >
                 Vehicle wash app
-                {!isLargeScreen && tabsActive === "Vehicle wash app" && (
+                {!isLargeScreen && currentTab === "Vehicle wash app" && (
                   <img alt="" src="/vehicle-wash-app/icons/check.svg" />
                 )}
               </TabsTrigger>
               <TabsTrigger
-                className="[state=active]:xl:text-gravel-25 flex h-[44px] w-full justify-between px-4 text-14r xl:mx-auto xl:block xl:h-auto xl:w-full xl:text-18s xl:text-gravel-300"
+                className="[state=active]:xl:text-gravel-25 shadow-text flex h-[44px] w-full justify-between px-4 text-14r hover:text-gravel-25 xl:mx-auto xl:block xl:h-auto xl:w-full xl:text-18s xl:text-gravel-300"
                 value={"Insurance Feature"}
-                onClick={() => setTabsActive("Insurance Feature")}
+                onClick={() => setCurrentTab("Insurance Feature")}
               >
                 Insurance Feature
-                {!isLargeScreen && tabsActive === "Insurance Feature" && (
+                {!isLargeScreen && currentTab === "Insurance Feature" && (
                   <img alt="" src="/vehicle-wash-app/icons/check.svg" />
                 )}
               </TabsTrigger>
               <TabsTrigger
-                className="[state=active]:xl:text-gravel-25 flex h-[44px] w-full justify-between px-4 text-14r xl:mx-auto xl:block xl:h-auto xl:w-full xl:text-18s xl:text-gravel-300"
+                className="[state=active]:xl:text-gravel-25 shadow-text flex h-[44px] w-full justify-between px-4 text-14r hover:text-gravel-25 xl:mx-auto xl:block xl:h-auto xl:w-full xl:text-18s xl:text-gravel-300"
                 value={"Technician app"}
-                onClick={() => setTabsActive("Technician app")}
+                onClick={() => setCurrentTab("Technician app")}
               >
                 Technician app
-                {!isLargeScreen && tabsActive === "Technician app" && (
+                {!isLargeScreen && currentTab === "Technician app" && (
                   <img alt="" src="/vehicle-wash-app/icons/check.svg" />
                 )}
               </TabsTrigger>
               <TabsTrigger
-                className="[state=active]:xl:text-gravel-25 flex h-[44px] w-full justify-between px-4 text-14r xl:mx-auto xl:block xl:h-auto xl:w-full xl:text-18s xl:text-gravel-300"
+                className="[state=active]:xl:text-gravel-25 shadow-text flex h-[44px] w-full justify-between px-4 text-14r hover:text-gravel-25 xl:mx-auto xl:block xl:h-auto xl:w-full xl:text-18s xl:text-gravel-300"
                 value={"Technician Order"}
-                onClick={() => setTabsActive("Technician Order")}
+                onClick={() => setCurrentTab("Technician Order")}
               >
                 Technician Order
-                {!isLargeScreen && tabsActive === "Technician Order" && (
+                {!isLargeScreen && currentTab === "Technician Order" && (
                   <img alt="" src="/vehicle-wash-app/icons/check.svg" />
                 )}
               </TabsTrigger>
@@ -151,7 +162,7 @@ function TabsComponent() {
         <TabOne />
       </TabsContent>
       <TabsContent className="text-gravel-25" value="Insurance Feature">
-        hehe
+        <TabTwo />
       </TabsContent>
       <TabsContent className="text-gravel-25" value="Technician app">
         hihi
@@ -165,6 +176,7 @@ function TabsComponent() {
 
 function WashUp() {
   const isLargeScreen = useResponsiveProps({ xl: true });
+  const [currentTab, setCurrentTab] = useState<CurrentTab>("Vehicle wash app");
   const [hoverBreadcrumb, setHoverBreadcrumb] = useState({
     home: false,
     projectHighlights: false,
@@ -220,9 +232,9 @@ function WashUp() {
         </BreadcrumbList>
       </Breadcrumb>
 
-      <div className="flex flex-col gap-6">
-        <TabsController />
-        <LayoutProjectSection listIds={[]} />
+      <div className="flex flex-col gap-6 xl:flex-row">
+        <LayoutProjectSection currentTab={currentTab} />
+        <TabsController setCurrentTab={setCurrentTab} currentTab={currentTab} />
       </div>
     </div>
   );

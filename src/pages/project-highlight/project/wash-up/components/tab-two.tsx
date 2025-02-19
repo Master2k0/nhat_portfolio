@@ -1,7 +1,7 @@
 import { SectionWrapper } from "@/components/sections-wrapper";
 import { WashUp as Datas } from "@/configs/datas/wash-up";
 import { useResponsiveProps } from "@/hooks/responsive.hook";
-import { Header } from "@radix-ui/react-accordion";
+import Header from "./header";
 
 function TabTwo() {
   const isLargeScreen = useResponsiveProps({ xl: true });

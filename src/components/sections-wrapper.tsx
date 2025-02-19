@@ -5,12 +5,14 @@ import BorderGradientWrapper from "./border-gradient-wrapper";
 interface SectionWrapperProps extends PropsWithChildren {
   wrapperClassName?: string;
   divClassName?: string;
+  id?: string;
 }
 
 export function SectionWrapper({
   children,
   wrapperClassName = "",
   divClassName = "",
+  id,
 }: SectionWrapperProps) {
   return (
     <BorderGradientWrapper
@@ -24,6 +26,7 @@ export function SectionWrapper({
           "rounded-[20px] bg-block-bg px-4 py-5 lg:rounded-[16px] 3xl:rounded-[28px] 3xl:p-7",
           divClassName,
         )}
+        id={id}
       >
         {children}
       </div>
