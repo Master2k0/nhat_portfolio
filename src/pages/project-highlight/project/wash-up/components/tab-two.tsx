@@ -16,6 +16,7 @@ function TabTwo() {
       <SectionWrapper
         wrapperClassName="rounded-tl-none rounded-tr-none !pl-0 !pt-0 xl:!pl-[1px] xl:!pt-[1px] xl:mt-6 lg:rounded-tl-none lg:rounded-tr-none xl:rounded-[8px] 3xl:rounded-[8px]"
         divClassName="rounded-tl-none rounded-tr-none  lg:rounded-tl-none lg:rounded-tr-none xl:rounded-[8px]  !pt-4 !pb-[19px] !pr-[15px] 3xl:rounded-[8px] xl:!p-[31px] "
+        id="introduction"
       >
         <div className="flex flex-col gap-4">
           <Header
@@ -33,6 +34,7 @@ function TabTwo() {
       <SectionWrapper
         divClassName="xl:rounded-[8px] 3xl:rounded-[8px] xl:!p-[31px]"
         wrapperClassName="xl:rounded-[8px] 3xl:rounded-[8px] "
+        id="key-features"
       >
         <Header title={Datas.insuranceFeature.section2.title} />
         <Divider />
@@ -53,6 +55,7 @@ function TabTwo() {
       <SectionWrapper
         divClassName="xl:rounded-[8px] 3xl:rounded-[8px] xl:!p-[31px]"
         wrapperClassName="xl:rounded-[8px] 3xl:rounded-[8px] "
+        id="user-flow"
       >
         <Header title={Datas.insuranceFeature.section3.title} />
         <Divider />
@@ -61,6 +64,7 @@ function TabTwo() {
       <SectionWrapper
         divClassName="xl:rounded-[8px] 3xl:rounded-[8px] xl:!p-[31px]"
         wrapperClassName="xl:rounded-[8px] 3xl:rounded-[8px] "
+        id="problems-solutions"
       >
         <Header title={Datas.insuranceFeature.section4.title} />
         <Divider />
@@ -156,10 +160,10 @@ function TabTwo() {
           </div>
         </div>
       </SectionWrapper>
-
       <SectionWrapper
         divClassName="xl:rounded-[8px] 3xl:rounded-[8px] xl:!p-[31px]"
         wrapperClassName="xl:rounded-[8px] 3xl:rounded-[8px] "
+        id="user-contracts"
       >
         <Header title={Datas.insuranceFeature.section5.title} />
         <Divider />
@@ -171,10 +175,10 @@ function TabTwo() {
           />
         </div>
       </SectionWrapper>
-
       <SectionWrapper
         divClassName="xl:rounded-[8px] 3xl:rounded-[8px] xl:!p-[31px]"
         wrapperClassName="xl:rounded-[8px] 3xl:rounded-[8px] "
+        id="conclusion"
       >
         <Header title={Datas.insuranceFeature.section6.title} />
         <Divider />
