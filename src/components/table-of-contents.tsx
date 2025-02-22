@@ -61,7 +61,11 @@ function TableOfContents({ listIds }: TableOfContentsProps) {
       )}
     >
       {listIds.map((data) => (
-        <div className="flex h-16 items-center gap-x-3 px-5" onClick={() => handleClick(data.id)}>
+        <div
+          className="flex h-16 items-center gap-x-3 px-5"
+          key={data.id}
+          onClick={() => handleClick(data.id)}
+        >
           <span
             className={cn(
               "block size-2 rounded-full",

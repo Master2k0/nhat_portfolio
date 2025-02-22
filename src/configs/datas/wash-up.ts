@@ -90,7 +90,8 @@ export const WashUp = {
   },
   insuranceFeature: {
     section1: {
-      title: "Washup - Insurance Feature",
+      pcTitle: "Washup - Insurance Feature",
+      title: "Insurance Feature",
       content: [
         "The goal is to expand the platform's reach and make it easier for users to buy and manage insurance.",
         "The vehicle insurance feature lets users buy and manage motorcycles or car insurance directly in the app. Unlike other apps that require code checks on websites or emails, our feature simplifies access to insurance records without searching or remembering contract codes.",
@@ -125,11 +126,11 @@ export const WashUp = {
           problem:
             "The first issue was to enhance customer confidence in the platform. We recognised that the existing application lacked a clear market position and that customers might be reluctant to spend their money on purchasing our insurance.",
           solution:
-            "In the initial phase, users are presented with <div>a pop-up summary of benefits, costs, and reasons</div> for purchasing insurance. Users can easily understand the insurance package. Before purchasing, they need to review key details such as <div>indemnity costs</div> and <div>terms</div>. To improve readability, the information is divided into sections with clear line breaks. After understanding the details, users confirm and proceed to purchase.",
-          img: "/inurance-feature/images/phone-1.png",
+            "In the initial phase, users are presented with <span class='text-yellow text-14m'>a pop-up summary of benefits, costs, and reasons</span> for purchasing insurance. Users can easily understand the insurance package. Before purchasing, they need to review key details such as <span class='text-yellow text-14m'>indemnity costs</span> and <span class='text-yellow text-14m'>terms</span>. To improve readability, the information is divided into sections with clear line breaks. After understanding the details, users confirm and proceed to purchase.",
+          img: "/insurance-feature/images/phone-1.png",
         },
         {
-          problem: [
+          problems: [
             {
               title: "Authenticity of information",
               description:
@@ -141,7 +142,7 @@ export const WashUp = {
                 "The insurance form interface has too many fields, making it challenging to review. Additional improvements are needed to enhance usability and better organize key sections like Coverage Period, Contact Details, and Vehicle Information.",
             },
           ],
-          solution: [
+          solutions: [
             {
               title: "Authenticity of information",
               description:
@@ -158,10 +159,8 @@ export const WashUp = {
         {
           problem:
             "Despite the minor UI changes in the second solution, the form page still did not receive much positive feedback. Users still had difficulty reviewing and editing sections, suggesting that more efficient solutions were needed.",
-          solution: [
+          solution:
             "So - When the user completes any section, it collapses for easy review and when you want to edit? Just click on the pencil icon. ",
-            "/insurance-feature/images/phone-3.png",
-          ],
           imgMobile: "/insurance-feature/images/phone-3-mobile.png",
           imgPc: "/insurance-feature/images/phone-3-pc.png",
         },
@@ -183,7 +182,7 @@ export const WashUp = {
 
       content: [
         {
-          img: "/insurance-feature/images/phone-contract.png",
+          img: "/insurance-feature/images/contract-1.png",
         },
         {
           list: ["Pending", "Unpaid", "Active", "Nearly-Expired", "Expire"],
@@ -201,12 +200,12 @@ export const WashUp = {
           ],
         },
       ],
+      img: "/insurance-feature/images/phone-contract.png",
     },
     section6: {
       title: "Conclusion",
-      content: [
+      content:
         "The app's insurance features enable users to buy and manage policies with ease, offering tools for research, informed decisions, real-time support, and renewal reminders. These features streamline the process, reduce time, and improve accessibility, making insurance management efficient and user-friendly while fostering better customer-insurer interactions.",
-      ],
     },
   },
 };
