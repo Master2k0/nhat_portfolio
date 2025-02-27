@@ -59,8 +59,50 @@ const listIds = {
       title: "Conclusion",
     },
   ],
-  "Technician app": [],
-  "Technician Order": [],
+  "Technician app": [
+    {
+      id: "introduction",
+      title: "Introduction",
+    },
+    {
+      id: "identifying-users",
+      title: "Identifying Users",
+    },
+    {
+      id: "key-features",
+      title: "Key Features",
+    },
+    {
+      id: "user-journeys",
+      title: "User Journeys",
+    },
+    {
+      id: "user-flow",
+      title: "User Flow",
+    },
+    {
+      id: "task-reception-ui",
+      title: "Task Reception UI",
+    },
+    {
+      id: "import-order-ui",
+      title: "Import Order UI",
+    },
+  ],
+  "Technician Task": [
+    {
+      id: "introduction",
+      title: "Introduction",
+    },
+    {
+      id: "some-ux-points",
+      title: "Some UX Points",
+    },
+    {
+      id: "conclusion",
+      title: "Conclusion",
+    },
+  ],
 };
 
 export function LayoutProjectSection({ currentTab, children }: LayoutProjectSectionProps) {

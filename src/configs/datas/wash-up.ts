@@ -208,4 +208,139 @@ export const WashUp = {
         "The app's insurance features enable users to buy and manage policies with ease, offering tools for research, informed decisions, real-time support, and renewal reminders. These features streamline the process, reduce time, and improve accessibility, making insurance management efficient and user-friendly while fostering better customer-insurer interactions.",
     },
   },
+  technicianApp: {
+    section1: {
+      pcTitle: "Washup - Technician app",
+      title: "Technician app",
+      content:
+        "The application helps technicians manage remote orders, gather customer information, and proactively contact them before heading to the car wash location. Similar to ride-hailing apps, Washup’s order-receiving system works through random assignments within a radius, allowing technicians to accept or decline based on availability and proximity. Once an order is accepted, the technician receives a confirmation with order details and instructions.",
+      img: "/technician-app/images/section1.png",
+    },
+    section2: {
+      title: "Identifying Users",
+      content: [
+        {
+          icon: "/technician-app/icons/wt-icon.svg",
+          title: "Washup Technicians",
+          description:
+            "Washup technicians, equipped with tools, go to customer-specified locations to perform vehicle maintenance and cleaning per Washup standards.",
+        },
+        {
+          icon: "/technician-app/icons/cmt-icon.svg",
+          title: "Car maintenance technicians",
+          description:
+            "Staff at affiliated local centres handle orders, with customers bringing vehicles within 15m. Services are performed step by step per Washup standards.",
+        },
+      ],
+    },
+    section3: {
+      title: "Key features",
+      content: [
+        {
+          icon: "/technician-app/icons/ro-icon.svg",
+          title: "Receive orders",
+          description:
+            "Technicians are assigned jobs based on distance and their feedback scores from previous tasks",
+        },
+        {
+          icon: "/technician-app/icons/mt-icon.svg",
+          title: "Manage tasks",
+          description:
+            "We provide features for managing jobs, including pending, in progress, completed, and cancelled jobs.",
+        },
+        {
+          icon: "/technician-app/icons/ipft-icon.svg",
+          title: "Instruct process for technicians",
+          description:
+            "Each order includes detailed instructions following Washup’s standards to ensure consistency.",
+        },
+        {
+          icon: "/technician-app/icons/pft-icon.svg",
+          title: "Pay for technician",
+          description:
+            "Completed tasks are carefully calculated to protect technicians' rights, with payment based on the fee schedule.",
+        },
+      ],
+    },
+    section4: {
+      title: "User Journeys",
+      imgMobile: "/technician-app/images/user-journey-mobile.png",
+      imgPc: "/technician-app/images/user-journey-pc.png",
+    },
+    section5: {
+      title: "User Flow",
+      img: "/technician-app/images/user-flow.png",
+    },
+    section6: {
+      title: "Task Reception UI",
+      description:
+        "Below are user interfaces that provide an overview of the order entry process for technicians. They guide technicians through steps like activating availability, reviewing orders, and managing order status, streamlining the workflow and improving efficiency.",
+      content: [
+        {
+          description: [
+            'The technician activates the <span class="text-gravel-25 xl:text-18s text-10m">"Ready to Wash"</span> toggle in the app, signaling their availability to accept new orders. Once activated, the system notifies them when a nearby customer places a request, allowing the technician to review the details and prepare for the job.',
+          ],
+          img: "/technician-app/images/phone-1.webp",
+        },
+        {
+          description: [
+            `When a job comes in, a pop-up notification appears on the technician's screen with key details <span class="text-gravel-25 xl:text-18s text-10m"> such as the customer's location, vehicle type, and requested services. </span>`,
+            "Technicians can choose to accept the order immediately if they are ready, or temporarily set it to pending, giving them time to assess their availability before making a decision. This provides flexibility and allows technicians to manage their workload efficiently.",
+          ],
+          img: "/technician-app/images/phone-2.webp",
+        },
+        {
+          description: [
+            `The order will be placed in the queue if the technician clicks the <span class="text-gravel-25 xl:text-18s text-10m">"Later"</span> button. However, if a technician has already accepted the order, it will be immediately removed from the queue of other technicians.`,
+          ],
+          img: "/technician-app/images/phone-3.webp",
+        },
+        {
+          description: [
+            "Once the technician has accepted an order, the queue will display only the accepted order. The technician will not be able to receive another job until the current task is completed.",
+          ],
+          img: "/technician-app/images/phone-4.webp",
+        },
+      ],
+    },
+    section7: {
+      title: "Import Order UI",
+      content:
+        "Technicians can also proactively receive a specific order directly from a customer by scanning the QR code in the customer's order details or by clicking the “Import order” button and entering the Order ID.",
+      img: "/technician-app/images/final-design-2.png",
+    },
+  },
+  technicianTask: {
+    section1: {
+      pcTitle: "Washup - Technician task",
+      title: "Technician task",
+      content:
+        "To standardize service quality, technicians follow a set of instructions for each task and capture evaluation photos for their performance records.",
+    },
+    section2: {
+      title: "Some UX points",
+      content:
+        "To standardize service quality, technicians follow a set of instructions for each task and capture evaluation photos for their performance records.",
+      endContent:
+        "Moreover, to be able to accept orders, the technician must scroll to the bottom of the screen and click the 'Start' button. This ensures that they review the information at least once.",
+      description: {
+        title: "Device information",
+        content: [
+          "We aim to develop a device management solution to track usage and identify damage by scanning QR codes for each device.",
+          "At the time I design this stuff, scanning QR codes was not required. Therefore, I was asked to add an option for technicians to manually turn the device on or off while still encouraging the use of the QR code.",
+          "Hence, my proposed design solution makes QR code scanning the default option. If a technician prefers to switch to manual control, they must open a pop-up and make a selection. This approach increases the number of steps required for manual control, thereby promoting the default QR code option.",
+        ],
+        img: [
+          "/technician-task/images/desk-device-info.png",
+          "/technician-task/images/mobile-right.png",
+          "/technician-task/images/some-ux-points.png",
+        ],
+      },
+    },
+    section3: {
+      title: "Conclusion",
+      description:
+        "The next steps involve the execution of the car wash process. However, there are no notable points as the feature is relatively straightforward and primarily aimed at system control and operation. In addition, to ensure the confidentiality of the project, I will not show the full user interface for these steps.",
+    },
+  },
 };

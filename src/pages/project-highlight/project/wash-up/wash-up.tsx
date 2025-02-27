@@ -16,12 +16,14 @@ import { cn } from "@/libs/utils";
 import { useState } from "react";
 import TabOne from "./components/tab-one";
 import TabTwo from "./components/tab-two";
+import TabThree from "./components/tab-three";
+import TabFour from "./components/tab-four";
 
 export type CurrentTab =
   | "Vehicle wash app"
   | "Insurance Feature"
   | "Technician app"
-  | "Technician Order";
+  | "Technician Task";
 
 type TabsControllerProps = {
   setCurrentTab: (tab: CurrentTab) => void;
@@ -84,11 +86,11 @@ function TabsController({ currentTab, setCurrentTab }: TabsControllerProps) {
                     </TabsTrigger>
                     <TabsTrigger
                       className="[state=active]:xl:text-gravel-25 flex h-[44px] w-full justify-between px-4 text-14r xl:h-auto xl:text-18s xl:text-gravel-300"
-                      value={"Technician Order"}
-                      onClick={() => setCurrentTab("Technician Order")}
+                      value={"Technician Task"}
+                      onClick={() => setCurrentTab("Technician Task")}
                     >
-                      Technician Order
-                      {!isLargeScreen && currentTab === "Technician Order" && (
+                      Technician Task
+                      {!isLargeScreen && currentTab === "Technician Task" && (
                         <img alt="" src="/vehicle-wash-app/icons/check.svg" />
                       )}
                     </TabsTrigger>
@@ -138,11 +140,11 @@ function TabsController({ currentTab, setCurrentTab }: TabsControllerProps) {
               </TabsTrigger>
               <TabsTrigger
                 className="[state=active]:xl:text-gravel-25 shadow-text flex h-[44px] w-full justify-between px-4 text-14r hover:text-gravel-25 xl:mx-auto xl:block xl:h-auto xl:w-full xl:text-18s xl:text-gravel-300"
-                value={"Technician Order"}
-                onClick={() => setCurrentTab("Technician Order")}
+                value={"Technician Task"}
+                onClick={() => setCurrentTab("Technician Task")}
               >
-                Technician Order
-                {!isLargeScreen && currentTab === "Technician Order" && (
+                Technician Task
+                {!isLargeScreen && currentTab === "Technician Task" && (
                   <img alt="" src="/vehicle-wash-app/icons/check.svg" />
                 )}
               </TabsTrigger>
@@ -165,10 +167,10 @@ function TabsComponent() {
         <TabTwo />
       </TabsContent>
       <TabsContent className="text-gravel-25" value="Technician app">
-        hihi
+        <TabThree />
       </TabsContent>
-      <TabsContent className="text-gravel-25" value="Technician Order">
-        hoho
+      <TabsContent className="text-gravel-25" value="Technician Task">
+        <TabFour />
       </TabsContent>
     </>
   );
