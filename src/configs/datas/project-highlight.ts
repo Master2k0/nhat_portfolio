@@ -21,7 +21,7 @@ export const ProjectHighLights = [
     description:
       "Seamlessly connect with trusted suppliers for all your medical essentials, delivered directly to you.",
     img: "/project-highlights/cc.webp",
-    isReady: false,
+    isReady: true,
     href: "/project-highlights/circa",
   },
   {

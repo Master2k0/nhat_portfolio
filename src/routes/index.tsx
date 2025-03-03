@@ -3,7 +3,7 @@ import { Layout, LayoutProject } from "@/layouts";
 import AboutMe from "@/pages/about-me";
 import CaseStudies from "@/pages/case-studies";
 import Home from "@/pages/home";
-import { ProjectHighlight, WashUp } from "@/pages/project-highlight";
+import { Circa, ProjectHighlight, WashUp } from "@/pages/project-highlight";
 import { createBrowserRouter, RouteObject } from "react-router-dom";
 
 const publicRoutes: RouteObject[] = [
@@ -29,6 +29,10 @@ const projectRoutes: RouteObject[] = [
   {
     path: siteConfig.pageList.washUp.href,
     element: <WashUp />,
+  },
+  {
+    path: siteConfig.pageList.circa.href,
+    element: <Circa />,
   },
 ];
 

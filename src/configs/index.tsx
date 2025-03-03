@@ -83,6 +83,10 @@ export const siteConfig = {
       href: "/project-highlights/wash-up",
       as: "Wash Up",
     },
+    circa: {
+      href: "/project-highlights/circa",
+      as: "Circa",
+    },
     // insuranceFeature: {
     //     href: '/project-highlights/wash-up/insurance-feature',
     //     as: 'Washup - Insurance feature'

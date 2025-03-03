@@ -9,21 +9,12 @@ import {
 import { Button } from "@/components/ui/button";
 import { Drawer, DrawerContent, DrawerTrigger } from "@/components/ui/drawer";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { WashUp as Datas } from "@/configs/datas/wash-up";
+import { Circa as Datas } from "@/configs/datas/circa";
 import { useResponsiveProps } from "@/hooks/responsive.hook";
 import { LayoutProjectSection } from "@/layouts";
 import { cn } from "@/libs/utils";
 import { useState } from "react";
-import TabOne from "./components/tab-one";
-import TabTwo from "./components/tab-two";
-import TabThree from "./components/tab-three";
-import TabFour from "./components/tab-four";
-
-export type CurrentTab =
-  | "Vehicle wash app"
-  | "Insurance Feature"
-  | "Technician app"
-  | "Technician Task";
+export type CurrentTab = "Consumer Product" | "Design System" | "POS System" | "Admin System";
 
 type TabsControllerProps = {
   setCurrentTab: (tab: CurrentTab) => void;
@@ -31,109 +22,83 @@ type TabsControllerProps = {
 };
 
 const listIds = {
-  "Vehicle wash app": [
+  "Consumer Product": [
     {
       id: "introduction",
       title: "Introduction",
     },
     {
-      id: "identifying-users",
-      title: "Identifying Users",
+      id: "product-scope",
+      title: "Product Scope",
     },
     {
-      id: "key-features",
-      title: "Key Features",
+      id: "personas",
+      title: "Personas",
     },
     {
       id: "user-journeys",
       title: "User Journeys",
     },
     {
-      id: "user-flow",
-      title: "User Flow",
+      id: "info-architecture",
+      title: "Infor Architecture",
     },
     {
-      id: "ui-design",
-      title: "UI Design",
+      id: "wireframes-userflow",
+      title: "Wireframes/ Userflow",
+    },
+    {
+      id: "app-ui-design",
+      title: "App UI Design",
+    },
+    {
+      id: "web-ui-design",
+      title: "Web UI Design",
     },
   ],
-  "Insurance Feature": [
+  "Design System": [
     {
       id: "introduction",
       title: "Introduction",
     },
     {
-      id: "key-features",
-      title: "Key Features",
+      id: "product-scope",
+      title: "Product Scope",
     },
     {
-      id: "user-flow",
-      title: "User Flow",
-    },
-    {
-      id: "problems-solutions",
-      title: "Problems/ Solutions",
-    },
-    {
-      id: "user-contracts",
-      title: "User Contracts",
-    },
-    {
-      id: "conclusion",
-      title: "Conclusion",
-    },
-  ],
-  "Technician app": [
-    {
-      id: "introduction",
-      title: "Introduction",
-    },
-    {
-      id: "identifying-users",
-      title: "Identifying Users",
-    },
-    {
-      id: "key-features",
-      title: "Key Features",
+      id: "personas",
+      title: "Personas",
     },
     {
       id: "user-journeys",
       title: "User Journeys",
     },
     {
-      id: "user-flow",
-      title: "User Flow",
+      id: "infor-architecture",
+      title: "Infor Architecture",
     },
     {
-      id: "task-reception-ui",
-      title: "Task Reception UI",
+      id: "wireframes-userflow",
+      title: "Wireframes/ Userflow",
     },
     {
-      id: "import-order-ui",
-      title: "Import Order UI",
+      id: "app-ui-design",
+      title: "App UI Design",
+    },
+    {
+      id: "web-ui-design",
+      title: "Web UI Design",
     },
   ],
-  "Technician Task": [
-    {
-      id: "introduction",
-      title: "Introduction",
-    },
-    {
-      id: "some-ux-points",
-      title: "Some UX Points",
-    },
-    {
-      id: "conclusion",
-      title: "Conclusion",
-    },
-  ],
+  "POS System": [],
+  "Admin System": [],
 };
 
 function TabsController({ currentTab, setCurrentTab }: TabsControllerProps) {
   const isLargeScreen = useResponsiveProps({ xl: true });
   return (
     <div>
-      <Tabs defaultValue="Vehicle wash app">
+      <Tabs defaultValue="Consumer Product">
         {!isLargeScreen ? (
           <SectionWrapper
             wrapperClassName={cn(
@@ -142,7 +107,7 @@ function TabsController({ currentTab, setCurrentTab }: TabsControllerProps) {
             divClassName="flex flex-col gap-4 xl:gap-6 pl-[15px] pr-[16px] pt-[19px] pb-0 xl:py-[20px] xl:p-[15px] xl:rounded-[8px] 3xl:p-[27px] height-fit rounded-bl-none rounded-br-none  "
           >
             <div className="flex flex-wrap items-center justify-between">
-              <p className="text-20b text-gravel-300">Wash Up</p>
+              <p className="text-20b text-gravel-300">Circa</p>
               <Drawer>
                 <DrawerTrigger asChild>
                   <Button className="flex gap-2 bg-select">
@@ -155,41 +120,43 @@ function TabsController({ currentTab, setCurrentTab }: TabsControllerProps) {
                     <p className="p-4 text-18s text-gravel-25 xl:hidden">Other sections</p>
                     <TabsTrigger
                       className="[state=active]:xl:text-gravel-25 flex h-[44px] w-full justify-between px-4 text-14r xl:h-auto xl:text-18s xl:text-gravel-300"
-                      value={"Vehicle wash app"}
-                      onClick={() => setCurrentTab("Vehicle wash app")}
+                      value={"Consumer Product"}
+                      onClick={() => setCurrentTab("Consumer Product")}
                     >
-                      Vehicle wash app
-                      {!isLargeScreen && currentTab === "Vehicle wash app" && (
+                      Consumer Product
+                      {!isLargeScreen && currentTab === "Consumer Product" && (
                         <img alt="" src="/vehicle-wash-app/icons/check.svg" />
                       )}
                     </TabsTrigger>
                     <TabsTrigger
                       className="[state=active]:xl:text-gravel-25 flex h-[44px] w-full justify-between px-4 text-14r xl:h-auto xl:text-18s xl:text-gravel-300"
-                      value={"Insurance Feature"}
-                      onClick={() => setCurrentTab("Insurance Feature")}
+                      value={"Design System"}
+                      onClick={() => setCurrentTab("Design System")}
                     >
-                      Insurance Feature
-                      {!isLargeScreen && currentTab === "Insurance Feature" && (
+                      Design System
+                      {!isLargeScreen && currentTab === "Design System" && (
                         <img alt="" src="/vehicle-wash-app/icons/check.svg" />
                       )}
                     </TabsTrigger>
                     <TabsTrigger
                       className="[state=active]:xl:text-gravel-25 flex h-[44px] w-full justify-between px-4 text-14r xl:h-auto xl:text-18s xl:text-gravel-300"
-                      value={"Technician app"}
-                      onClick={() => setCurrentTab("Technician app")}
+                      value={"POS System"}
+                      onClick={() => setCurrentTab("POS System")}
+                      disabled
                     >
-                      Technician app
-                      {!isLargeScreen && currentTab === "Technician app" && (
+                      POS System
+                      {!isLargeScreen && currentTab === "POS System" && (
                         <img alt="" src="/vehicle-wash-app/icons/check.svg" />
                       )}
                     </TabsTrigger>
                     <TabsTrigger
                       className="[state=active]:xl:text-gravel-25 flex h-[44px] w-full justify-between px-4 text-14r xl:h-auto xl:text-18s xl:text-gravel-300"
-                      value={"Technician Task"}
-                      onClick={() => setCurrentTab("Technician Task")}
+                      value={"Admin System"}
+                      onClick={() => setCurrentTab("Admin System")}
+                      disabled
                     >
-                      Technician Task
-                      {!isLargeScreen && currentTab === "Technician Task" && (
+                      Admin System
+                      {!isLargeScreen && currentTab === "Admin System" && (
                         <img alt="" src="/vehicle-wash-app/icons/check.svg" />
                       )}
                     </TabsTrigger>
@@ -208,42 +175,44 @@ function TabsController({ currentTab, setCurrentTab }: TabsControllerProps) {
           >
             <TabsList className="h-full">
               <TabsTrigger
-                className="[state=active]:xl:text-gravel-25 shadow-text flex h-[44px] w-full justify-between px-4 text-14r hover:text-gravel-25 xl:mx-auto xl:block xl:h-auto xl:w-full xl:text-18s xl:text-gravel-300"
-                value={"Vehicle wash app"}
-                onClick={() => setCurrentTab("Vehicle wash app")}
+                className="[state=active]:xl:text-gravel-25 shadow-text flex h-[44px] w-full justify-between px-4 text-14r hover:text-gravel-25 disabled:text-gravel-300 xl:mx-auto xl:block xl:h-auto xl:w-full xl:text-18s xl:text-gravel-300"
+                value={"Consumer Product"}
+                onClick={() => setCurrentTab("Consumer Product")}
               >
-                Vehicle wash app
-                {!isLargeScreen && currentTab === "Vehicle wash app" && (
+                Consumer Product
+                {!isLargeScreen && currentTab === "Consumer Product" && (
                   <img alt="" src="/vehicle-wash-app/icons/check.svg" />
                 )}
               </TabsTrigger>
               <TabsTrigger
-                className="[state=active]:xl:text-gravel-25 shadow-text flex h-[44px] w-full justify-between px-4 text-14r hover:text-gravel-25 xl:mx-auto xl:block xl:h-auto xl:w-full xl:text-18s xl:text-gravel-300"
-                value={"Insurance Feature"}
-                onClick={() => setCurrentTab("Insurance Feature")}
+                className="[state=active]:xl:text-gravel-25 shadow-text flex h-[44px] w-full justify-between px-4 text-14r hover:text-gravel-25 disabled:text-gravel-300 xl:mx-auto xl:block xl:h-auto xl:w-full xl:text-18s xl:text-gravel-300"
+                value={"Design System"}
+                onClick={() => setCurrentTab("Design System")}
               >
-                Insurance Feature
-                {!isLargeScreen && currentTab === "Insurance Feature" && (
+                Design System
+                {!isLargeScreen && currentTab === "Design System" && (
                   <img alt="" src="/vehicle-wash-app/icons/check.svg" />
                 )}
               </TabsTrigger>
               <TabsTrigger
-                className="[state=active]:xl:text-gravel-25 shadow-text flex h-[44px] w-full justify-between px-4 text-14r hover:text-gravel-25 xl:mx-auto xl:block xl:h-auto xl:w-full xl:text-18s xl:text-gravel-300"
-                value={"Technician app"}
-                onClick={() => setCurrentTab("Technician app")}
+                className="[state=active]:xl:text-gravel-25 shadow-text flex h-[44px] w-full justify-between px-4 text-14r hover:text-gravel-25 disabled:text-gravel-300 xl:mx-auto xl:block xl:h-auto xl:w-full xl:text-18s xl:text-gravel-300"
+                value={"POS System"}
+                onClick={() => setCurrentTab("POS System")}
+                disabled
               >
-                Technician app
-                {!isLargeScreen && currentTab === "Technician app" && (
+                POS System
+                {!isLargeScreen && currentTab === "POS System" && (
                   <img alt="" src="/vehicle-wash-app/icons/check.svg" />
                 )}
               </TabsTrigger>
               <TabsTrigger
-                className="[state=active]:xl:text-gravel-25 shadow-text flex h-[44px] w-full justify-between px-4 text-14r hover:text-gravel-25 xl:mx-auto xl:block xl:h-auto xl:w-full xl:text-18s xl:text-gravel-300"
-                value={"Technician Task"}
-                onClick={() => setCurrentTab("Technician Task")}
+                className="[state=active]:xl:text-gravel-25 shadow-text flex h-[44px] w-full justify-between px-4 text-14r hover:text-gravel-25 disabled:text-gravel-300 xl:mx-auto xl:block xl:h-auto xl:w-full xl:text-18s xl:text-gravel-300"
+                value={"Admin System"}
+                onClick={() => setCurrentTab("Admin System")}
+                disabled
               >
-                Technician Task
-                {!isLargeScreen && currentTab === "Technician Task" && (
+                Admin System
+                {!isLargeScreen && currentTab === "Admin System" && (
                   <img alt="" src="/vehicle-wash-app/icons/check.svg" />
                 )}
               </TabsTrigger>
@@ -259,25 +228,25 @@ function TabsController({ currentTab, setCurrentTab }: TabsControllerProps) {
 function TabsComponent() {
   return (
     <>
-      <TabsContent className="text-gravel-25" value="Vehicle wash app">
-        <TabOne />
+      <TabsContent className="text-gravel-25" value="Consumer Product">
+        {/* <TabOne /> */}
       </TabsContent>
-      <TabsContent className="text-gravel-25" value="Insurance Feature">
-        <TabTwo />
+      <TabsContent className="text-gravel-25" value="Design System">
+        {/* <TabTwo /> */}
       </TabsContent>
-      <TabsContent className="text-gravel-25" value="Technician app">
-        <TabThree />
+      <TabsContent className="text-gravel-25" value="POS System">
+        {/* <TabThree /> */}
       </TabsContent>
-      <TabsContent className="text-gravel-25" value="Technician Task">
-        <TabFour />
+      <TabsContent className="text-gravel-25" value="Admin System">
+        {/* <TabFour /> */}
       </TabsContent>
     </>
   );
 }
 
-function WashUp() {
+function Circa() {
   const isLargeScreen = useResponsiveProps({ xl: true });
-  const [currentTab, setCurrentTab] = useState<CurrentTab>("Vehicle wash app");
+  const [currentTab, setCurrentTab] = useState<CurrentTab>("Consumer Product");
   const [hoverBreadcrumb, setHoverBreadcrumb] = useState({
     home: false,
     projectHighlights: false,
@@ -327,7 +296,7 @@ function WashUp() {
               href={Datas.breadCrumbHref[2]}
               className="shadow-text text-12r text-gravel-25 xl:text-18r"
             >
-              Washup - Vehicle wash app
+              Circa - B2C Medical Ecommerce
             </BreadcrumbLink>
           </BreadcrumbItem>
         </BreadcrumbList>
@@ -341,4 +310,4 @@ function WashUp() {
   );
 }
 
-export default WashUp;
+export default Circa;
