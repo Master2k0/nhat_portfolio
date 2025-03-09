@@ -1,4 +1,4 @@
-import Content from "./content";
+import Content from "../../../../../components/content";
 
 type TabContentProps = {
   icon: string;

@@ -8,6 +8,7 @@ export const Circa = {
   ],
   consumerProduct: {
     section1: {
+      pcTitle: "Circa - B2C Medical Ecommerce",
       mainTitle: "Consumer Product",
       subTitle: "B2C Medical Ecommerce",
       content:
@@ -29,15 +30,15 @@ export const Circa = {
         {
           icon: "/circa/consumer-product/icons/lan-icon.svg",
           name: "MS. Lan Tran",
-          info: "25/ Female /Marketing Executive",
+          info: "65/ Female /Marketing Executive",
           position: "High Tech Proficiency",
-          "Lifestyle & Behavior:": [
+          LifestyleBehavior: [
             "Frequently shops online across multiple e-commerce platforms.",
             "Values convenience, speed, and seamless checkout experiences.",
             "Prefers mobile apps for shopping and payments.",
             "She occasionally buys health-related products for herself and her family.",
           ],
-          "Needs & Pain Points:": [
+          NeedsPainPoints: [
             "Wants a quick and hassle-free medication ordering process.",
             "Prefers an intuitive app interface with fast search and checkout.",
             "Needs trusted product info and pharmacist support.",
@@ -50,13 +51,13 @@ export const Circa = {
           name: "MS. Nam Nguyen",
           info: "65/ Male /Retired Teacher",
           position: "Low Tech Proficiency",
-          "Lifestyle & Behavior:": [
+          LifestyleBehavior: [
             "Frequently needs prescription medication for chronic conditions.",
             "Relies on family members, like Lan, to help with online orders.",
             "Prefers in-person visits due to unfamiliarity with apps.",
             "Finds app interfaces complex and difficult to navigate.",
           ],
-          "Needs & Pain Points:": [
+          NeedsPainPoints: [
             "Requires an easy-to-use platform with clear instructions.",
             "Needs reminders and easy prescription management.",
             "Prefers a family-support feature for loved ones to assist with orders.",
@@ -67,15 +68,15 @@ export const Circa = {
     },
     section4: {
       title: "User Journey",
-      content: `In this project, we identified two main user types. The first group consists of <span class='text-yellow text-14m'>occasional buyers</span>—users who do not shop regularly and only visit the platform when they experience a sudden health concern or have an unexpected need. The second group includes <span class='text-yellow text-14m'>frequent buyers</span> who require medication periodically and need a tool to remind them when it’s time to reorder their prescriptions.`,
-      "Occasional Buyers": [
+      content: `In this project, we identified two main user types. The first group consists of <span class='text-yellow text-14m xl:text-18b'>occasional buyers</span>—users who do not shop regularly and only visit the platform when they experience a sudden health concern or have an unexpected need. The second group includes <span class='text-yellow text-14m xl:text-18b'>frequent buyers</span> who require medication periodically and need a tool to remind them when it’s time to reorder their prescriptions.`,
+      OccasionalBuyers: [
         "The user experiences a sudden health concern, or needs a specific healthcare product. They finds their own way to Circa.",
         "The user lands on homepage and browses available products and then use the search bar or category filters to find the needed medication.",
         "The user selects a product, adds it to their cart, and proceeds to checkout by entering their delivery details.",
         "Casual customer typically don't opt to create an account initially unless it impacts their purchase, so they complete the checkout process as a guest without logging in.",
         "The user receives order confirmation and estimated delivery time. They can track their order in real time.",
       ],
-      "Frequent Buyers": [
+      FrequentBuyers: [
         "The user has an ongoing medical need and is already familiar with Circa Platform. They visit Circa directly or through a saved link/app to reorder.",
         'The user quickly navigates to their "Order History " or checks the reminder notification to review the list of products based on their previous purchases.',
         "The user selects a product from the previous orders, adds it to their cart, and proceeds to checkout",
@@ -97,7 +98,6 @@ export const Circa = {
           title: "Homepage",
           list1: [
             "Search tool",
-            "Take OTP",
             "Hero banner",
             "Featured products",
             "Mini banners",
@@ -205,8 +205,8 @@ export const Circa = {
       checkout: {
         title: "Checkout",
         imgs: [
-          "/circa/consumer-product/images/checkout-1.png",
-          "/circa/consumer-product/images/checkout-2.png",
+          "/circa/consumer-product/images/check-out-1.png",
+          "/circa/consumer-product/images/check-out-2.png",
         ],
       },
       myOrder: {

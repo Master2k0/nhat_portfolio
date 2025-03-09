@@ -14,6 +14,7 @@ import { useResponsiveProps } from "@/hooks/responsive.hook";
 import { LayoutProjectSection } from "@/layouts";
 import { cn } from "@/libs/utils";
 import { useState } from "react";
+import TabOne from "./components/tab-one";
 export type CurrentTab = "Consumer Product" | "Design System" | "POS System" | "Admin System";
 
 type TabsControllerProps = {
@@ -229,7 +230,7 @@ function TabsComponent() {
   return (
     <>
       <TabsContent className="text-gravel-25" value="Consumer Product">
-        {/* <TabOne /> */}
+        <TabOne />
       </TabsContent>
       <TabsContent className="text-gravel-25" value="Design System">
         {/* <TabTwo /> */}

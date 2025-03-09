@@ -1,13 +1,13 @@
 import { SectionWrapper } from "@/components/sections-wrapper";
 import { WashUp as Datas } from "@/configs/datas/wash-up";
 import { useResponsiveProps } from "@/hooks/responsive.hook";
-import Header from "./header";
-import Content from "./content";
-import Divider from "./divider";
+import Divider from "../../../../../components/divider";
 import ContentWithLargeIcon from "./content-with-large-icon";
 import { cn } from "@/libs/utils";
 import ProblemSolution from "./problem-solution";
 import UserContracts from "./user-contracts";
+import Content from "@/components/content";
+import Header from "@/components/header";
 
 function TabTwo() {
   const isLargeScreen = useResponsiveProps({ xl: true });

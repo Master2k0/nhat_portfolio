@@ -1,11 +1,11 @@
 import { SectionWrapper } from "@/components/sections-wrapper";
-import Header from "./header";
 import { useResponsiveProps } from "@/hooks/responsive.hook";
 import { WashUp as Datas } from "@/configs/datas/wash-up";
-import Content from "./content";
-import Divider from "./divider";
+import Divider from "../../../../../components/divider";
 import TabContent from "./tab-content";
 import ReceptionUI from "./reception-ui";
+import Header from "@/components/header";
+import Content from "@/components/content";
 
 function TabThree() {
   const isLargeScreen = useResponsiveProps({ xl: true });
