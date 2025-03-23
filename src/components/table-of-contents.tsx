@@ -7,9 +7,10 @@ type TableOfContentsProps = {
     id: string;
     title: string;
   }[];
+  classContainer?: string;
 };
 
-function TableOfContents({ listIds }: TableOfContentsProps) {
+function TableOfContents({ listIds, classContainer }: TableOfContentsProps) {
   const [activeId, setActiveId] = useState<string>(listIds[0].id);
   const isLargeScreen = useResponsiveProps({ xl: true });
 
@@ -58,6 +59,7 @@ function TableOfContents({ listIds }: TableOfContentsProps) {
       className={cn(
         "sticky top-28 mt-[128px] w-[250px] shrink-0 self-start",
         !isLargeScreen && "hidden",
+        classContainer,
       )}
     >
       {listIds.map((data) => (

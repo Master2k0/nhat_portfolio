@@ -2,6 +2,7 @@ import { siteConfig } from "@/configs";
 import { Layout, LayoutProject } from "@/layouts";
 import AboutMe from "@/pages/about-me";
 import CaseStudies from "@/pages/case-studies";
+import VPBank from "@/pages/case-studies/project/vp-bank/vp-bank";
 import Home from "@/pages/home";
 import { Circa, ProjectHighlight, WashUp } from "@/pages/project-highlight";
 import { createBrowserRouter, RouteObject } from "react-router-dom";
@@ -36,6 +37,13 @@ const projectRoutes: RouteObject[] = [
   },
 ];
 
+const caseStudiesRoutes: RouteObject[] = [
+  {
+    path: siteConfig.pageList.vpBank.href,
+    element: <VPBank />,
+  },
+];
+
 const router = createBrowserRouter([
   {
     path: siteConfig.pageList.home.href,
@@ -46,6 +54,11 @@ const router = createBrowserRouter([
     path: siteConfig.pageList.projectHighlights.href,
     element: <LayoutProject />,
     children: projectRoutes,
+  },
+  {
+    path: siteConfig.pageList.caseStudies.href,
+    element: <LayoutProject />,
+    children: caseStudiesRoutes,
   },
   {
     path: siteConfig.pageList.notFound.href,

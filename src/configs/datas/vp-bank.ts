@@ -1,7 +1,7 @@
 import { siteConfig } from "..";
 
 export const VPBank = {
-  breadCrumHref: [
+  breadCrumbHref: [
     siteConfig.pageList.home.href,
     siteConfig.pageList.caseStudies.href,
     siteConfig.pageList.vpBank.href,
@@ -18,11 +18,11 @@ export const VPBank = {
     section2: {
       title: "Hypothetical case",
       content: [
-        "I assume that VPBank is a leading financial institution in Vietnam, holding the second-largest market share in unsecured personal loans. The goal for the next 6 months is to <span class='text-yellow text-14m xl:text-18b'>become the market leader in lending and reach more customers, from urban to rural areas, across various age groups.</span>  Based on these expectations, I divided them into two main goals.",
+        "I assume that VPBank is a leading financial institution in Vietnam, holding the second-largest market share in unsecured personal loans. The goal for the next 6 months is to <span class='text-yellow text-14r xl:text-18r'>become the market leader in lending and reach more customers, from urban to rural areas, across various age groups.</span>  Based on these expectations, I divided them into two main goals.",
         "Based on the established business goal, I proceeded to break it down into smaller tasks that needed to be improved in the lending feature of the app (I will occasionally refer to the desktop version as well, but we will only touch on it briefly and not go into detail).",
       ],
       group1: {
-        icon: "/vpbank/images/section-2.1.png",
+        icon: "/vpbank/icons/section-2.1.svg",
         title: "Business goal",
         content: "To become the market leader",
         subContent: [
@@ -35,7 +35,7 @@ export const VPBank = {
       content2:
         "On the other hand, based on personal experiences with this feature, as well as conducting a quick survey with a sample of 8 volunteers from my town, I have summarized 4 main issues that users face when interacting with the feature, which directly impact the goal of reaching the mass market.",
       group2: {
-        icon: "/vpbank/images/section-2.2.png",
+        icon: "/vpbank/icons/section-2.2.svg",
         title: "Target customer",
         content: "60% urban / 40% rural / 20-50 yo ",
         subContent: [
@@ -49,7 +49,7 @@ export const VPBank = {
     section3: {
       title: "Problem Analysis",
       content: [
-        "In this section, I will group the user feedback into one main issue called the <span class'text-gravel-25 text-14m xl:text-18m'>“Challenges in Reaching the Mass Market”</span> while the other issues related to the business goal will be allocated accordingly based on the order of the 4 issues mentioned above.",
+        "In this section, I will group the user feedback into one main issue called the <span class='text-yellow text-14m xl:text-18m'>“Challenges in Reaching the Mass Market”</span> while the other issues related to the business goal will be allocated accordingly based on the order of the 4 issues mentioned above.",
         "For each issue, I will propose a few preliminary solutions to address the current problems of the feature. Please take a look and see if they make sense!",
       ],
       datas: [
@@ -87,7 +87,7 @@ export const VPBank = {
           ],
         },
         {
-          title: "Allow flexibility for future feature development (2 - 5 years)",
+          title: "Allow flexibility for future feature development (2 - 5yrs)",
           mid: "Create a flexible layout for easy modification when adding or removing features, categorized into five groups:",
           content: [
             "Account management",

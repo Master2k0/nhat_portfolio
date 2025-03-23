@@ -124,7 +124,14 @@
   }
 
   .green-gradient {
-    @apply visa-[#2BA657] bg-gradient-to-r from-[#288169] to-[#2CB355];
+    @apply bg-gradient-to-r from-[#288169] via-[#2BA657] to-[#2CB355];
+  }
+
+  .text-green-gradient {
+    background: var(--Primary, linear-gradient(90deg, #288169 0%, #2ba657 50.4%, #2cb355 100%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
   .no-scrollbar::-webkit-scrollbar {

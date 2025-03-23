@@ -5,8 +5,8 @@ export const CaseStudies = [
     description:
       "I challenged myself to analyze UX improvements in the payroll banking app my company uses.",
     img: "/case-studies/vp.webp",
-    isReady: false,
-    href: "/case-studies/vp-bank-app",
+    isReady: true,
+    href: "/case-studies/vp-bank",
   },
   {
     id: "WaveB",
