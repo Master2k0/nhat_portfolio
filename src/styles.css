@@ -132,8 +132,32 @@
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    width: fit-content;
   }
 
+  .red-gradient {
+    background: radial-gradient(
+      50% 50% at 50% 50%,
+      rgba(244, 66, 53, 0) 49.85%,
+      rgba(244, 66, 53, 0.8) 100%
+    );
+  }
+
+  .gray-gradient {
+    background: radial-gradient(
+      50% 50% at 50% 50%,
+      rgba(184, 184, 193, 0) 50%,
+      rgba(184, 184, 193, 0.8) 100%
+    );
+  }
+
+  .green-gradient-2 {
+    background: radial-gradient(
+      50% 50% at 50% 50%,
+      rgba(0, 131, 70, 0) 50%,
+      rgba(0, 131, 70, 0.8) 100%
+    );
+  }
   .no-scrollbar::-webkit-scrollbar {
     display: none;
   }

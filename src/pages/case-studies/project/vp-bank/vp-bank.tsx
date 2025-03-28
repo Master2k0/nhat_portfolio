@@ -14,6 +14,9 @@ import {
 import { useState } from "react";
 import Hypothetical from "./components/hypothetical-case/hypothetical-case";
 import Problem from "./components/problem/problem";
+import Evaluate from "./components/evaluate/evaluate";
+import Divider from "@/components/divider";
+import AppUIDesign from "./components/app-ui-design/app-ui-design";
 
 const listIds = {
   0: [
@@ -35,7 +38,7 @@ const listIds = {
       title: "Evaluate/ Improve",
     },
     {
-      id: "UI design",
+      id: "app-ui-design",
       title: "UI Design",
     },
   ],
@@ -101,8 +104,8 @@ function VPBank() {
         <LayoutProjectSection currentTab={0} listIds={listIds} classContainer="mt-8" />
         <div className="flex flex-col gap-6">
           <SectionWrapper
-            wrapperClassName="rounded-tl-none rounded-tr-none !pl-0 !pt-0 xl:!pl-[1px] xl:!pt-[1px]  lg:rounded-tl-none lg:rounded-tr-none xl:rounded-[8px] 3xl:rounded-[8px]"
-            divClassName="rounded-tl-none rounded-tr-none  lg:rounded-tl-none lg:rounded-tr-none xl:rounded-[8px]  !pt-4 !pb-[19px] !pr-[15px] 3xl:rounded-[8px] xl:!p-[31px] "
+            wrapperClassName="section-border overflow-hidden p-px overflow-hidden rounded-[20px] lg:rounded-[16px] 3xl:rounded-[28px] xl:rounded-[8px] 3xl:rounded-[8px]"
+            divClassName="rounded-[20px] bg-block-bg px-4 py-5 lg:rounded-[16px] 3xl:rounded-[28px] 3xl:p-7 xl:rounded-[8px] 3xl:rounded-[8px] xl:!p-[31px] "
             id="introduction"
           >
             <div className="flex flex-col gap-4">
@@ -124,12 +127,13 @@ function VPBank() {
             />
           </SectionWrapper>
           <SectionWrapper
-            wrapperClassName="rounded-tl-none rounded-tr-none !pl-0 !pt-0 xl:!pl-[1px] xl:!pt-[1px]  lg:rounded-tl-none lg:rounded-tr-none xl:rounded-[8px] 3xl:rounded-[8px]"
-            divClassName="rounded-tl-none rounded-tr-none  lg:rounded-tl-none lg:rounded-tr-none xl:rounded-[8px]  !pt-4 !pb-[19px] !pr-[15px] 3xl:rounded-[8px] xl:!p-[31px] "
+            wrapperClassName="section-border overflow-hidden p-px overflow-hidden rounded-[20px] lg:rounded-[16px] 3xl:rounded-[28px] xl:rounded-[8px] 3xl:rounded-[8px]"
+            divClassName="rounded-[20px] bg-block-bg px-4 py-5 lg:rounded-[16px] 3xl:rounded-[28px] 3xl:p-7 xl:rounded-[8px] 3xl:rounded-[8px] xl:!p-[31px] "
             id="hypothetical-case"
           >
             <div className="flex flex-col gap-4">
               <Header title={Datas.main.section2.title} />
+              <Divider />
               {Datas.main.section2.content.map((content, index) => (
                 <p
                   key={index}
@@ -155,13 +159,13 @@ function VPBank() {
             </div>
           </SectionWrapper>
           <SectionWrapper
-            wrapperClassName="rounded-tl-none rounded-tr-none !pl-0 !pt-0 xl:!pl-[1px] xl:!pt-[1px]  lg:rounded-tl-none lg:rounded-tr-none xl:rounded-[8px] 3xl:rounded-[8px]"
-            divClassName="rounded-tl-none rounded-tr-none  lg:rounded-tl-none lg:rounded-tr-none xl:rounded-[8px]  !pt-4 !pb-[19px] !pr-[15px] 3xl:rounded-[8px] xl:!p-[31px] "
+            wrapperClassName="section-border overflow-hidden p-px overflow-hidden rounded-[20px] lg:rounded-[16px] 3xl:rounded-[28px] xl:rounded-[8px] 3xl:rounded-[8px]"
+            divClassName="rounded-[20px] bg-block-bg px-4 py-5 lg:rounded-[16px] 3xl:rounded-[28px] 3xl:p-7 xl:rounded-[8px] 3xl:rounded-[8px] xl:!p-[31px] "
             id="problem-analysis"
           >
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col">
               <Header title={Datas.main.section3.title} />
-
+              <Divider />
               {Datas.main.section3.content.map((content, index) => (
                 <p
                   key={index}
@@ -175,15 +179,43 @@ function VPBank() {
             <Problem datas={Datas.main.section3.datas} />
           </SectionWrapper>
           <SectionWrapper
-            wrapperClassName="rounded-tl-none rounded-tr-none !pl-0 !pt-0 xl:!pl-[1px] xl:!pt-[1px]  lg:rounded-tl-none lg:rounded-tr-none xl:rounded-[8px] 3xl:rounded-[8px]"
-            divClassName="rounded-tl-none rounded-tr-none  lg:rounded-tl-none lg:rounded-tr-none xl:rounded-[8px]  !pt-4 !pb-[19px] !pr-[15px] 3xl:rounded-[8px] xl:!p-[31px] "
+            wrapperClassName="section-border overflow-hidden p-px overflow-hidden rounded-[20px] lg:rounded-[16px] 3xl:rounded-[28px] xl:rounded-[8px] 3xl:rounded-[8px]"
+            divClassName="rounded-[20px] bg-block-bg px-4 py-5 lg:rounded-[16px] 3xl:rounded-[28px] 3xl:p-7 xl:rounded-[8px] 3xl:rounded-[8px] xl:!p-[31px] "
             id="user-flow"
           >
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col">
               <Header title={Datas.main.section4.title} />
+              <Divider />
               <Content content={Datas.main.section4.content} />
             </div>
             <img src={Datas.main.section4.img} alt={Datas.main.section4.title} />
+          </SectionWrapper>
+          <SectionWrapper
+            wrapperClassName="section-border overflow-hidden p-px overflow-hidden rounded-[20px] lg:rounded-[16px] 3xl:rounded-[28px] xl:rounded-[8px] 3xl:rounded-[8px]"
+            divClassName="rounded-[20px] bg-block-bg px-4 py-5 lg:rounded-[16px] 3xl:rounded-[28px] 3xl:p-7 xl:rounded-[8px] 3xl:rounded-[8px] xl:!p-[31px] "
+            id="evaluate"
+          >
+            <div className="flex flex-col">
+              <Header title={Datas.main.section5.title} />
+              <Divider />
+              <Content content={Datas.main.section5.content} />
+            </div>
+            <Evaluate
+              dataMobile={Datas.main.section5.dataMobile}
+              dataPC={Datas.main.section5.dataPC}
+            />
+          </SectionWrapper>
+          <SectionWrapper
+            divClassName="xl:rounded-[8px] 3xl:rounded-[8px] xl:!p-[31px]"
+            wrapperClassName="xl:rounded-[8px] 3xl:rounded-[8px]"
+            id="app-ui-design"
+          >
+            <div className="flex flex-col">
+              <Header title={Datas.main.section6.title} />
+              <Divider />
+              <Content className="mb-6" content={Datas.main.section6.content} />
+              <AppUIDesign />
+            </div>
           </SectionWrapper>
         </div>
       </div>

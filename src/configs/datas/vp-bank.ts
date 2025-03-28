@@ -110,7 +110,7 @@ export const VPBank = {
       title: "Evaluate and Improve",
       content:
         "Next, I will perform a detailed analysis of the problems in the current version of the application. After identifying these problems, I will propose practical solutions to address them and improve the overall user experience effectively.",
-      data: [
+      dataMobile: [
         {
           title: "Available loans screen",
           content:
@@ -239,14 +239,14 @@ export const VPBank = {
                   "In my assessment, the display of the required steps is not visualized effectively. The progress bar here is only an estimate, and while the specific step count 'Step 1/3' is provided, I believe it is insufficient.",
               },
               {
-                title: "Improving Information Field Usability",
-                content:
-                  "Currently, the information fields are quite interactive but need better separation for easier tracking. In addition, some fields should be optimized by suggesting the best options to reduce steps, as many fields are often left blank unnecessarily and take time to fill out.",
-              },
-              {
                 title: "Optimizing UX and Business Goals",
                 content:
                   "Like the 'Cancel' button above, this option enhances UX by letting users quickly return to the homepage. However, this ease of exit may hurt sales, as customers can easily opt-out.",
+              },
+              {
+                title: "Improving Information Field Usability",
+                content:
+                  "Currently, the information fields are quite interactive but need better separation for easier tracking. In addition, some fields should be optimized by suggesting the best options to reduce steps, as many fields are often left blank unnecessarily and take time to fill out.",
               },
             ],
           },
@@ -272,6 +272,29 @@ export const VPBank = {
           },
         },
       ],
+      dataPC: [
+        {
+          title: "Available loans screen",
+          content:
+            "After accessing the 'Loans' section on the homepage, users will be directed to a page displaying available loans, where they can select a loan that suits their personal needs.",
+          problemIMG: "/vpbank/images/section-5-pc-1-pr.png",
+          solutionIMG: "/vpbank/images/section-5-pc-1-so.png",
+        },
+        {
+          title: "Loan details",
+          content:
+            "After users select a suitable loan package, they are directed to the loan details page. On this page, I want users to carefully read the information, so presenting it in a visually engaging and appealing way can help improve their ability to follow and understand the details.",
+          problemIMG: "/vpbank/images/section-5-pc-2-pr.png",
+          solutionIMG: "/vpbank/images/section-5-pc-2-so.png",
+        },
+        {
+          title: "Loan Application",
+          content:
+            "After users agree to the terms, they proceed to enter the required information to initiate the loan. While the process has three steps, I will only analyze the first. Details on the next steps can be found in the UI Design section below.",
+          problemIMG: "/vpbank/images/section-5-pc-3-pr.png",
+          solutionIMG: "/vpbank/images/section-5-pc-3-so.png",
+        },
+      ],
     },
     section6: {
       title: "UI Design",
@@ -281,33 +304,33 @@ export const VPBank = {
         {
           title: "Loans / Loan Information Screens",
           imgs: [
-            "/vpbank/images/section-6.1-1.png",
-            "/vpbank/images/section-6.1-2.png",
-            "/vpbank/images/section-6.1-3.png",
-            "/vpbank/images/section-6.1-4.png",
-            "/vpbank/images/section-6.1-5.png",
+            "/vpbank/images/section-6.1.1.png",
+            "/vpbank/images/section-6.1.2.png",
+            "/vpbank/images/section-6.1.3.png",
+            "/vpbank/images/section-6.1.4.png",
+            "/vpbank/images/section-6.1.5.png",
           ],
         },
         {
           title: "Loan Application Screens",
           imgs: [
-            "/vpbank/images/section-6.2-1.png",
-            "/vpbank/images/section-6.2-2.png",
-            "/vpbank/images/section-6.2-3.png",
-            "/vpbank/images/section-6.2-4.png",
-            "/vpbank/images/section-6.2-5.png",
+            "/vpbank/images/section-6.2.1.png",
+            "/vpbank/images/section-6.2.2.png",
+            "/vpbank/images/section-6.2.3.png",
+            "/vpbank/images/section-6.2.4.png",
+            "/vpbank/images/section-6.2.5.png",
           ],
         },
         {
           title: "Insurance Information Screens",
-          imgs: ["/vpbank/images/section-6.3-1.png", "/vpbank/images/section-6.3-2.png"],
+          imgs: ["/vpbank/images/section-6.3.1.png", "/vpbank/images/section-6.3.2.png"],
         },
         {
           title: "Result Bottom Sheet",
           imgs: [
-            "/vpbank/images/section-6.4-1.png",
-            "/vpbank/images/section-6.4-2.png",
-            "/vpbank/images/section-6.4-3.png",
+            "/vpbank/images/section-6.4.1.png",
+            "/vpbank/images/section-6.4.2.png",
+            "/vpbank/images/section-6.4.3.png",
           ],
         },
       ],
