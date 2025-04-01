@@ -3,6 +3,7 @@ import { Layout, LayoutProject } from "@/layouts";
 import AboutMe from "@/pages/about-me";
 import CaseStudies from "@/pages/case-studies";
 import VPBank from "@/pages/case-studies/project/vp-bank/vp-bank";
+import WaveB from "@/pages/case-studies/project/waveB/waveB";
 import Home from "@/pages/home";
 import { Circa, ProjectHighlight, WashUp } from "@/pages/project-highlight";
 import { createBrowserRouter, RouteObject } from "react-router-dom";
@@ -41,6 +42,10 @@ const caseStudiesRoutes: RouteObject[] = [
   {
     path: siteConfig.pageList.vpBank.href,
     element: <VPBank />,
+  },
+  {
+    path: siteConfig.pageList.waveB.href,
+    element: <WaveB />,
   },
 ];
 

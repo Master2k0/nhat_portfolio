@@ -13,7 +13,7 @@ export const CaseStudies = [
     title: "WaveB - Blockchain Platform",
     description: "My first project to kickstart my journey into the Product Design industry.",
     img: "/case-studies/wb.webp",
-    isReady: false,
-    href: "/case-studies/waveb",
+    isReady: true,
+    href: "/case-studies/wave-b",
   },
 ];

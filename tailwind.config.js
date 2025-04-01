@@ -321,6 +321,9 @@ export default {
       "3xl": "1920px",
     },
     extend: {
+      fontFamily: {
+        montserrat: ["Montserrat", "sans-serif"],
+      },
       colors: {
         "gravel-25": "#F7F7F8",
         "gravel-50": "#EEEEF0",
