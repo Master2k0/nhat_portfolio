@@ -17,6 +17,7 @@ import Problem from "./components/problem/problem";
 import Evaluate from "./components/evaluate/evaluate";
 import Divider from "@/components/divider";
 import AppUIDesign from "./components/app-ui-design/app-ui-design";
+import { useNavigate } from "react-router-dom";
 
 const listIds = {
   0: [
@@ -46,6 +47,7 @@ const listIds = {
 
 function VPBank() {
   const isLargeScreen = useResponsiveProps({ xl: true });
+  const navigate = useNavigate();
   const [hoverBreadcrumb, setHoverBreadcrumb] = useState({
     home: false,
     projectHighlights: false,
@@ -55,30 +57,34 @@ function VPBank() {
       <Breadcrumb>
         <BreadcrumbList>
           <BreadcrumbItem>
-            <BreadcrumbLink
-              href={Datas.breadCrumbHref[0]}
-              className="shadow-text"
+            <span
+              className="shadow-text cursor-pointer text-gravel-300 hover:text-gravel-25"
               onMouseEnter={() => setHoverBreadcrumb({ ...hoverBreadcrumb, home: true })}
               onMouseLeave={() => setHoverBreadcrumb({ ...hoverBreadcrumb, home: false })}
+              onClick={() => {
+                navigate(Datas.breadCrumbHref[0]);
+              }}
             >
               {hoverBreadcrumb.home ? (
                 <img alt="" src="/home/icons/hh.svg" />
               ) : (
                 <img alt="" src="/home/icons/ha.svg" />
               )}
-            </BreadcrumbLink>
+            </span>
           </BreadcrumbItem>
           <BreadcrumbSeparator />
           <BreadcrumbItem>
-            <BreadcrumbLink
-              href={Datas.breadCrumbHref[1]}
-              className="shadow-text text-gravel-300"
+            <span
+              className="shadow-text cursor-pointer text-16r text-gravel-300 hover:text-gravel-25"
               onMouseEnter={() =>
                 setHoverBreadcrumb({ ...hoverBreadcrumb, projectHighlights: true })
               }
               onMouseLeave={() =>
                 setHoverBreadcrumb({ ...hoverBreadcrumb, projectHighlights: false })
               }
+              onClick={() => {
+                navigate(Datas.breadCrumbHref[1]);
+              }}
             >
               {isLargeScreen ? (
                 "Case studies"
@@ -87,16 +93,13 @@ function VPBank() {
               ) : (
                 <img alt="" src="/home/icons/ba.svg" />
               )}
-            </BreadcrumbLink>
+            </span>
           </BreadcrumbItem>
           <BreadcrumbSeparator />
           <BreadcrumbItem>
-            <BreadcrumbLink
-              href={Datas.breadCrumbHref[2]}
-              className="shadow-text text-12r text-gravel-25 xl:text-18r"
-            >
+            <span className="shadow-text cursor-pointer text-12r text-gravel-25 xl:text-16r">
               VP App UX Issues
-            </BreadcrumbLink>
+            </span>
           </BreadcrumbItem>
         </BreadcrumbList>
       </Breadcrumb>

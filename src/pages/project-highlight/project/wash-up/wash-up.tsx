@@ -18,6 +18,7 @@ import TabOne from "./components/tab-one";
 import TabTwo from "./components/tab-two";
 import TabThree from "./components/tab-three";
 import TabFour from "./components/tab-four";
+import { useNavigate } from "react-router-dom";
 
 export type CurrentTab =
   | "Vehicle wash app"
@@ -277,6 +278,7 @@ function TabsComponent() {
 
 function WashUp() {
   const isLargeScreen = useResponsiveProps({ xl: true });
+  const navigate = useNavigate();
   const [currentTab, setCurrentTab] = useState<CurrentTab>("Vehicle wash app");
   const [hoverBreadcrumb, setHoverBreadcrumb] = useState({
     home: false,
@@ -287,30 +289,34 @@ function WashUp() {
       <Breadcrumb>
         <BreadcrumbList>
           <BreadcrumbItem>
-            <BreadcrumbLink
-              href={Datas.breadCrumbHref[0]}
-              className="shadow-text"
+            <span
+              className="shadow-text cursor-pointer text-gravel-300 hover:text-gravel-25"
               onMouseEnter={() => setHoverBreadcrumb({ ...hoverBreadcrumb, home: true })}
               onMouseLeave={() => setHoverBreadcrumb({ ...hoverBreadcrumb, home: false })}
+              onClick={() => {
+                navigate(Datas.breadCrumbHref[0]);
+              }}
             >
               {hoverBreadcrumb.home ? (
                 <img alt="" src="/home/icons/hh.svg" />
               ) : (
                 <img alt="" src="/home/icons/ha.svg" />
               )}
-            </BreadcrumbLink>
+            </span>
           </BreadcrumbItem>
           <BreadcrumbSeparator />
           <BreadcrumbItem>
-            <BreadcrumbLink
-              href={Datas.breadCrumbHref[1]}
-              className="shadow-text text-gravel-300"
+            <span
+              className="shadow-text cursor-pointer text-16r text-gravel-300 hover:text-gravel-25"
               onMouseEnter={() =>
                 setHoverBreadcrumb({ ...hoverBreadcrumb, projectHighlights: true })
               }
               onMouseLeave={() =>
                 setHoverBreadcrumb({ ...hoverBreadcrumb, projectHighlights: false })
               }
+              onClick={() => {
+                navigate(Datas.breadCrumbHref[1]);
+              }}
             >
               {isLargeScreen ? (
                 "Project Highlights"
@@ -319,16 +325,13 @@ function WashUp() {
               ) : (
                 <img alt="" src="/home/icons/ba.svg" />
               )}
-            </BreadcrumbLink>
+            </span>
           </BreadcrumbItem>
           <BreadcrumbSeparator />
           <BreadcrumbItem>
-            <BreadcrumbLink
-              href={Datas.breadCrumbHref[2]}
-              className="shadow-text text-12r text-gravel-25 xl:text-18r"
-            >
+            <span className="shadow-text cursor-pointer text-12r text-gravel-25 xl:text-16r">
               Washup - Vehicle wash app
-            </BreadcrumbLink>
+            </span>
           </BreadcrumbItem>
         </BreadcrumbList>
       </Breadcrumb>

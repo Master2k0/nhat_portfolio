@@ -15,6 +15,7 @@ import { LayoutProjectSection } from "@/layouts";
 import { cn } from "@/libs/utils";
 import { useState } from "react";
 import TabOne from "./components/tab-one";
+import { useNavigate } from "react-router-dom";
 export type CurrentTab = "Consumer Product" | "Design System" | "POS System" | "Admin System";
 
 type TabsControllerProps = {
@@ -247,6 +248,7 @@ function TabsComponent() {
 
 function Circa() {
   const isLargeScreen = useResponsiveProps({ xl: true });
+  const navigate = useNavigate();
   const [currentTab, setCurrentTab] = useState<CurrentTab>("Consumer Product");
   const [hoverBreadcrumb, setHoverBreadcrumb] = useState({
     home: false,
@@ -257,30 +259,34 @@ function Circa() {
       <Breadcrumb>
         <BreadcrumbList>
           <BreadcrumbItem>
-            <BreadcrumbLink
-              href={Datas.breadCrumbHref[0]}
-              className="shadow-text"
+            <span
+              className="shadow-text cursor-pointer text-gravel-300 hover:text-gravel-25"
               onMouseEnter={() => setHoverBreadcrumb({ ...hoverBreadcrumb, home: true })}
               onMouseLeave={() => setHoverBreadcrumb({ ...hoverBreadcrumb, home: false })}
+              onClick={() => {
+                navigate(Datas.breadCrumbHref[0]);
+              }}
             >
               {hoverBreadcrumb.home ? (
                 <img alt="" src="/home/icons/hh.svg" />
               ) : (
                 <img alt="" src="/home/icons/ha.svg" />
               )}
-            </BreadcrumbLink>
+            </span>
           </BreadcrumbItem>
           <BreadcrumbSeparator />
           <BreadcrumbItem>
-            <BreadcrumbLink
-              href={Datas.breadCrumbHref[1]}
-              className="shadow-text text-gravel-300"
+            <span
+              className="shadow-text cursor-pointer text-16r text-gravel-300 hover:text-gravel-25"
               onMouseEnter={() =>
                 setHoverBreadcrumb({ ...hoverBreadcrumb, projectHighlights: true })
               }
               onMouseLeave={() =>
                 setHoverBreadcrumb({ ...hoverBreadcrumb, projectHighlights: false })
               }
+              onClick={() => {
+                navigate(Datas.breadCrumbHref[1]);
+              }}
             >
               {isLargeScreen ? (
                 "Project Highlights"
@@ -289,16 +295,13 @@ function Circa() {
               ) : (
                 <img alt="" src="/home/icons/ba.svg" />
               )}
-            </BreadcrumbLink>
+            </span>
           </BreadcrumbItem>
           <BreadcrumbSeparator />
           <BreadcrumbItem>
-            <BreadcrumbLink
-              href={Datas.breadCrumbHref[2]}
-              className="shadow-text text-12r text-gravel-25 xl:text-18r"
-            >
+            <span className="shadow-text cursor-pointer text-12r text-gravel-25 xl:text-16r">
               Circa - B2C Medical Ecommerce
-            </BreadcrumbLink>
+            </span>
           </BreadcrumbItem>
         </BreadcrumbList>
       </Breadcrumb>
