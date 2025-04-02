@@ -13,6 +13,7 @@ import { SectionWrapper } from "@/components/sections-wrapper";
 import Header from "@/components/header";
 import Content from "@/components/content";
 import Divider from "@/components/divider";
+import { useNavigate } from "react-router-dom";
 const listIds = {
   0: [
     { id: "introduction", title: "Introduction" },
@@ -45,6 +46,7 @@ const listIds = {
 
 function WaveB() {
   const isLargeScreen = useResponsiveProps({ xl: true });
+  const navigage = useNavigate();
   const [hoverBreadcrumb, setHoverBreadcrumb] = useState({
     home: false,
     projectHighlights: false,
@@ -87,6 +89,13 @@ function WaveB() {
                 <img alt="" src="/home/icons/ba.svg" />
               )}
             </BreadcrumbLink>
+            <div
+              onClick={() => {
+                navigage("/case-studies");
+              }}
+            >
+              hahaha
+            </div>
           </BreadcrumbItem>
           <BreadcrumbSeparator />
           <BreadcrumbItem>

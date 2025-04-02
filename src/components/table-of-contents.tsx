@@ -51,7 +51,9 @@ function TableOfContents({ listIds, classContainer }: TableOfContentsProps) {
   const handleClick = (id: string) => {
     const section = document.getElementById(id);
     if (section) {
-      section.scrollIntoView({ behavior: "smooth", block: "center" });
+      const newPosition = window.scrollY + section.getBoundingClientRect().top - 128;
+      // section.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      window.scrollTo({ top: newPosition, behavior: "smooth" });
     }
   };
   return (
