@@ -2,7 +2,6 @@ import { SectionWrapper } from "@/components/sections-wrapper";
 import {
   Breadcrumb,
   BreadcrumbItem,
-  BreadcrumbLink,
   BreadcrumbList,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
@@ -14,11 +13,11 @@ import { useResponsiveProps } from "@/hooks/responsive.hook";
 import { LayoutProjectSection } from "@/layouts";
 import { cn } from "@/libs/utils";
 import { useState } from "react";
-import TabOne from "./components/tab-one";
-import TabTwo from "./components/tab-two";
-import TabThree from "./components/tab-three";
-import TabFour from "./components/tab-four";
 import { useNavigate } from "react-router-dom";
+import TabFour from "./components/tab-four";
+import TabOne from "./components/tab-one";
+import TabThree from "./components/tab-three";
+import TabTwo from "./components/tab-two";
 
 export type CurrentTab =
   | "Vehicle wash app"

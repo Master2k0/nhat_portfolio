@@ -1,23 +1,22 @@
 import Content from "@/components/content";
+import Divider from "@/components/divider";
 import Header from "@/components/header";
 import { SectionWrapper } from "@/components/sections-wrapper";
-import { useResponsiveProps } from "@/hooks/responsive.hook";
-import { LayoutProjectSection } from "@/layouts";
-import { VPBank as Datas } from "@/configs/datas/vp-bank";
 import {
   Breadcrumb,
   BreadcrumbItem,
-  BreadcrumbLink,
   BreadcrumbList,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
+import { VPBank as Datas } from "@/configs/datas/vp-bank";
+import { useResponsiveProps } from "@/hooks/responsive.hook";
+import { LayoutProjectSection } from "@/layouts";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import AppUIDesign from "./components/app-ui-design/app-ui-design";
+import Evaluate from "./components/evaluate/evaluate";
 import Hypothetical from "./components/hypothetical-case/hypothetical-case";
 import Problem from "./components/problem/problem";
-import Evaluate from "./components/evaluate/evaluate";
-import Divider from "@/components/divider";
-import AppUIDesign from "./components/app-ui-design/app-ui-design";
-import { useNavigate } from "react-router-dom";
 
 const listIds = {
   0: [

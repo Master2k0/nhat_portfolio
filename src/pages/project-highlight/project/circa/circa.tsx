@@ -2,7 +2,6 @@ import { SectionWrapper } from "@/components/sections-wrapper";
 import {
   Breadcrumb,
   BreadcrumbItem,
-  BreadcrumbLink,
   BreadcrumbList,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
@@ -14,8 +13,8 @@ import { useResponsiveProps } from "@/hooks/responsive.hook";
 import { LayoutProjectSection } from "@/layouts";
 import { cn } from "@/libs/utils";
 import { useState } from "react";
-import TabOne from "./components/tab-one";
 import { useNavigate } from "react-router-dom";
+import TabOne from "./components/tab-one";
 export type CurrentTab = "Consumer Product" | "Design System" | "POS System" | "Admin System";
 
 type TabsControllerProps = {

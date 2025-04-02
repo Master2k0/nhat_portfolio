@@ -1,18 +1,17 @@
+import Content from "@/components/content";
+import Divider from "@/components/divider";
+import Header from "@/components/header";
+import { SectionWrapper } from "@/components/sections-wrapper";
 import {
   Breadcrumb,
   BreadcrumbItem,
-  BreadcrumbLink,
   BreadcrumbList,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
-import { useResponsiveProps } from "@/hooks/responsive.hook";
-import { useState } from "react";
 import { WaveB as Datas } from "@/configs/datas/wave-b";
+import { useResponsiveProps } from "@/hooks/responsive.hook";
 import { LayoutProjectSection } from "@/layouts";
-import { SectionWrapper } from "@/components/sections-wrapper";
-import Header from "@/components/header";
-import Content from "@/components/content";
-import Divider from "@/components/divider";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 const listIds = {
   0: [
