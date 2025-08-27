@@ -4,14 +4,15 @@ import AboutMe from "@/pages/about-me";
 import CaseStudies from "@/pages/case-studies";
 import VPBank from "@/pages/case-studies/project/vp-bank/vp-bank";
 import WaveB from "@/pages/case-studies/project/waveB/waveB";
-import Home from "@/pages/home";
+// import Home from "@/pages/home";
+import HomeNew from "@/pages/home-new";
 import { Circa, ProjectHighlight, WashUp } from "@/pages/project-highlight";
 import { createBrowserRouter, RouteObject } from "react-router-dom";
 
 const publicRoutes: RouteObject[] = [
   {
     index: true,
-    element: <Home />,
+    element: <HomeNew />,
   },
   {
     path: siteConfig.pageList.projectHighlights.href,

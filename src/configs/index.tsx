@@ -59,6 +59,10 @@ export const siteConfig = {
       href: "/",
       as: "Home",
     },
+    otherProjects: {
+      href: "/other-projects",
+      as: "Other projects"
+    },
     caseStudies: {
       href: "/case-studies",
       as: "Case Studies",
@@ -72,8 +76,8 @@ export const siteConfig = {
       as: "Wave B",
     },
     about: {
-      href: "/about",
-      as: "About",
+      href: "/about-me",
+      as: "About me",
     },
     projectHighlights: {
       href: "/project-highlights",
@@ -123,76 +127,18 @@ export const SidebarItems: ISidebarItem[] = [
     id: "home",
     href: siteConfig.pageList.home.href,
     name: "Home",
-    status: {
-      normal: {
-        icon: "/home/icons/ha.svg",
-        alt: "Home",
-      },
-      hover: {
-        icon: "/home/icons/hh.svg",
-        alt: "Home",
-      },
-      active: {
-        icon: "/home/icons/hn.svg",
-        alt: "Home",
-      },
-    },
+
   },
   {
-    id: "projectHighlights",
-    href: siteConfig.pageList.projectHighlights.href,
-    name: "Project Highlights",
-    status: {
-      normal: {
-        icon: "/home/icons/ba.svg",
-        alt: "Home",
-      },
-      hover: {
-        icon: "/home/icons/bh.svg",
-        alt: "Home",
-      },
-      active: {
-        icon: "/home/icons/bn.svg",
-        alt: "Home",
-      },
-    },
-  },
-  {
-    id: "caseStudies",
-    href: siteConfig.pageList.caseStudies.href,
-    name: "Case study",
-    status: {
-      normal: {
-        icon: "/home/icons/la.svg",
-        alt: "Home",
-      },
-      hover: {
-        icon: "/home/icons/lh.svg",
-        alt: "Home",
-      },
-      active: {
-        icon: "/home/icons/ln.svg",
-        alt: "Home",
-      },
-    },
+    id: "otherProjects",
+    href: siteConfig.pageList.otherProjects.href,
+    name: "Other projects",
+
   },
   {
     id: "about",
     href: siteConfig.pageList.about.href,
     name: "About me",
-    status: {
-      normal: {
-        icon: "/home/icons/cn.svg",
-        alt: "Home",
-      },
-      hover: {
-        icon: "/home/icons/ch.svg",
-        alt: "Home",
-      },
-      active: {
-        icon: "/home/icons/ca.svg",
-        alt: "Home",
-      },
-    },
+
   },
 ];

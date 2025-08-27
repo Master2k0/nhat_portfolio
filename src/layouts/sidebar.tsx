@@ -1,21 +1,22 @@
-import Icon from "@/components/ui/icon";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import { Button } from "@/components/ui/button";
 import { SidebarItems, siteConfig } from "@/configs";
+import { useResponsiveProps } from "@/hooks/responsive.hook";
 import { cn } from "@/libs/utils";
-import { ISidebarItem, StatusEnum } from "@/types/config";
+import { ISidebarItem } from "@/types/config";
+import { Menu } from "lucide-react";
 import { useMemo, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 
 interface SidebarItemsProps {
     item: ISidebarItem;
+    onClick?: () => void;
 }
 
 
 
-function SidebarItemsRender({ item }: SidebarItemsProps) {
+function SidebarItemsRender({ item, onClick }: SidebarItemsProps) {
     const location = useLocation();
-    const [status, setStatus] = useState<StatusEnum>(StatusEnum.normal);
 
     const isActive = useMemo(() => {
         if (item.href === siteConfig.pageList.home.href) {
@@ -23,49 +24,61 @@ function SidebarItemsRender({ item }: SidebarItemsProps) {
         }
         return location.pathname.startsWith(item.href);
     }, [location, item.href]);
-
-    const currentStatus = useMemo(() => isActive ? StatusEnum.active : status, [isActive, status]);
-
     return (
-        <TooltipProvider >
-            <Tooltip >
-                <Link
-                    key={item.id}
-                    to={item.href}
-                    className={cn(
-                        "col-span-1 auto-rows-fr grid place-items-center",
-                        isActive ? "bg-select" : "bg-transparent"
-                    )}
-                    onMouseEnter={() => setStatus(StatusEnum.hover)}
-                    onMouseLeave={() => setStatus(StatusEnum.normal)}
-                >
+        <Link
+            key={item.id}
+            to={item.href}
+            data-label={item.name}
+            className={cn(
+                "text-gravel-25 text-18r px-6  ",
+                isActive && "navbar-text-gradient text-18s",
 
-                    <TooltipTrigger>
-                        <div className='relative lg:p-7'>
-                            <Icon
-                                icon={item.status[currentStatus].icon}
-                                alt={item.status[currentStatus].alt}
-                            />
-                        </div>
-                    </TooltipTrigger>
-                </Link>
-                <TooltipContent side='right' hidden={isActive} className={cn('bg-gradient-2', 'text-14 border-0')} sideOffset={-25}>
-                    {item.name}
-                </TooltipContent>
-            </Tooltip>
-        </TooltipProvider>
+            )}
+            onClick={onClick}
+        >
+            {item.name}
+        </Link>
     );
 }
 
 
 function SideBar() {
+    const isLarge = useResponsiveProps({ lg: true });
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
     return (
-        <div className="fixed bottom-0 left-0 z-50 bg-block-bg w-full h-[68px] lg:left-0  lg:w-[100px] lg:h-screen">
-            <div className="grid grid-cols-4 h-full lg:flex lg:flex-col lg:justify-center lg:items-center ">
-                {SidebarItems.map((item) => (
-                    <SidebarItemsRender key={item.id} item={item} />
-                ))}
+        <div className="fixed top-0 left-0 z-50  w-full h-[68px] ">
+            <div className="flex justify-between px-4 lg:px-[200px] h-[60px] lg:h-20 items-center relative z-10 bg-background">
+                <p className="text-14s text-gravel-25 lg:text-18s ">@jamesnguyendesign</p>
+                {isLarge ? (
+                    <div className="flex">
+                        {SidebarItems.map((item) => (
+                            <SidebarItemsRender key={item.id} item={item} />
+                        ))}
+                    </div>
+
+                ) : (
+                    <>
+                        <Button onClick={() => setIsMenuOpen(!isMenuOpen)} >
+                            <Menu />
+                        </Button>
+
+                    </>
+                )}
             </div>
+            {!isLarge && (
+                <div className={cn(
+                    isMenuOpen ? 'translate-y-[0px]' : 'translate-y-[-300px]',
+                    'w-full absolute  mt-[60px] top-0 left-0 transition-all bg-background '
+                )}>
+                    <div className="flex flex-col items-end gap-4 px-3 py-2 z-[-1]">
+                        {SidebarItems.map((item) => (
+                            <SidebarItemsRender key={item.id} item={item} onClick={() => {
+                                setIsMenuOpen(false);
+                            }} />
+                        ))}
+                    </div>
+                </div>
+            )}
         </div>
     )
 }
