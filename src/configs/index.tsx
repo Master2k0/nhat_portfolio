@@ -36,7 +36,9 @@ export const siteConfig = {
       as: "Linkedin",
     },
     email: {
-      href: "mailto:nhatnguyen.wk@gmail.com",
+
+      // href: "mailto:nhatnguyen.wk@gmail.com",
+      href: "https://mail.google.com/mail/?view=cm&fs=1&to=nhatnguyen.wk@gmail.com",
       as: "nhatnguyen.wk@gmail.com",
     },
     behance: {

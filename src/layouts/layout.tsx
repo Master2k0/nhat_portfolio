@@ -1,16 +1,32 @@
 import { Outlet } from "react-router-dom";
 import SideBar from "./sidebar";
 import { Toaster } from "@/components/ui/toaster";
+import { cn } from "@/libs/utils";
+import { siteConfig } from "@/configs";
+import Footer from "./footer";
 function Layout() {
+
+  const listWithoutPadding = [
+    siteConfig.pageList.home.href
+  ]
+  const isMatchWithoutPadding = listWithoutPadding.includes(window.location.pathname);
   return (
     <div className="no-scrollbar w-full">
       <SideBar />
-      <div className="no-scrollbar min-h-screen px-4 pb-10 pt-5 lg:mb-0 lg:ml-[100px] lg:p-10 xl:grid xl:place-items-center 3xl:p-20">
-        <div className="mx-auto w-full bg-background lg:flex lg:h-[100%] xl:max-w-[1100px] 3xl:max-w-[1660px]">
+      <div className={cn(
+        "no-scrollbar min-h-screen mt-[60px] mb-8 ", !isMatchWithoutPadding && "px-4  ",
+        "  lg:mt-20 lg:mb-[100px]", !isMatchWithoutPadding && "lg:p-10",
+
+      )}>
+        <div className={cn(
+          "mx-auto w-full bg-background ",
+          !isMatchWithoutPadding && "xl:max-w-[1100px] 3xl:max-w-[1660px]"
+        )}>
           <Outlet />
         </div>
       </div>
       <Toaster />
+      <Footer />
     </div>
   );
 }

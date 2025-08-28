@@ -315,6 +315,34 @@ export default {
           fontWeight: "700",
         },
       ],
+      "60r": [
+        "60px",
+        {
+          lineHeight: "90px",
+          fontWeight: "400",
+        },
+      ],
+      "60m": [
+        "60px",
+        {
+          lineHeight: "90px",
+          fontWeight: "500",
+        },
+      ],
+      "60s": [
+        "60px",
+        {
+          lineHeight: "90px",
+          fontWeight: "600",
+        },
+      ],
+      "60b": [
+        "60px",
+        {
+          lineHeight: "90px",
+          fontWeight: "700",
+        },
+      ],
     },
     screens: {
       ...defaultTheme.screens,
@@ -347,6 +375,7 @@ export default {
         "pj-studio": "#9540C8",
         "pj-red": "#C73C59",
         white: "#FFFFFF",
+        "white-footer": "#FBFBFB",
         black: "#000000",
         background: "#0F0F10",
         "block-bg": "#242427",

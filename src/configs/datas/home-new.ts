@@ -20,12 +20,13 @@ export const DataHome = {
       ],
       links: [
         {
-          img: "/home-new/icons/vng.svg",
+          img: "/home-new/images/vng.png",
           href: "/project-highlights/vng",
           title: "MyVNG - POSTAL TOOL",
           content: "Project to improve the current shipment and order management process.",
         },
       ],
+      active: true,
     },
     {
       startDate: "10/2024",
@@ -38,6 +39,7 @@ export const DataHome = {
         "Collaborated with the Dev team to make adjustments aligned with technical requirements.",
       ],
       links: [],
+      active: false,
     },
     {
       startDate: "10/2022",
@@ -51,20 +53,21 @@ export const DataHome = {
       ],
       links: [
         {
-          img: "/home-new/icons/circa.png",
+          img: "/home-new/images/circa.png",
           href: "/project-highlights/circa",
           title: "CIRCA - B2C Medical Ecommerce",
           content:
             "E-commerce platform specializing in retail distribution of pharmaceutical products.",
         },
         {
-          img: "/home-new/icons/thuoc-si.png",
+          img: "/home-new/images/thuoc-si.png",
           href: "",
           title: "THUOCSI - B2B Medical E-Commerce",
           content:
             "Platform specializing in wholesale distribution of pharmaceutical products to pharmacies.",
         },
       ],
+      active: false,
     },
     {
       startDate: "06/2022",
@@ -78,13 +81,14 @@ export const DataHome = {
       ],
       links: [
         {
-          img: "/home-new/icons/dakoli.png",
-          href: "",
+          img: "/home-new/images/dakoli.png",
+          href: "/project-highlights/dakoli",
           title: "DAKOLI PROJECT",
           content:
             "Your go-to platform for businesses and customers to shop a variety of products easily.",
         },
       ],
+      active: false,
     },
   ],
 };

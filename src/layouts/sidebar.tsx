@@ -47,7 +47,7 @@ function SideBar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     return (
         <div className="fixed top-0 left-0 z-50  w-full h-[68px] ">
-            <div className="flex justify-between px-4 lg:px-[200px] h-[60px] lg:h-20 items-center relative z-10 bg-background">
+            <div className="flex justify-between px-4 lg:px-[200px] h-[60px] lg:h-20 items-center relative z-10 bg-block-bg">
                 <p className="text-14s text-gravel-25 lg:text-18s ">@jamesnguyendesign</p>
                 {isLarge ? (
                     <div className="flex">
@@ -58,7 +58,7 @@ function SideBar() {
 
                 ) : (
                     <>
-                        <Button onClick={() => setIsMenuOpen(!isMenuOpen)} >
+                        <Button className="!bg-block-bg" onClick={() => setIsMenuOpen(!isMenuOpen)} >
                             <Menu />
                         </Button>
 

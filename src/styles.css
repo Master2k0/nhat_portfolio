@@ -79,6 +79,14 @@
     -webkit-text-fill-color: transparent;
   }
 
+  .text-new-gradient {
+    background: linear-gradient(225deg, #f2d76f 0%, #e97f96 100%);
+    width: fit-content;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
   .text-gradient {
     background: var(--Primary, linear-gradient(90deg, #ce80ff 0%, #80f0ff 50.4%, #b1ff80 100%));
     background-clip: text;
@@ -211,6 +219,19 @@
         transparent 8px
       )
       1;
+  }
+
+  .image-border {
+    padding: 1px;
+    background: linear-gradient(
+      171.08deg,
+      #4f4f4f 0.98%,
+      rgba(0, 0, 0, 0.3) 26.03%,
+      rgba(0, 0, 0, 0.3) 74.96%,
+      #4f4f4f 100%
+    );
+
+    border: 1px solid;
   }
 }
 

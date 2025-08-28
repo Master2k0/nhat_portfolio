@@ -6,6 +6,7 @@ import VPBank from "@/pages/case-studies/project/vp-bank/vp-bank";
 import WaveB from "@/pages/case-studies/project/waveB/waveB";
 // import Home from "@/pages/home";
 import HomeNew from "@/pages/home-new";
+import OrtherProject from "@/pages/other-projects";
 import { Circa, ProjectHighlight, WashUp } from "@/pages/project-highlight";
 import { createBrowserRouter, RouteObject } from "react-router-dom";
 
@@ -26,6 +27,10 @@ const publicRoutes: RouteObject[] = [
     path: siteConfig.pageList.about.href,
     element: <AboutMe />,
   },
+  {
+    path: siteConfig.pageList.otherProjects.href,
+    element: <OrtherProject />
+  }
 ];
 
 const projectRoutes: RouteObject[] = [
