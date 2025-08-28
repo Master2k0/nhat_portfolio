@@ -1,5 +1,5 @@
 import { siteConfig } from "@/configs";
-import { Layout, LayoutProject } from "@/layouts";
+import { Layout } from "@/layouts";
 import AboutMe from "@/pages/about-me";
 import CaseStudies from "@/pages/case-studies";
 import VPBank from "@/pages/case-studies/project/vp-bank/vp-bank";
@@ -33,27 +33,50 @@ const publicRoutes: RouteObject[] = [
   }
 ];
 
-const projectRoutes: RouteObject[] = [
+// const projectRoutes: RouteObject[] = [
+//   {
+//     path: siteConfig.pageList.washUp.href,
+//     element: <WashUp />,
+//   },
+//   {
+//     path: siteConfig.pageList.circa.href,
+//     element: <Circa />,
+//   },
+// ];
+
+// const caseStudiesRoutes: RouteObject[] = [
+//   {
+//     path: siteConfig.pageList.vpBank.href,
+//     element: <VPBank />,
+//   },
+//   {
+//     path: siteConfig.pageList.waveB.href,
+//     element: <WaveB />,
+//   },
+// ];
+
+const otherProjects: RouteObject[] = [
   {
-    path: siteConfig.pageList.washUp.href,
-    element: <WashUp />,
+    path: siteConfig.pageList.cloakline.href,
+    element: <div>Cloakline - VPN app</div>,
   },
   {
     path: siteConfig.pageList.circa.href,
-    element: <Circa />,
+    element: <Circa />
   },
-];
-
-const caseStudiesRoutes: RouteObject[] = [
+  {
+    path: siteConfig.pageList.washUp.href,
+    element: <WashUp />
+  },
   {
     path: siteConfig.pageList.vpBank.href,
-    element: <VPBank />,
+    element: <VPBank />
   },
   {
     path: siteConfig.pageList.waveB.href,
-    element: <WaveB />,
-  },
-];
+    element: <WaveB />
+  }
+]
 
 const router = createBrowserRouter([
   {
@@ -62,18 +85,23 @@ const router = createBrowserRouter([
     children: publicRoutes,
   },
   {
-    path: siteConfig.pageList.projectHighlights.href,
-    element: <LayoutProject />,
-    children: projectRoutes,
+    path: siteConfig.pageList.otherProjects.href,
+    element: <Layout />,
+    children: otherProjects,
   },
-  {
-    path: siteConfig.pageList.caseStudies.href,
-    element: <LayoutProject />,
-    children: caseStudiesRoutes,
-  },
+  // {
+  //   path: siteConfig.pageList.projectHighlights.href,
+  //   element: <LayoutProject />,
+  //   children: projectRoutes,
+  // },
+  // {
+  //   path: siteConfig.pageList.caseStudies.href,
+  //   element: <LayoutProject />,
+  //   children: caseStudiesRoutes,
+  // },
   {
     path: siteConfig.pageList.notFound.href,
-    element: <div>Not Found</div>,
+    element: <div className="text-white">Not Found</div>,
   },
 ]);
 

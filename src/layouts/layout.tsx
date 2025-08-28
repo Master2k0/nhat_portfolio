@@ -1,4 +1,4 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, ScrollRestoration } from "react-router-dom";
 import SideBar from "./sidebar";
 import { Toaster } from "@/components/ui/toaster";
 import { cn } from "@/libs/utils";
@@ -7,9 +7,11 @@ import Footer from "./footer";
 function Layout() {
 
   const listWithoutPadding = [
-    siteConfig.pageList.home.href
+    siteConfig.pageList.home.href,
+    siteConfig.pageList.otherProjects.href,
   ]
   const isMatchWithoutPadding = listWithoutPadding.includes(window.location.pathname);
+  console.log("isMatchWithoutPadding", isMatchWithoutPadding);
   return (
     <div className="no-scrollbar w-full">
       <SideBar />
@@ -27,6 +29,8 @@ function Layout() {
       </div>
       <Toaster />
       <Footer />
+      <ScrollRestoration />
+
     </div>
   );
 }

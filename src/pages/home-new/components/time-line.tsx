@@ -1,6 +1,5 @@
 import ProjectCardNew from "@/components/project-card-new";
 import { cn } from "@/libs/utils";
-import { Link } from "react-router-dom";
 
 interface TimelineProps {
   startDate: string;

@@ -70,11 +70,11 @@ export const siteConfig = {
       as: "Case Studies",
     },
     vpBank: {
-      href: "/case-studies/vp-bank",
+      href: "/other-projects/vp-bank",
       as: "VP Bank",
     },
     waveB: {
-      href: "/case-studies/wave-b",
+      href: "/other-projects/waveB",
       as: "Wave B",
     },
     about: {
@@ -86,11 +86,11 @@ export const siteConfig = {
       as: "Project Highlights",
     },
     washUp: {
-      href: "/project-highlights/wash-up",
+      href: "/other-projects/wash-up",
       as: "Wash Up",
     },
     circa: {
-      href: "/project-highlights/circa",
+      href: "/other-projects/circa",
       as: "Circa",
     },
     // insuranceFeature: {
@@ -112,6 +112,10 @@ export const siteConfig = {
     dakoli: {
       href: "/dakoli",
       as: "Dakoli",
+    },
+    cloakline: {
+      href: "/other-projects/cloakline",
+      as: "Cloakline",
     },
     setKey: {
       href: "/api/set-key",

@@ -1,16 +1,32 @@
+import ProjectCardNew from "@/components/project-card-new"
+import { OtherProjects } from "@/configs/datas/other-projects"
 import { cn } from "@/libs/utils"
 
-const OrtherProject = () => {
+const OrtherProjects = () => {
   return (
     <div className={
       cn(
-        "px-4 py-8",
-        "lg:px-[200px] lg:py-[100px]"
+        " py-8 flex flex-col gap-8 mx-auto px-4",
+        " lg:py-[100px] lg:gap-[100px] lg:max-w-[1048px]  lg:p-2"
       )
     }>
+      <p className={cn(
+        "text-white-footer text-24b",
+        "text-60b"
+      )}>Other Projects</p>
+      <div className={cn(
+        "grid grid-cols-1 gap-6  ",
+        "lg:grid-cols-2 lg:gap-10 "
 
+      )}>
+        {OtherProjects.projects.map((item, index) => (
+          <div className="" key={index}>
+            <ProjectCardNew item={item} />
+          </div>
+        ))}
+      </div>
     </div>
   )
 }
 
-export default OrtherProject
+export default OrtherProjects

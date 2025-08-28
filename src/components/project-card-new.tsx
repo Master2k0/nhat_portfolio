@@ -15,20 +15,20 @@ const ProjectCardNew = ({ item }: ProjectCardNewProps) => {
   return (
     <Link
       to={item.href}
-      data-label={item.title}
       className={cn(
         "flex flex-col gap-3 ",
       )}
     >
       <div className={cn(
         "relative rounded-[8px] image-border w-fit",
+        "lg:rounded-[12px]"
       )}>
         {!item.href &&
-          <div className="absolute top-[1px] left-[1px]  w-[calc(100%-2px)] h-[calc(100%-2px)] bg-black bg-opacity-80 z-10 grid place-items-center text-14s text-gravel-300 lg:text-20s rounded-[8px]">
+          <div className="absolute top-[1px] left-[1px]  w-[calc(100%-2px)] h-[calc(100%-2px)] bg-black bg-opacity-80 z-10 grid place-items-center text-14s text-gravel-300 lg:text-20s rounded-[8px] lg:rounded-[12px]">
             COMMING SOON
           </div>
         }
-        <img src={item.img} className="rounded-[8px] " />
+        <img src={item.img} className="rounded-[8px] lg:rounded-[12px] " />
       </div>
       <div className=" flex flex-col lg:gap-2">
         <p className={cn(
