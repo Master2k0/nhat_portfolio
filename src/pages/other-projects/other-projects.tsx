@@ -12,8 +12,8 @@ const OrtherProjects = () => {
     }>
       <p className={cn(
         "text-white-footer text-24b",
-        "text-60b"
-      )}>Other Projects</p>
+        "lg:text-60b"
+      )}>Other projects</p>
       <div className={cn(
         "grid grid-cols-1 gap-6  ",
         "lg:grid-cols-2 lg:gap-10 "

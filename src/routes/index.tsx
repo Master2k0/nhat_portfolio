@@ -1,6 +1,6 @@
 import { siteConfig } from "@/configs";
 import { Layout } from "@/layouts";
-import AboutMe from "@/pages/about-me";
+import AboutMeNew from "@/pages/about-me-new";
 import CaseStudies from "@/pages/case-studies";
 import VPBank from "@/pages/case-studies/project/vp-bank/vp-bank";
 import WaveB from "@/pages/case-studies/project/waveB/waveB";
@@ -25,7 +25,7 @@ const publicRoutes: RouteObject[] = [
   },
   {
     path: siteConfig.pageList.about.href,
-    element: <AboutMe />,
+    element: <AboutMeNew />,
   },
   {
     path: siteConfig.pageList.otherProjects.href,

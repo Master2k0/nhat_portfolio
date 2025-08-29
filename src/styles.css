@@ -87,6 +87,27 @@
     -webkit-text-fill-color: transparent;
   }
 
+  .text-underline-gradient {
+    background: linear-gradient(225deg, #f2d76f 0%, #e97f96 100%);
+    width: fit-content;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-decoration: none; /* bỏ underline mặc định */
+    position: relative;
+  }
+
+  .text-underline-gradient::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 4px; /* sát chữ */
+    width: 100%;
+    height: 2px; /* độ dày gạch */
+    border-bottom: 1px solid transparent;
+    border-image: linear-gradient(225deg, #f2d76f 0%, #e97f96 100%) 1;
+  }
+
   .text-gradient {
     background: var(--Primary, linear-gradient(90deg, #ce80ff 0%, #80f0ff 50.4%, #b1ff80 100%));
     background-clip: text;
