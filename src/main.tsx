@@ -4,8 +4,10 @@ import router from "./routes";
 import { RouterProvider } from "react-router-dom";
 import ResponsiveProvider from "./hooks/responsive.provider";
 import { GlobalContext } from "./context/global-context";
+import { Analytics } from "@vercel/analytics/react"
 createRoot(document.getElementById("root")!).render(
   <ResponsiveProvider>
+    <Analytics />
     <GlobalContext>
       <RouterProvider router={router} />
     </GlobalContext>
