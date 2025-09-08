@@ -12,6 +12,11 @@ function Layout() {
   ]
   const isMatchWithoutPadding = listWithoutPadding.includes(window.location.pathname);
 
+  const listWithoutMaxWidth = [
+    siteConfig.pageList.home.href,
+  ]
+
+  const isMatchWithoutMaxWidth = listWithoutMaxWidth.includes(window.location.pathname);
   return (
     <div className="no-scrollbar w-full relative">
       <SideBar />
@@ -21,7 +26,8 @@ function Layout() {
 
       )}>
         <div className={cn(
-          "mx-auto w-full bg-background max-w-[1040px] ",
+          "mx-auto w-full bg-background  ",
+          !isMatchWithoutMaxWidth && "max-w-[1040px]"
         )}>
           <Outlet />
         </div>
