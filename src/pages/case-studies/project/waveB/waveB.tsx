@@ -105,7 +105,7 @@ function WaveB() {
         <LayoutProjectSection currentTab={0} listIds={listIds} classContainer="mt-8" />
         <div className="flex flex-col gap-6">
           <SectionWrapper
-            wrapperClassName="section-border overflow-hidden p-px overflow-hidden rounded-[20px] lg:rounded-[16px] 3xl:rounded-[28px] xl:rounded-[8px] 3xl:rounded-[8px]"
+            wrapperClassName="section-border overflow-hidden p-px  rounded-[20px] lg:rounded-[16px] 3xl:rounded-[28px] xl:rounded-[8px] 3xl:rounded-[8px]"
             divClassName="rounded-[20px] bg-block-bg px-4 py-5 lg:rounded-[16px] 3xl:rounded-[28px] 3xl:p-7 xl:rounded-[8px] 3xl:rounded-[8px] xl:!p-[31px] "
             id="introduction"
           >
@@ -135,7 +135,7 @@ function WaveB() {
             />
           </SectionWrapper>
           <SectionWrapper
-            wrapperClassName="section-border overflow-hidden p-px overflow-hidden rounded-[20px] lg:rounded-[16px] 3xl:rounded-[28px] xl:rounded-[8px] 3xl:rounded-[8px]"
+            wrapperClassName="section-border overflow-hidden p-px  rounded-[20px] lg:rounded-[16px] 3xl:rounded-[28px] xl:rounded-[8px] 3xl:rounded-[8px]"
             divClassName="rounded-[20px] bg-block-bg px-4 py-5 lg:rounded-[16px] 3xl:rounded-[28px] 3xl:p-7 xl:rounded-[8px] 3xl:rounded-[8px] xl:!p-[31px] "
             id="about-logo"
           >
@@ -155,7 +155,7 @@ function WaveB() {
             />
           </SectionWrapper>
           <SectionWrapper
-            wrapperClassName="section-border overflow-hidden p-px overflow-hidden rounded-[20px] lg:rounded-[16px] 3xl:rounded-[28px] xl:rounded-[8px] 3xl:rounded-[8px]"
+            wrapperClassName="section-border overflow-hidden p-px  rounded-[20px] lg:rounded-[16px] 3xl:rounded-[28px] xl:rounded-[8px] 3xl:rounded-[8px]"
             divClassName="rounded-[20px] bg-block-bg px-4 py-5 lg:rounded-[16px] 3xl:rounded-[28px] 3xl:p-7 xl:rounded-[8px] 3xl:rounded-[8px] xl:!p-[31px] "
             id="style-guide"
           >
@@ -193,7 +193,7 @@ function WaveB() {
                     {Datas.main.section3.subSection2.title[1]}
                   </p>
                 </div>
-                <div className="flex flex-col gap-3 lg:flex-row lg:items-start lg:items-center lg:gap-10">
+                <div className="flex flex-col gap-3 lg:flex-row  lg:items-center lg:gap-10">
                   <p className="font-montserrat text-[133px] font-bold text-gravel-25">Aa</p>
                   <div className="flex flex-col gap-4 xl:gap-5">
                     <div className="flex gap-6 lg:gap-10">
@@ -213,7 +213,7 @@ function WaveB() {
             </div>
           </SectionWrapper>
           <SectionWrapper
-            wrapperClassName="section-border overflow-hidden p-px overflow-hidden rounded-[20px] lg:rounded-[16px] 3xl:rounded-[28px] xl:rounded-[8px] 3xl:rounded-[8px]"
+            wrapperClassName="section-border overflow-hidden p-px  rounded-[20px] lg:rounded-[16px] 3xl:rounded-[28px] xl:rounded-[8px] 3xl:rounded-[8px]"
             divClassName="rounded-[20px] bg-block-bg px-4 py-5 lg:rounded-[16px] 3xl:rounded-[28px] 3xl:p-7 xl:rounded-[8px] 3xl:rounded-[8px] xl:!p-[31px] "
             id="sitemap"
           >
@@ -230,7 +230,7 @@ function WaveB() {
             />
           </SectionWrapper>
           <SectionWrapper
-            wrapperClassName="section-border overflow-hidden p-px overflow-hidden rounded-[20px] lg:rounded-[16px] 3xl:rounded-[28px] xl:rounded-[8px] 3xl:rounded-[8px]"
+            wrapperClassName="section-border overflow-hidden p-px  rounded-[20px] lg:rounded-[16px] 3xl:rounded-[28px] xl:rounded-[8px] 3xl:rounded-[8px]"
             divClassName="rounded-[20px] bg-block-bg px-4 py-5 lg:rounded-[16px] 3xl:rounded-[28px] 3xl:p-7 xl:rounded-[8px] 3xl:rounded-[8px] xl:!p-[31px] "
             id="user-flow"
           >
@@ -247,7 +247,7 @@ function WaveB() {
             />
           </SectionWrapper>
           <SectionWrapper
-            wrapperClassName="section-border overflow-hidden p-px overflow-hidden rounded-[20px] lg:rounded-[16px] 3xl:rounded-[28px] xl:rounded-[8px] 3xl:rounded-[8px]"
+            wrapperClassName="section-border overflow-hidden p-px  rounded-[20px] lg:rounded-[16px] 3xl:rounded-[28px] xl:rounded-[8px] 3xl:rounded-[8px]"
             divClassName="rounded-[20px] bg-block-bg px-4 py-5 lg:rounded-[16px] 3xl:rounded-[28px] 3xl:p-7 xl:rounded-[8px] 3xl:rounded-[8px] xl:!p-[31px] "
             id="wireframe"
           >
@@ -288,7 +288,7 @@ function WaveB() {
             </div>
           </SectionWrapper>
           <SectionWrapper
-            wrapperClassName="section-border overflow-hidden p-px overflow-hidden rounded-[20px] lg:rounded-[16px] 3xl:rounded-[28px] xl:rounded-[8px] 3xl:rounded-[8px]"
+            wrapperClassName="section-border overflow-hidden p-px  rounded-[20px] lg:rounded-[16px] 3xl:rounded-[28px] xl:rounded-[8px] 3xl:rounded-[8px]"
             divClassName="rounded-[20px] bg-block-bg px-4 py-5 lg:rounded-[16px] 3xl:rounded-[28px] 3xl:p-7 xl:rounded-[8px] 3xl:rounded-[8px] xl:!p-[31px] "
             id="final-ui"
           >

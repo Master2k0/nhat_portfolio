@@ -98,7 +98,7 @@ const listIds = {
 function TabsController({ currentTab, setCurrentTab }: TabsControllerProps) {
   const isLargeScreen = useResponsiveProps({ xl: true });
   return (
-    <div>
+    <div className="w-full">
       <Tabs defaultValue="Consumer Product">
         {!isLargeScreen ? (
           <SectionWrapper

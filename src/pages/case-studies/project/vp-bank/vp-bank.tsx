@@ -106,7 +106,7 @@ function VPBank() {
         <LayoutProjectSection currentTab={0} listIds={listIds} classContainer="mt-8" />
         <div className="flex flex-col gap-6">
           <SectionWrapper
-            wrapperClassName="section-border overflow-hidden p-px overflow-hidden rounded-[20px] lg:rounded-[16px] 3xl:rounded-[28px] xl:rounded-[8px] 3xl:rounded-[8px]"
+            wrapperClassName="section-border overflow-hidden p-px rounded-[20px] lg:rounded-[16px] 3xl:rounded-[28px] xl:rounded-[8px] 3xl:rounded-[8px]"
             divClassName="rounded-[20px] bg-block-bg px-4 py-5 lg:rounded-[16px] 3xl:rounded-[28px] 3xl:p-7 xl:rounded-[8px] 3xl:rounded-[8px] xl:!p-[31px] "
             id="introduction"
           >
@@ -129,7 +129,7 @@ function VPBank() {
             />
           </SectionWrapper>
           <SectionWrapper
-            wrapperClassName="section-border overflow-hidden p-px overflow-hidden rounded-[20px] lg:rounded-[16px] 3xl:rounded-[28px] xl:rounded-[8px] 3xl:rounded-[8px]"
+            wrapperClassName="section-border overflow-hidden p-px rounded-[20px] lg:rounded-[16px] 3xl:rounded-[28px] xl:rounded-[8px] 3xl:rounded-[8px]"
             divClassName="rounded-[20px] bg-block-bg px-4 py-5 lg:rounded-[16px] 3xl:rounded-[28px] 3xl:p-7 xl:rounded-[8px] 3xl:rounded-[8px] xl:!p-[31px] "
             id="hypothetical-case"
           >
@@ -161,7 +161,7 @@ function VPBank() {
             </div>
           </SectionWrapper>
           <SectionWrapper
-            wrapperClassName="section-border overflow-hidden p-px overflow-hidden rounded-[20px] lg:rounded-[16px] 3xl:rounded-[28px] xl:rounded-[8px] 3xl:rounded-[8px]"
+            wrapperClassName="section-border overflow-hidden p-px  rounded-[20px] lg:rounded-[16px] 3xl:rounded-[28px] xl:rounded-[8px] 3xl:rounded-[8px]"
             divClassName="rounded-[20px] bg-block-bg px-4 py-5 lg:rounded-[16px] 3xl:rounded-[28px] 3xl:p-7 xl:rounded-[8px] 3xl:rounded-[8px] xl:!p-[31px] "
             id="problem-analysis"
           >
@@ -181,7 +181,7 @@ function VPBank() {
             <Problem datas={Datas.main.section3.datas} />
           </SectionWrapper>
           <SectionWrapper
-            wrapperClassName="section-border overflow-hidden p-px overflow-hidden rounded-[20px] lg:rounded-[16px] 3xl:rounded-[28px] xl:rounded-[8px] 3xl:rounded-[8px]"
+            wrapperClassName="section-border overflow-hidden p-px  rounded-[20px] lg:rounded-[16px] 3xl:rounded-[28px] xl:rounded-[8px] 3xl:rounded-[8px]"
             divClassName="rounded-[20px] bg-block-bg px-4 py-5 lg:rounded-[16px] 3xl:rounded-[28px] 3xl:p-7 xl:rounded-[8px] 3xl:rounded-[8px] xl:!p-[31px] "
             id="user-flow"
           >
@@ -193,7 +193,7 @@ function VPBank() {
             <img src={Datas.main.section4.img} alt={Datas.main.section4.title} />
           </SectionWrapper>
           <SectionWrapper
-            wrapperClassName="section-border overflow-hidden p-px overflow-hidden rounded-[20px] lg:rounded-[16px] 3xl:rounded-[28px] xl:rounded-[8px] 3xl:rounded-[8px]"
+            wrapperClassName="section-border overflow-hidden p-px  rounded-[20px] lg:rounded-[16px] 3xl:rounded-[28px] xl:rounded-[8px] 3xl:rounded-[8px]"
             divClassName="rounded-[20px] bg-block-bg px-4 py-5 lg:rounded-[16px] 3xl:rounded-[28px] 3xl:p-7 xl:rounded-[8px] 3xl:rounded-[8px] xl:!p-[31px] "
             id="evaluate"
           >
