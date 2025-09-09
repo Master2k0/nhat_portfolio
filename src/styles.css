@@ -72,6 +72,39 @@
 }
 
 @layer utilities {
+  .bg-gradient-new {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .bg-gradient-new::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(225deg, #f2d76f 0%, #e97f96 100%);
+    transition: opacity 1s linear;
+    opacity: 1;
+  }
+
+  .bg-gradient-new::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(225deg, #f1acbb 0%, #f6e49d 100%);
+    transition: opacity 1s linear;
+    opacity: 0;
+  }
+
+  .bg-gradient-new:hover::before {
+    opacity: 0;
+  }
+
+  .bg-gradient-new:hover::after {
+    opacity: 1;
+  }
+
   .navbar-text-gradient {
     background: var(--Primary, linear-gradient(225deg, #f2d76f 0%, #e97f96 100%));
     background-clip: text;

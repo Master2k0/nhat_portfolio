@@ -6,6 +6,7 @@ import VPBank from "@/pages/case-studies/project/vp-bank/vp-bank";
 import WaveB from "@/pages/case-studies/project/waveB/waveB";
 // import Home from "@/pages/home";
 import HomeNew from "@/pages/home-new";
+import NotFound from "@/pages/not-found/not-found";
 import OrtherProject from "@/pages/other-projects";
 import { Circa, ProjectHighlight, WashUp } from "@/pages/project-highlight";
 import { createBrowserRouter, RouteObject } from "react-router-dom";
@@ -101,7 +102,7 @@ const router = createBrowserRouter([
   // },
   {
     path: siteConfig.pageList.notFound.href,
-    element: <div className="text-white">Not Found</div>,
+    element: <NotFound />,
   },
 ]);
 

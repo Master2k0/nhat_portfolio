@@ -18,7 +18,7 @@ function HomeNew() {
         )}>
           <div className={cn(
             "flex flex-col gap-5",
-            "lg:flex-row-reverse lg:items-center lg:mx-auto lg:max-w-[1240px] [@media(min-width:1440px)]:pl-[100px]  "
+            "lg:flex-row-reverse lg:items-center lg:mx-auto lg:max-w-[1040px]   "
           )}>
 
             <img src={DataHome.banner.img} className={
