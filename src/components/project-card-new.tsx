@@ -36,7 +36,7 @@ const ProjectCardNew = ({ item }: ProjectCardNewProps) => {
           "xl:text-20s"
         )}>{item.title}</p>
         <p className={cn(
-          "text-12r text-gravel-100",
+          "text-14r text-gravel-100",
           "xl:text-16r"
         )}>{item.content} </p>
       </div>

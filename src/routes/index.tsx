@@ -3,7 +3,7 @@ import { Layout } from "@/layouts";
 import AboutMeNew from "@/pages/about-me-new";
 import HomeNew from "@/pages/home-new";
 import NotFound from "@/pages/not-found/not-found";
-import { Circa, VPBank, WashUp, WaveB } from "@/pages/projects";
+import { Circa, VPBank, WashUp, WaveB, VNG } from "@/pages/projects";
 import { createBrowserRouter, Navigate, RouteObject } from "react-router-dom";
 
 const publicRoutes: RouteObject[] = [
@@ -43,6 +43,10 @@ const projects: RouteObject[] = [
   {
     path: siteConfig.subPage.waveB.href,
     element: <WaveB />
+  },
+  {
+    path: siteConfig.subPage.vng.href,
+    element: <VNG />
   }
 ]
 
