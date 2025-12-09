@@ -2,9 +2,9 @@ import { siteConfig } from "..";
 
 export const VPBank = {
   breadCrumbHref: [
-    siteConfig.pageList.home.href,
-    siteConfig.pageList.caseStudies.href,
-    siteConfig.pageList.vpBank.href,
+    siteConfig.mainPage.home.href,
+    // siteConfig.pageList.caseStudies.href,
+    siteConfig.subPage.vpBank.href,
   ],
   main: {
     section1: {

@@ -52,19 +52,6 @@ function HomeNew() {
             </div>
           </div>
         </div>
-
-        {/* Timeline
-        <div className={cn(
-          "flex flex-col gap-[60px] mt-10 px-4",
-          "lg:mt-[100px] lg:max-w-[1040px] lg:mx-auto lg:px-0 lg:gap-[100px]"
-        )}>
-          {
-            DataHome.timeline.map((item, index) => (
-              <Timeline key={index} {...item} />
-            ))
-          }
-        </div> */}
-
         {/* Section */}
         {
           <div className={

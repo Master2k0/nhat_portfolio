@@ -2,9 +2,9 @@ import { siteConfig } from "..";
 
 export const WashUp = {
   breadCrumbHref: [
-    siteConfig.pageList.home.href,
-    siteConfig.pageList.projectHighlights.href,
-    siteConfig.pageList.washUp.href,
+    siteConfig.mainPage.home.href,
+    // siteConfig.pageList.projectHighlights.href,
+    siteConfig.subPage.washUp.href,
   ],
   vehicleWashApp: {
     section1: {

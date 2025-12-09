@@ -2,9 +2,9 @@ import { siteConfig } from "..";
 
 export const Circa = {
   breadCrumbHref: [
-    siteConfig.pageList.home.href,
-    siteConfig.pageList.projectHighlights.href,
-    siteConfig.pageList.circa.href,
+    siteConfig.mainPage.home.href,
+    // siteConfig.pageList.projectHighlights.href,
+    siteConfig.subPage.circa.href,
   ],
   consumerProduct: {
     section1: {

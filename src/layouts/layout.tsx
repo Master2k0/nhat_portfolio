@@ -7,13 +7,13 @@ import SideBar from "./sidebar";
 function Layout() {
 
   const listWithoutPadding = [
-    siteConfig.pageList.home.href,
-    siteConfig.pageList.otherProjects.href,
+    siteConfig.mainPage.home.href,
+    // siteConfig.pageList.otherProjects.href,
   ]
   const isMatchWithoutPadding = listWithoutPadding.includes(window.location.pathname);
 
   const listWithoutMaxWidth = [
-    siteConfig.pageList.home.href,
+    siteConfig.mainPage.home.href,
   ]
 
   const isMatchWithoutMaxWidth = listWithoutMaxWidth.includes(window.location.pathname);

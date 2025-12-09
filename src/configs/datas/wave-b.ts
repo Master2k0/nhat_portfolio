@@ -2,9 +2,9 @@ import { siteConfig } from "..";
 
 export const WaveB = {
   breadCrumbHref: [
-    siteConfig.pageList.home.href,
-    siteConfig.pageList.caseStudies.href,
-    siteConfig.pageList.waveB.href,
+    siteConfig.mainPage.home.href,
+    // siteConfig.pageList.caseStudies.href,
+    siteConfig.subPage.waveB.href,
   ],
   main: {
     section1: {

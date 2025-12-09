@@ -15,8 +15,8 @@ interface SidebarItemsProps {
 function SidebarItemsRender({ item, onClick }: SidebarItemsProps) {
     const location = useLocation();
     const isActive = useMemo(() => {
-        if (item.href === siteConfig.pageList.home.href) {
-            return location.pathname === siteConfig.pageList.home.href;
+        if (item.href === siteConfig.mainPage.home.href) {
+            return location.pathname === siteConfig.mainPage.home.href;
         }
         return location.pathname.startsWith(item.href);
     }, [location, item.href]);
