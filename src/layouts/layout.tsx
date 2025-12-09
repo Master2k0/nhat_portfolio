@@ -22,7 +22,7 @@ function Layout() {
       <SideBar />
       <div className={cn(
         "no-scrollbar mt-[60px] mb-8 ", !isMatchWithoutPadding && "px-4  ",
-        "  lg:mt-20 lg:mb-[100px]", !isMatchWithoutPadding && "lg:p-10 lg:mb-[60px]",
+        "  xl:mt-20 xl:mb-[100px]", !isMatchWithoutPadding && "xl:p-10 xl:mb-[60px]",
 
       )}>
         <div className={cn(

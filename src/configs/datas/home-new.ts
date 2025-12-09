@@ -92,3 +92,61 @@ export const DataHome = {
     },
   ],
 };
+
+export const DataHomeV3 = {
+  banner: {
+    name: "Nhat Nguyen",
+    position: "Product Designer",
+    description:
+      "+3 years of experience in pampering users, delivering solutions tailored to the demanding requirements of businesses, and actively persuading developers to go the extra mile to enhance the user experience.",
+    img: "/home-new/images/img-banner.png",
+  },
+  projects: [
+    {
+      img: "/home-new/images/vng.png",
+      href: "/project-highlights/vng",
+      title: "MyVNG - POSTAL TOOL",
+      content: "Project to improve the current shipment and order management process.",
+      active: true,
+    },
+    {
+      img: "/home-new/images/circa.png",
+      href: "/project-highlights/circa",
+      title: "CIRCA - B2C Medical Ecommerce",
+      content:
+        "E-commerce platform specializing in retail distribution of pharmaceutical products.",
+      active: true,
+    },
+    {
+      img: "/home-new/images/thuoc-si.png",
+      href: "",
+      title: "THUOCSI - B2B Medical E-Commerce",
+      content:
+        "Platform specializing in wholesale distribution of pharmaceutical products to pharmacies.",
+      active: false,
+    },
+    {
+      img: "/home-new/images/vp-bank.png",
+      href: "",
+      title: "VP Bank App -  UX problems",
+      content:
+        "I challenged myself to analyze UX improvements in the payroll banking app my company uses.",
+      active: false,
+    },
+    {
+      img: "/home-new/images/dakoli.png",
+      href: "/project-highlights/dakoli",
+      title: "DAKOLI PROJECT",
+      content:
+        "Your go-to platform for businesses and customers to shop a variety of products easily.",
+      active: true,
+    },
+    {
+      img: "/home-new/images/waveB.png",
+      href: "",
+      title: "WaveB - Blockchain Platform",
+      content: "My first project to kickstart my journey into the /n Product Design industry.",
+      active: false,
+    },
+  ],
+};

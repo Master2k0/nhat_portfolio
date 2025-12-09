@@ -1,6 +1,6 @@
-import { DataHome } from "@/configs/datas/home-new";
+import ProjectCardNew from "@/components/project-card-new";
+import { DataHomeV3 } from "@/configs/datas/home-new";
 import { cn } from "@/libs/utils";
-import Timeline from "./components/time-line";
 import { Helmet } from "react-helmet";
 function HomeNew() {
 
@@ -21,7 +21,7 @@ function HomeNew() {
             "lg:flex-row-reverse lg:items-center lg:mx-auto lg:max-w-[1040px]   "
           )}>
 
-            <img src={DataHome.banner.img} className={
+            <img src={DataHomeV3.banner.img} className={
               cn(
                 "w-full",
                 "lg:flex-1 lg:min-w-0 lg:max-w-[740px]  lg:aspect-[1/1]"
@@ -35,25 +35,25 @@ function HomeNew() {
                 <p className={cn(
                   "text-32b text-gravel-25",
                   "lg:text-60b"
-                )}>{DataHome.banner.name}</p>
+                )}>{DataHomeV3.banner.name}</p>
                 <p className={
                   cn(
                     "text-20b text-new-gradient",
                     "lg:text-32b"
                   )
-                }>{DataHome.banner.position}</p>
+                }>{DataHomeV3.banner.position}</p>
               </div>
               <p className={cn(
                 "text-14r text-gravel-100 pb-5",
                 "text-18r"
               )}>
-                {DataHome.banner.description}
+                {DataHomeV3.banner.description}
               </p>
             </div>
           </div>
         </div>
 
-        {/* Timeline */}
+        {/* Timeline
         <div className={cn(
           "flex flex-col gap-[60px] mt-10 px-4",
           "lg:mt-[100px] lg:max-w-[1040px] lg:mx-auto lg:px-0 lg:gap-[100px]"
@@ -63,7 +63,23 @@ function HomeNew() {
               <Timeline key={index} {...item} />
             ))
           }
-        </div>
+        </div> */}
+
+        {/* Section */}
+        {
+          <div className={
+            cn(
+              "grid grid-cols-1 gap-8 mt-8 px-4",
+              "xl:grid-cols-2 xl:mt-[100px] xl:max-w-[1092px] xl:mx-auto xl:px-0 xl:gap-[60px]"
+            )
+          }>
+            {
+              DataHomeV3.projects.map((item) => (
+                <ProjectCardNew item={item} key={item.href} />
+              ))
+            }
+          </div>
+        }
       </div >;
     </>
   )

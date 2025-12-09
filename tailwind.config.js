@@ -346,7 +346,7 @@ export default {
     },
     screens: {
       ...defaultTheme.screens,
-      "3xl": "1920px",
+      xl: "1440px",
     },
     extend: {
       fontFamily: {

@@ -5,33 +5,36 @@ const Footer = () => {
   return (
     <div className={
       cn(
-        "w-full bg-block-bg px-4 pt-5 pb-8 ",
-        "lg:pt-[60px] lg:pb-[100px]"
+        "w-full bg-block-bg pt-5 pb-8 px-4 ",
+        "xl:pt-[60px] xl:pb-[100px] xl:px-0"
       )
     }>
-      <div className="mx-auto max-w-[1040px]  flex flex-col gap-5">
+      <div className={cn(
+        "flex flex-col gap-5",
+        "xl:mx-auto xl:max-w-[1080px]"
+      )}>
 
         <p className={cn(
           "text-24b text-white-footer",
-          "lg:text-32b"
+          "xl:text-32b"
         )}>Contact info</p>
         <div className="flex flex-col gap-2">
           <span className={cn(
             "text-14r text-gravel-100",
-            "lg:text-16r"
+            "xl:text-16r"
           )}>Please feel free to contact me via&nbsp;
             <a className={cn(
               "text-new-gradient text-14m",
-              "lg:text-16m"
+              "xl:text-16m"
             )} href={siteConfig.contact.linkedin.href} target="_blank" >Linkedin</a>
           </span>
           <span className={cn(
             "text-14r text-gravel-100",
-            "lg:text-16r"
+            "xl:text-16r"
           )}> or send an email to&nbsp;
             <a className={cn(
               "text-new-gradient text-14m",
-              "lg:text-16m"
+              "xl:text-16m"
             )}
               href={siteConfig.contact.email.href}
               target="_blank"

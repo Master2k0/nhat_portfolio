@@ -135,12 +135,12 @@ export const SidebarItems: ISidebarItem[] = [
     name: "Home",
 
   },
-  {
-    id: "otherProjects",
-    href: siteConfig.pageList.otherProjects.href,
-    name: "Other projects",
+  // {
+  //   id: "otherProjects",
+  //   href: siteConfig.pageList.otherProjects.href,
+  //   name: "Other projects",
 
-  },
+  // },
   {
     id: "about",
     href: siteConfig.pageList.about.href,
