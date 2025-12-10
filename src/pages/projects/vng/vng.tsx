@@ -1,6 +1,7 @@
 import Content from "@/components/content";
 import Divider from "@/components/divider";
 import Header from "@/components/header";
+import ImageWithBlur from "@/components/imageWithBlur";
 import { SectionWrapper } from "@/components/sections-wrapper";
 import { VNG as Datas } from "@/configs/datas/vng";
 import { LayoutProjectSection } from "@/layouts";
@@ -106,10 +107,10 @@ function VNG() {
 
               </div>
             </div>
-            <img
+            <ImageWithBlur
               alt=""
               src={Datas.main.section1.img}
-              className="mt-6 w-full rounded-[8px] xl:mt-8 xl:rounded-[12px]"
+              className="mt-6 w-full rounded-[8px] xl:mt-8 xl:rounded-[12px] aspect-[1440/721]"
             />
             <div className={cn(
               "flex gap-4 mt-5",
@@ -158,10 +159,10 @@ function VNG() {
                 ))}
               </div>
             </div>
-            <img
+            <ImageWithBlur
               alt=""
               src={Datas.main.section2.img}
-              className="mt-6 w-full xl:mt-8 "
+              className="mt-6 w-full xl:mt-8 aspect-[795/631]"
             />
             <div className="bg-orange p-5 rounded-xl mt-6">
               <p className="text-14b xl:text-18b text-white ">Busines Goal:</p>
@@ -214,7 +215,7 @@ function VNG() {
               <div className="flex flex-col gap-6">
                 {Datas.main.section3.keyFindings.map((finding, index) => (
                   <div key={index} className="flex gap-5 bg-gravel-800 rounded-xl p-5">
-                    <img
+                    <ImageWithBlur
                       alt={finding.content}
                       src={finding.img}
                       className="aspect-[250/140] max-w-[250px]"
@@ -252,10 +253,10 @@ function VNG() {
                 <Content content={Datas.main.section4.content} />
               </div>
             </div>
-            <img
+            <ImageWithBlur
               alt=""
               src={Datas.main.section4.img}
-              className="mt-6 w-full xl:mt-8 "
+              className="mt-6 w-full xl:mt-8 aspect-[711/631]"
             />
             <div className="flex flex-col gap-8">
               <Content content={Datas.main.section4.belowContent} />
@@ -267,10 +268,10 @@ function VNG() {
                       <Content content={content} key={idx} />
                     ))}
                   </div>
-                  <img
+                  <ImageWithBlur
                     alt=""
                     src={subContent.img}
-                    className="shrink-0 grow-0  max-w-[345px] "
+                    className="shrink-0 grow-0  max-w-[345px]"
                   />
                 </div>
               ))}
@@ -296,12 +297,12 @@ function VNG() {
             <div className="flex flex-col gap-5 mt-5">
               <div className="flex flex-col  xl:flex-row gap-5 w-full">
                 {Datas.main.section5.imgs.map((img, index) => (
-                  <img key={index} src={img} className="rounded-[8px] max-w-[223px]" />
+                  <ImageWithBlur alt="" key={index} src={img} className="rounded-[8px] max-w-[223px]" />
                 ))}
 
               </div>
               {Datas.main.section5.imgs2.map((img, index) => (
-                <img key={index} src={img} className="rounded-[8px] w-full" />
+                <ImageWithBlur alt="" key={index} src={img} className="rounded-[8px] w-full" />
               ))}
             </div>
           </SectionWrapper>
@@ -320,7 +321,7 @@ function VNG() {
             <div className="flex flex-col gap-8 mt-8">
 
               {Datas.main.section6.imgs.map((img, index) => (
-                <img key={index} src={img} className=" w-full" />
+                <ImageWithBlur alt="" key={index} src={img} className=" w-full" />
               ))}
             </div>
           </SectionWrapper>
