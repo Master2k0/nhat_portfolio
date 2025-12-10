@@ -3,9 +3,11 @@ import { defineConfig } from "vite";
 import path from "path";
 import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
 import { visualizer } from "rollup-plugin-visualizer";
+import ReactInspector from "vite-plugin-react-inspector";
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
+    ReactInspector(),
     react(),
     ViteImageOptimizer({
       png: {
