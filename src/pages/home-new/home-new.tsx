@@ -1,14 +1,12 @@
 import ProjectCardNew from "@/components/project-card-new";
 import { DataHomeV3 } from "@/configs/datas/home-new";
 import { cn } from "@/libs/utils";
-import { Helmet } from "react-helmet";
 function HomeNew() {
 
   return (
     <>
-      <Helmet>
-        <title>Home</title>
-      </Helmet>
+      <title>Home</title>
+      <meta name="Home" content="Home JamesDes" />
       <div className="">
 
         {/* Banner */}
