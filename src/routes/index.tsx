@@ -1,5 +1,6 @@
 import { siteConfig } from "@/configs";
 import { Layout } from "@/layouts";
+import LayoutV2 from "@/layouts/layout-v2";
 import AboutMeNew from "@/pages/about-me-new";
 import HomeNew from "@/pages/home-new";
 import NotFound from "@/pages/not-found/not-found";
@@ -15,9 +16,7 @@ const publicRoutes: RouteObject[] = [
     path: siteConfig.mainPage.about.href,
     element: <AboutMeNew />,
   },
-
 ];
-
 
 const projects: RouteObject[] = [
   {
@@ -30,25 +29,25 @@ const projects: RouteObject[] = [
   },
   {
     path: siteConfig.subPage.circa.href,
-    element: <Circa />
+    element: <Circa />,
   },
   {
     path: siteConfig.subPage.washUp.href,
-    element: <WashUp />
+    element: <WashUp />,
   },
   {
     path: siteConfig.subPage.vpBank.href,
-    element: <VPBank />
+    element: <VPBank />,
   },
   {
     path: siteConfig.subPage.waveB.href,
-    element: <WaveB />
+    element: <WaveB />,
   },
   {
     path: siteConfig.subPage.vng.href,
-    element: <VNG />
-  }
-]
+    element: <VNG />,
+  },
+];
 
 const router = createBrowserRouter([
   {
@@ -58,9 +57,8 @@ const router = createBrowserRouter([
   },
   {
     path: siteConfig.mainPage.projects.href,
-    element: <Layout />,
+    element: <LayoutV2 />,
     children: projects,
-
   },
   {
     path: siteConfig.mainPage.notFound.href,

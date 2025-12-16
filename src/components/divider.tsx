@@ -9,7 +9,7 @@ function Divider({ type = "line", className }: DividerProps) {
   return (
     <div
       className={cn(
-        "mb-6 mt-3 w-full border-t border-gravel-700 xl:mb-10 xl:mt-5",
+        "w-full border-t border-gravel-700",
         {
           "border-dotted": type === "dot",
           "border-solid": type === "line",
