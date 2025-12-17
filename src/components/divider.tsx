@@ -1,7 +1,7 @@
 import { cn } from "@/libs/utils";
 
 type DividerProps = {
-  type?: "dot" | "line";
+  type?: "dot" | "line" | "dashed";
   className?: string;
 };
 
@@ -13,6 +13,7 @@ function Divider({ type = "line", className }: DividerProps) {
         {
           "border-dotted": type === "dot",
           "border-solid": type === "line",
+          "border-dashed": type === "dashed",
         },
         className,
       )}

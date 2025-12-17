@@ -14,12 +14,11 @@ const ImageWithBlur = ({ src, alt, className }: ImageWithBlurProps) => {
       <img
         src={src}
         alt={alt}
-        className={`w-full h-full transition-opacity duration-700 ease-in-out ${isLoaded ? 'opacity-100 blur-0 ' : 'opacity-0 blur-lg '}`}
+        className={`h-full w-full transition-opacity duration-700 ease-in-out ${isLoaded ? "opacity-100 blur-0" : "opacity-0 blur-lg"}`}
         onLoad={() => setIsLoaded(true)}
       />
-
     </div>
-  )
-}
+  );
+};
 
 export default ImageWithBlur;

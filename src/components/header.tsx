@@ -12,10 +12,10 @@ function Header({
   return (
     <p
       className={cn(
-        type === "h3" && "text-24b text-gravel-25 xl:text-32b",
+        type === "h3" && "text-20b text-gravel-25 xl:text-32b",
         type === "h2" && "xl:text-40b text-32b text-gravel-25",
-        type === "h1" && "text-40b text-gravel-25 xl:text-60b",
-        type === "h4" && "text-18b text-gravel-25 xl:text-24b",
+        type === "h1" && "text-32b text-gravel-25 xl:text-60b",
+        type === "h4" && "text-16b text-gravel-25 xl:text-24b",
         className,
       )}
     >
