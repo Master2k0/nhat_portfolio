@@ -23,8 +23,8 @@ function SidebarItemsRender({ item, onClick }: SidebarItemsProps) {
       to={item.href}
       data-label={item.name}
       className={cn(
-        isActive && "navbar-text-gradient text-14m xl:text-20m",
         "px-4 text-14r text-gravel-25 xl:px-6 xl:text-20r",
+        isActive && "text-14m text-yellow xl:text-20m",
       )}
       onClick={onClick}
     >

@@ -100,7 +100,10 @@ const AboutMeNew = () => {
               </span>
             </div>
             <a
-              className={cn("text-underline-gradient text-14m", "xl:text-18m")}
+              className={cn(
+                "text-14m text-yellow underline decoration-solid underline-offset-1",
+                "xl:text-18m",
+              )}
               href={Datas.certificate.link}
               target="_blank"
             >

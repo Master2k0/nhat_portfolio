@@ -3,6 +3,7 @@ import Divider from "@/components/divider";
 import Header from "@/components/header";
 import ImageWithBlur from "@/components/imageWithBlur";
 import { SectionWrapperNew } from "@/components/section-wrapper-new";
+import ZoomableImageWithBlur from "@/components/zoomable-image-with-blur";
 import { VNG as Datas } from "@/configs/datas/vng";
 import { useResponsiveProps } from "@/hooks/responsive.hook";
 import { cn } from "@/libs/utils";
@@ -64,12 +65,17 @@ function VNG() {
             }}
           />
         </div>
-        <ImageWithBlur alt="" src={Datas.main.section2.img1} />
+        <ZoomableImageWithBlur alt="" src={Datas.main.section2.img1} />
+        {/* <ImageWithBlur alt="" src={Datas.main.section2.img1} /> */}
         <Content content={Datas.main.section2.content2} />
-        <ImageWithBlur
+        <ZoomableImageWithBlur
           alt=""
           src={isLargeScreen ? Datas.main.section2.img2 : Datas.main.section2.img2small}
         />
+        {/* <ImageWithBlur
+          alt=""
+          src={isLargeScreen ? Datas.main.section2.img2 : Datas.main.section2.img2small}
+        /> */}
         <div className="rounded-[12px] bg-orange p-5">
           <p className="text-16b text-white xl:text-18b">
             {Datas.main.section2.businessGoal.title}
@@ -122,7 +128,12 @@ function VNG() {
             ))}
           </div>
         </div>
-        <ImageWithBlur alt="" src={Datas.main.section3.img} className="mt-3 xl:mt-5" />
+        <ZoomableImageWithBlur
+          alt=""
+          src={Datas.main.section3.img}
+          wrapperClassName="mt-3 xl:mt-5"
+        />
+        {/* <ImageWithBlur alt="" src={Datas.main.section3.img} className="mt-3 xl:mt-5" /> */}
         <div className="mt-3 rounded-[12px] bg-blue p-5 xl:mt-10">
           <p className="text-14b text-white xl:text-18b">{Datas.main.section3.hmw.title}</p>
           <Content
@@ -156,18 +167,29 @@ function VNG() {
           ))}
 
           {Datas.main.section4.ticketEasier.imgs.map((img, index) => (
-            <ImageWithBlur
+            <ZoomableImageWithBlur
               alt=""
               src={img}
               key={index}
-              className={cn(
-                "rounded-sm xl:rounded-[8px]",
+              wrapperClassName={cn(
                 index === 0 && "order-2",
                 index === 1 && "order-4",
 
                 "xl:order-2 xl:col-span-1",
               )}
             />
+            // <ImageWithBlur
+            //   alt=""
+            //   src={img}
+            //   key={index}
+            //   className={cn(
+            //     "rounded-sm xl:rounded-[8px]",
+            //     index === 0 && "order-2",
+            //     index === 1 && "order-4",
+
+            //     "xl:order-2 xl:col-span-1",
+            //   )}
+            // />
           ))}
         </div>
         <Header
@@ -183,11 +205,12 @@ function VNG() {
               className="text-14r text-gravel-100 xl:text-18r"
             />
           ))}
-          <ImageWithBlur
+          <ZoomableImageWithBlur alt="" src={Datas.main.section4.manage.img} />
+          {/* <ImageWithBlur
             alt=""
             src={Datas.main.section4.manage.img}
             className="rounded-sm xl:rounded-[8px]"
-          />
+          /> */}
         </div>
         <Header
           type="h4"
@@ -196,12 +219,13 @@ function VNG() {
         />
         <div className="mt-3 grid grid-cols-2 gap-3 xl:mt-5 xl:gap-6">
           {Datas.main.section4.wireframing.imgs.map((img, index) => (
-            <ImageWithBlur
-              alt=""
-              src={img}
-              key={index}
-              className="h-fit rounded-sm xl:rounded-[8px]"
-            />
+            <ZoomableImageWithBlur alt="" src={img} key={index} wrapperClassName="h-fit" />
+            // <ImageWithBlur
+            //   alt=""
+            //   src={img}
+            //   key={index}
+            //   className="h-fit rounded-sm xl:rounded-[8px]"
+            // />
           ))}
         </div>
       </SectionWrapperNew>
@@ -214,12 +238,14 @@ function VNG() {
           />
           <div className="grid grid-cols-3 gap-5">
             {Datas.main.section5.imgs.map((img, index) => (
-              <ImageWithBlur
-                alt=""
-                src={img}
-                key={index}
-                className="aspect-[106/138] rounded-sm xl:aspect-[275/356] xl:rounded-[8px]"
-              />
+              <ZoomableImageWithBlur alt="" src={img} key={index} wrapperClassName="h-fit" />
+
+              // <ImageWithBlur
+              //   alt=""
+              //   src={img}
+              //   key={index}
+              //   className="aspect-[106/138] rounded-sm xl:aspect-[275/356] xl:rounded-[8px]"
+              // />
             ))}
           </div>
         </div>
@@ -231,11 +257,12 @@ function VNG() {
           />
           <div className="flex flex-col gap-5">
             <Content content={Datas.main.section5.planning.content} />
-            <ImageWithBlur
+            <ZoomableImageWithBlur alt="" src={Datas.main.section5.planning.img} />
+            {/* <ImageWithBlur
               alt=""
               src={Datas.main.section5.planning.img}
               className="rounded-sm xl:rounded-[8px]"
-            />
+            /> */}
           </div>
         </div>
         <div className="flex flex-col gap-3 xl:gap-5">
@@ -254,12 +281,17 @@ function VNG() {
                     __html: Datas.main.section5.result.content[index],
                   }}
                 />
-                <ImageWithBlur
+                <ZoomableImageWithBlur
+                  alt=""
+                  src={Datas.main.section5.result.imgs[index]}
+                  key={index}
+                />
+                {/* <ImageWithBlur
                   key={index}
                   alt=""
                   src={Datas.main.section5.result.imgs[index]}
                   className="rounded-sm xl:rounded-[8px]"
-                />
+                /> */}
               </>
             ))}
           </div>
@@ -272,22 +304,12 @@ function VNG() {
           {Datas.main.section6.subContent.map((subContent, index) => (
             <div key={index} className="flex flex-col gap-2 xl:gap-5">
               <Content content={subContent.title} className="text-14b text-gravel-25 xl:text-18b" />
-              <ImageWithBlur alt="" src={subContent.img} className="rounded-sm xl:rounded-[8px]" />
+              <ZoomableImageWithBlur alt="" src={subContent.img} />
+              {/* <ImageWithBlur alt="" src={subContent.img} className="rounded-sm xl:rounded-[8px]" /> */}
             </div>
           ))}
         </div>
       </SectionWrapperNew>
-      {/* <ImageWithBlur
-                    alt=""
-                    src={subContent.img}
-                    className="shrink-0 grow-0  max-w-[345px]"
-                  /> */}
-      {/* <p
-                    className="text-14r text-gravel-100 xl:text-16r"
-                    dangerouslySetInnerHTML={{
-                      __html: Datas.main.section3.conducted[0],
-                    }}
-                  /> */}
     </div>
   );
 }

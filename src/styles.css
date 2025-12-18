@@ -134,9 +134,9 @@
     content: "";
     position: absolute;
     left: 0;
-    bottom: 4px; /* sát chữ */
+    bottom: 4px;
     width: 100%;
-    height: 2px; /* độ dày gạch */
+    height: 2px;
     border-bottom: 1px solid transparent;
     border-image: linear-gradient(225deg, #f2d76f 0%, #e97f96 100%) 1;
   }

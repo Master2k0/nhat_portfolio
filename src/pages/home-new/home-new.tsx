@@ -24,7 +24,7 @@ function HomeNew() {
                 <p className={cn("text-32b text-gravel-25", "lg:text-60b")}>
                   {DataHomeV3.banner.name}
                 </p>
-                <p className={cn("text-20b", "lg:text-32b", "text-new-gradient")}>
+                <p className={cn("text-20b", "text-yellow lg:text-32b")}>
                   {DataHomeV3.banner.position}
                 </p>
               </div>
