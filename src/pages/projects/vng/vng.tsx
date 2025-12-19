@@ -68,14 +68,14 @@ function VNG() {
         <ZoomableImageWithBlur alt="" src={Datas.main.section2.img1} />
         {/* <ImageWithBlur alt="" src={Datas.main.section2.img1} /> */}
         <Content content={Datas.main.section2.content2} />
-        <ZoomableImageWithBlur
-          alt=""
-          src={isLargeScreen ? Datas.main.section2.img2 : Datas.main.section2.img2small}
-        />
-        {/* <ImageWithBlur
+        {/* <ZoomableImageWithBlur
           alt=""
           src={isLargeScreen ? Datas.main.section2.img2 : Datas.main.section2.img2small}
         /> */}
+        <ImageWithBlur
+          alt=""
+          src={isLargeScreen ? Datas.main.section2.img2 : Datas.main.section2.img2small}
+        />
         <div className="rounded-[12px] bg-orange p-5">
           <p className="text-16b text-white xl:text-18b">
             {Datas.main.section2.businessGoal.title}
@@ -234,7 +234,7 @@ function VNG() {
         <div className="mt-6 flex flex-col gap-5 xl:mt-10">
           <Content
             content={Datas.main.section5.content}
-            className="text-14r text-gravel-100 xl:mt-10 xl:text-18r"
+            className="text-14r text-gravel-100  xl:text-18r"
           />
           <div className="grid grid-cols-3 gap-5">
             {Datas.main.section5.imgs.map((img, index) => (
