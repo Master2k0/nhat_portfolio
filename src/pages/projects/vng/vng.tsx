@@ -76,7 +76,7 @@ function VNG() {
           alt=""
           src={isLargeScreen ? Datas.main.section2.img2 : Datas.main.section2.img2small}
         />
-        <div className="rounded-[12px] bg-orange p-5">
+        <div className="rounded-[12px] bg-orange p-3 xl:p-5">
           <p className="text-16b text-white xl:text-18b">
             {Datas.main.section2.businessGoal.title}
           </p>
@@ -134,7 +134,7 @@ function VNG() {
           wrapperClassName="mt-3 xl:mt-5"
         />
         {/* <ImageWithBlur alt="" src={Datas.main.section3.img} className="mt-3 xl:mt-5" /> */}
-        <div className="mt-3 rounded-[12px] bg-blue p-5 xl:mt-10">
+        <div className="mt-3 rounded-[12px] bg-blue p-3 xl:mt-10 xl:p-5">
           <p className="text-14b text-white xl:text-18b">{Datas.main.section3.hmw.title}</p>
           <Content
             content={Datas.main.section3.hmw.content}
@@ -234,7 +234,7 @@ function VNG() {
         <div className="mt-6 flex flex-col gap-5 xl:mt-10">
           <Content
             content={Datas.main.section5.content}
-            className="text-14r text-gravel-100  xl:text-18r"
+            className="text-14r text-gravel-100 xl:text-18r"
           />
           <div className="grid grid-cols-3 gap-5">
             {Datas.main.section5.imgs.map((img, index) => (

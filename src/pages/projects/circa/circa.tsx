@@ -1,314 +1,306 @@
-import { SectionWrapper } from "@/components/sections-wrapper";
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbList,
-  BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb";
-import { Button } from "@/components/ui/button";
-import { Drawer, DrawerContent, DrawerTrigger } from "@/components/ui/drawer";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Circa as Datas } from "@/configs/datas/circa";
-import { useResponsiveProps } from "@/hooks/responsive.hook";
-import { LayoutProjectSection } from "@/layouts";
+import Content from "@/components/content";
+import Divider from "@/components/divider";
+import Header from "@/components/header";
+import ImageWithBlur from "@/components/imageWithBlur";
+import { SectionWrapperNew } from "@/components/section-wrapper-new";
+import ZoomableImageWithBlur from "@/components/zoomable-image-with-blur";
+import { CircaNew as Datas } from "@/configs/datas/circa-new";
 import { cn } from "@/libs/utils";
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import TabOne from "./components/tab-one";
-export type CurrentTab = "Consumer Product" | "Design System" | "POS System" | "Admin System";
-
-type TabsControllerProps = {
-  setCurrentTab: (tab: CurrentTab) => void;
-  currentTab: CurrentTab;
-};
-
-const listIds = {
-  "Consumer Product": [
-    {
-      id: "introduction",
-      title: "Introduction",
-    },
-    {
-      id: "product-scope",
-      title: "Product Scope",
-    },
-    {
-      id: "personas",
-      title: "Personas",
-    },
-    {
-      id: "user-journeys",
-      title: "User Journeys",
-    },
-    {
-      id: "info-architecture",
-      title: "Infor Architecture",
-    },
-    {
-      id: "wireframes-userflow",
-      title: "Wireframes/ Userflow",
-    },
-    {
-      id: "app-ui-design",
-      title: "App UI Design",
-    },
-    {
-      id: "web-ui-design",
-      title: "Web UI Design",
-    },
-  ],
-  "Design System": [
-    {
-      id: "introduction",
-      title: "Introduction",
-    },
-    {
-      id: "product-scope",
-      title: "Product Scope",
-    },
-    {
-      id: "personas",
-      title: "Personas",
-    },
-    {
-      id: "user-journeys",
-      title: "User Journeys",
-    },
-    {
-      id: "infor-architecture",
-      title: "Infor Architecture",
-    },
-    {
-      id: "wireframes-userflow",
-      title: "Wireframes/ Userflow",
-    },
-    {
-      id: "app-ui-design",
-      title: "App UI Design",
-    },
-    {
-      id: "web-ui-design",
-      title: "Web UI Design",
-    },
-  ],
-  "POS System": [],
-  "Admin System": [],
-};
-
-function TabsController({ currentTab, setCurrentTab }: TabsControllerProps) {
-  const isLargeScreen = useResponsiveProps({ xl: true });
-  return (
-    <div className="w-full">
-      <Tabs defaultValue="Consumer Product">
-        {!isLargeScreen ? (
-          <SectionWrapper
-            wrapperClassName={cn(
-              "relative w-full overflow-visible  xl:rounded-[8px]  rounded-[20px] xl:max-w-[600px] 3xl:max-w-[1064px] h-fit rounded-bl-none lg:rounded-bl-none lg:rounded-br-none rounded-br-none !pr-0 !pb-0 xl:pr-[1px] xl:pb-[1px]",
-            )}
-            divClassName="flex flex-col gap-4 xl:gap-6 pl-[15px] pr-[16px] pt-[19px] pb-0 xl:py-[20px] xl:p-[15px] xl:rounded-[8px] 3xl:p-[27px] height-fit rounded-bl-none rounded-br-none lg:rounded-bl-none lg:rounded-br-none "
-          >
-            <div className="flex flex-wrap items-center justify-between">
-              <p className="text-20b text-gravel-300">Circa</p>
-              <Drawer>
-                <DrawerTrigger asChild>
-                  <Button className="flex gap-2 bg-select">
-                    <img src="/vehicle-wash-app/icons/grid.svg" alt="" className="h-4 w-4" />
-                    Orther sections
-                  </Button>
-                </DrawerTrigger>
-                <DrawerContent className="bg-block-bg">
-                  <TabsList className="flex h-fit flex-col !items-start">
-                    <p className="p-4 text-18s text-gravel-25 xl:hidden">Other sections</p>
-                    <TabsTrigger
-                      className="[state=active]:xl:text-gravel-25 flex h-[44px] w-full justify-between px-4 text-14r xl:h-auto xl:text-18s xl:text-gravel-300"
-                      value={"Consumer Product"}
-                      onClick={() => setCurrentTab("Consumer Product")}
-                    >
-                      Consumer Product
-                      {!isLargeScreen && currentTab === "Consumer Product" && (
-                        <img alt="" src="/vehicle-wash-app/icons/check.svg" />
-                      )}
-                    </TabsTrigger>
-                    <TabsTrigger
-                      className="[state=active]:xl:text-gravel-25 flex h-[44px] w-full justify-between px-4 text-14r xl:h-auto xl:text-18s xl:text-gravel-300"
-                      value={"Design System"}
-                      onClick={() => setCurrentTab("Design System")}
-                    >
-                      Design System
-                      {!isLargeScreen && currentTab === "Design System" && (
-                        <img alt="" src="/vehicle-wash-app/icons/check.svg" />
-                      )}
-                    </TabsTrigger>
-                    <TabsTrigger
-                      className="[state=active]:xl:text-gravel-25 flex h-[44px] w-full justify-between px-4 text-14r xl:h-auto xl:text-18s xl:text-gravel-300"
-                      value={"POS System"}
-                      onClick={() => setCurrentTab("POS System")}
-                      disabled
-                    >
-                      POS System
-                      {!isLargeScreen && currentTab === "POS System" && (
-                        <img alt="" src="/vehicle-wash-app/icons/check.svg" />
-                      )}
-                    </TabsTrigger>
-                    <TabsTrigger
-                      className="[state=active]:xl:text-gravel-25 flex h-[44px] w-full justify-between px-4 text-14r xl:h-auto xl:text-18s xl:text-gravel-300"
-                      value={"Admin System"}
-                      onClick={() => setCurrentTab("Admin System")}
-                      disabled
-                    >
-                      Admin System
-                      {!isLargeScreen && currentTab === "Admin System" && (
-                        <img alt="" src="/vehicle-wash-app/icons/check.svg" />
-                      )}
-                    </TabsTrigger>
-                  </TabsList>
-                </DrawerContent>
-              </Drawer>
-            </div>
-            <div className="border-dash-custom w-full" data-type="separator" />
-          </SectionWrapper>
-        ) : (
-          <SectionWrapper
-            wrapperClassName={cn(
-              "relative w-full overflow-visible   xl:rounded-[8px] 3xl:rounded-[8px] h-fit ",
-            )}
-            divClassName="flex flex-col gap-6  xl:rounded-[8px] 3xl:rounded-[8px] height-fit xl:p-0 3xl:p-0 xl:h-[100px] "
-          >
-            <TabsList className="h-full">
-              <TabsTrigger
-                className="[state=active]:xl:text-gravel-25 shadow-text flex h-[44px] w-full justify-between px-4 text-14r hover:text-gravel-25 disabled:text-gravel-300 xl:mx-auto xl:block xl:h-auto xl:w-full xl:text-18s xl:text-gravel-300"
-                value={"Consumer Product"}
-                onClick={() => setCurrentTab("Consumer Product")}
-              >
-                Consumer Product
-                {!isLargeScreen && currentTab === "Consumer Product" && (
-                  <img alt="" src="/vehicle-wash-app/icons/check.svg" />
-                )}
-              </TabsTrigger>
-              <TabsTrigger
-                className="[state=active]:xl:text-gravel-25 shadow-text flex h-[44px] w-full justify-between px-4 text-14r hover:text-gravel-25 disabled:text-gravel-300 xl:mx-auto xl:block xl:h-auto xl:w-full xl:text-18s xl:text-gravel-300"
-                value={"Design System"}
-                onClick={() => setCurrentTab("Design System")}
-              >
-                Design System
-                {!isLargeScreen && currentTab === "Design System" && (
-                  <img alt="" src="/vehicle-wash-app/icons/check.svg" />
-                )}
-              </TabsTrigger>
-              <TabsTrigger
-                className="[state=active]:xl:text-gravel-25 shadow-text flex h-[44px] w-full justify-between px-4 text-14r hover:text-gravel-25 disabled:text-gravel-300 xl:mx-auto xl:block xl:h-auto xl:w-full xl:text-18s xl:text-gravel-300"
-                value={"POS System"}
-                onClick={() => setCurrentTab("POS System")}
-                disabled
-              >
-                POS System
-                {!isLargeScreen && currentTab === "POS System" && (
-                  <img alt="" src="/vehicle-wash-app/icons/check.svg" />
-                )}
-              </TabsTrigger>
-              <TabsTrigger
-                className="[state=active]:xl:text-gravel-25 shadow-text flex h-[44px] w-full justify-between px-4 text-14r hover:text-gravel-25 disabled:text-gravel-300 xl:mx-auto xl:block xl:h-auto xl:w-full xl:text-18s xl:text-gravel-300"
-                value={"Admin System"}
-                onClick={() => setCurrentTab("Admin System")}
-                disabled
-              >
-                Admin System
-                {!isLargeScreen && currentTab === "Admin System" && (
-                  <img alt="" src="/vehicle-wash-app/icons/check.svg" />
-                )}
-              </TabsTrigger>
-            </TabsList>
-          </SectionWrapper>
-        )}
-        <TabsComponent />
-      </Tabs>
-    </div>
-  );
-}
-
-function TabsComponent() {
-  return (
-    <>
-      <TabsContent className="text-gravel-25" value="Consumer Product">
-        <TabOne />
-      </TabsContent>
-      <TabsContent className="text-gravel-25" value="Design System">
-        {/* <TabTwo /> */}
-      </TabsContent>
-      <TabsContent className="text-gravel-25" value="POS System">
-        {/* <TabThree /> */}
-      </TabsContent>
-      <TabsContent className="text-gravel-25" value="Admin System">
-        {/* <TabFour /> */}
-      </TabsContent>
-    </>
-  );
-}
+import Personas from "./components/personas";
 
 function Circa() {
-  const isLargeScreen = useResponsiveProps({ xl: true });
-  const navigate = useNavigate();
-  const [currentTab, setCurrentTab] = useState<CurrentTab>("Consumer Product");
-  const [hoverBreadcrumb, setHoverBreadcrumb] = useState({
-    home: false,
-    projectHighlights: false,
-  });
   return (
-    <div className="flex flex-col gap-6 xl:gap-[60px]">
-      <Breadcrumb>
-        <BreadcrumbList>
-          <BreadcrumbItem>
-            <span
-              className="shadow-text cursor-pointer text-gravel-300 hover:text-gravel-25"
-              onMouseEnter={() => setHoverBreadcrumb({ ...hoverBreadcrumb, home: true })}
-              onMouseLeave={() => setHoverBreadcrumb({ ...hoverBreadcrumb, home: false })}
-              onClick={() => {
-                navigate(Datas.breadCrumbHref[0]);
-              }}
-            >
-              {hoverBreadcrumb.home ? (
-                <img alt="" src="/home/icons/hh.svg" />
-              ) : (
-                <img alt="" src="/home/icons/ha.svg" />
-              )}
-            </span>
-          </BreadcrumbItem>
-          <BreadcrumbSeparator />
-          <BreadcrumbItem>
-            <span
-              className="shadow-text cursor-pointer text-16r text-gravel-300 hover:text-gravel-25"
-              onMouseEnter={() =>
-                setHoverBreadcrumb({ ...hoverBreadcrumb, projectHighlights: true })
-              }
-              onMouseLeave={() =>
-                setHoverBreadcrumb({ ...hoverBreadcrumb, projectHighlights: false })
-              }
-              onClick={() => {
-                navigate(Datas.breadCrumbHref[1]);
-              }}
-            >
-              {isLargeScreen ? (
-                "Project Highlights"
-              ) : hoverBreadcrumb.projectHighlights ? (
-                <img alt="" src="/home/icons/bh.svg" />
-              ) : (
-                <img alt="" src="/home/icons/ba.svg" />
-              )}
-            </span>
-          </BreadcrumbItem>
-          <BreadcrumbSeparator />
-          <BreadcrumbItem>
-            <span className="shadow-text cursor-pointer text-12r text-gravel-25 xl:text-16r">
-              Circa - B2C Medical Ecommerce
-            </span>
-          </BreadcrumbItem>
-        </BreadcrumbList>
-      </Breadcrumb>
+    <div className={cn("flex flex-col gap-10", "xl:gap-[150px]")}>
+      <SectionWrapperNew>
+        <Header type="h1" title={Datas.main.section1.title} />
+        <Content
+          content={Datas.main.section1.content}
+          className={cn("mt-5 text-20b text-yellow", "xl:text-32b")}
+        />
+        <Divider type="dashed" className={cn("my-5 xl:my-10")} />
+        <div className={cn("mt-5 flex gap-8", "xl:mt-8 xl:gap-[100px]")}>
+          <div className={cn("flex flex-col gap-2", "xl:gap-5")}>
+            <Content content="Duration:" className="text-gravel-25" />
+            <Content content={Datas.main.section1.duration} />
+          </div>
+          <div className={cn("flex flex-col gap-2", "xl:gap-5")}>
+            <Content content="Team:" className="text-gravel-25" />
+            {Datas.main.section1.teams.map((team, index) => (
+              <Content content={team} key={index} />
+            ))}
+          </div>
+          <div className={cn("flex flex-col gap-2", "xl:gap-5")}>
+            <Content content="Mt contribution:" className="text-gravel-25" />
+            {Datas.main.section1.contributions.map((contribution, index) => (
+              <Content content={contribution} key={index} />
+            ))}
+          </div>
+        </div>
+        <ImageWithBlur
+          alt=""
+          src={Datas.main.section1.img}
+          className={cn(
+            "left-[50%] mt-10 aspect-[1440/721] w-[100vw] -translate-x-1/2",
+            "xl:mt-[150px]",
+          )}
+        />
+      </SectionWrapperNew>
+      <SectionWrapperNew
+        divClassName={cn("flex flex-col gap-6 mb-10", "xl:flex xl:gap-10 xl:mb-0")}
+      >
+        <Header type="h3" title={Datas.main.section2.title} />
+        <div className={cn("flex flex-col gap-3", "xl:gap-5")}>
+          <Header
+            type="h4"
+            title={Datas.main.section2.subContent[0].title}
+            className="text-yellow"
+          />
+          <p
+            className="text-14r text-gravel-100 xl:text-18r"
+            dangerouslySetInnerHTML={{
+              __html: Datas.main.section2.subContent[0].content[0],
+            }}
+          />
+          <p className="xl:18b text-14m text-yellow">{Datas.main.section2.subContent[0].result}</p>
+          <ZoomableImageWithBlur alt="" src={Datas.main.section2.subContent[0].img || ""} />
+        </div>
+        <div className={cn("flex flex-col gap-3", "xl:gap-5")}>
+          <Header
+            type="h4"
+            title={Datas.main.section2.subContent[1].title}
+            className="text-yellow"
+          />
+          <Content content={Datas.main.section2.subContent[1].mainContent!} />
+          <ul>
+            {Datas.main.section2.subContent[1].content.map((item, index) => (
+              <li
+                key={index}
+                className={cn("list-ouside ml-6 list-disc text-14r text-gravel-100", "xl:text-18r")}
+              >
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="rounded-[12px] bg-orange p-3 xl:p-5">
+          <p className="text-16b text-white xl:text-18b">Business goal:</p>
+          <Content
+            content={Datas.main.section2.subContent[1].result}
+            className="mt-2 text-gravel-25"
+          />
+        </div>
+      </SectionWrapperNew>
+      <SectionWrapperNew
+        divClassName={cn("flex flex-col gap-6 mb-10", "xl:flex xl:gap-10 xl:mb-0")}
+      >
+        <Header type="h3" title={Datas.main.section3.title} />
+        {Datas.main.section3.subContent.map((subContent, index) => (
+          <div key={index} className={cn("flex flex-col gap-3", "xl:gap-5")}>
+            <Header type="h4" title={subContent.title} className="text-yellow" />
+            {subContent.content.map((content, contentIndex) => (
+              <p
+                key={contentIndex}
+                className="text-14r text-gravel-100 xl:text-18r"
+                dangerouslySetInnerHTML={{
+                  __html: content,
+                }}
+              />
+            ))}
+          </div>
+        ))}
+      </SectionWrapperNew>
+      <SectionWrapperNew
+        divClassName={cn("flex flex-col gap-6 mb-10", "xl:flex xl:gap-10 xl:mb-0")}
+      >
+        <Header type="h3" title={Datas.main.section4.title} />
+        <div className="flex flex-col gap-5">
+          <p
+            className="text-14r text-gravel-100 xl:text-18r"
+            dangerouslySetInnerHTML={{
+              __html: Datas.main.section4.content,
+            }}
+          />
+          <div className="flex flex-col gap-3 xl:gap-5">
+            <Content content={Datas.main.section4.content2} />
+            <ul className="flex flex-col gap-3 xl:gap-5">
+              {Datas.main.section4.subContent2.map((item, index) => (
+                <li
+                  key={index}
+                  className={cn(
+                    "list-ouside ml-6 list-disc text-14r text-gravel-100",
+                    "xl:text-18r",
+                  )}
+                >
+                  {item}
+                </li>
+              ))}
+            </ul>
+            <Content className="pl-6" content={Datas.main.section4.content3} />
+          </div>
+        </div>
+      </SectionWrapperNew>
+      <SectionWrapperNew
+        divClassName={cn("flex flex-col gap-6 mb-10", "xl:flex xl:gap-10 xl:mb-0")}
+      >
+        <Header type="h3" title={Datas.main.section5.title} />
+        <div className="flex flex-col gap-5">
+          {Datas.main.section5.content.map((subContent, index) => (
+            <Content key={index} content={subContent} />
+          ))}
+        </div>
+        <Personas
+          icon={Datas.main.section5.persona.icon}
+          name={Datas.main.section5.persona.name}
+          info={Datas.main.section5.persona.info}
+          position={Datas.main.section5.persona.position}
+          LifestyleBehavior={Datas.main.section5.persona.LifestyleBehavior}
+          NeedsPainPoints={Datas.main.section5.persona.NeedsPainPoints}
+        />
+      </SectionWrapperNew>
+      <SectionWrapperNew
+        divClassName={cn("flex flex-col gap-6 mb-10", "xl:flex xl:gap-10 xl:mb-0")}
+      >
+        <Header type="h3" title={Datas.main.section6.title} />
+        <div className="flex flex-col gap-5 xl:gap-10">
+          <Content content={Datas.main.section6.content} />
+          <ZoomableImageWithBlur alt="" src={Datas.main.section6.img || ""} />
+        </div>
+      </SectionWrapperNew>
+      <SectionWrapperNew
+        divClassName={cn("flex flex-col gap-6 mb-10", "xl:flex xl:gap-10 xl:mb-0")}
+      >
+        <Header type="h3" title={Datas.main.section7.title} />
+        <Content content={Datas.main.section7.content} />
+        <div className="flex flex-col gap-3 xl:gap-5">
+          <div className="rounded-[8px] bg-gravel-600 p-3 xl:rounded-xl xl:p-5">
+            <Content
+              content={Datas.main.section7.listImages[0].title}
+              className="text-14s text-gravel-100 xl:text-18s"
+            />
+          </div>
+          <div className="flex w-full gap-2 overflow-scroll xl:gap-[28.5px]">
+            {Datas.main.section7.listImages[0].imgs.map((img, index) => (
+              <ZoomableImageWithBlur
+                imgClassName="w-[175px] aspect-[175/379] xl:w-[160px] xl:aspect-auto"
+                wrapperClassName="w-[175px] shrink-0 grow xl:w-[150px] xl:aspect-auto xl:shrink"
+                key={index}
+                alt=""
+                src={img}
+              />
+            ))}
+          </div>
+        </div>
+        <div className="flex flex-col gap-3 xl:max-w-[507px] xl:gap-5">
+          <div className="rounded-[8px] bg-gravel-600 p-3 xl:rounded-xl xl:p-5">
+            <Content
+              content={Datas.main.section7.listImages[1].title}
+              className="text-14s text-gravel-100 xl:text-18s"
+            />
+          </div>
+          <div className="flex w-full gap-2 overflow-scroll xl:gap-[28.5px]">
+            {Datas.main.section7.listImages[1].imgs.map((img, index) => (
+              <ZoomableImageWithBlur
+                imgClassName="w-[175px] aspect-[175/379] xl:w-[160px] xl:aspect-auto"
+                wrapperClassName="w-[175px] shrink-0 grow xl:w-[150px] xl:aspect-auto xl:shrink"
+                key={index}
+                alt=""
+                src={img}
+              />
+            ))}
+          </div>
+        </div>
+        <div className="flex flex-col gap-6 xl:flex-row xl:gap-10">
+          <div className="flex flex-col gap-3 xl:max-w-[507px] xl:gap-5">
+            <div className="rounded-[8px] bg-gravel-600 p-3 xl:rounded-xl xl:p-5">
+              <Content
+                content={Datas.main.section7.listImages[2].title}
+                className="text-14s text-gravel-100 xl:text-18s"
+              />
+            </div>
+            <div className="flex w-full gap-2 overflow-scroll xl:gap-[28.5px]">
+              {Datas.main.section7.listImages[2].imgs.map((img, index) => (
+                <ZoomableImageWithBlur
+                  imgClassName="w-[175px] aspect-[175/379] xl:w-[160px] xl:aspect-auto"
+                  wrapperClassName="w-[175px] shrink-0 grow xl:w-[150px] xl:aspect-auto xl:shrink"
+                  key={index}
+                  alt=""
+                  src={img}
+                />
+              ))}
+            </div>
+          </div>
+          <div className="flex flex-col gap-3 xl:max-w-[507px] xl:gap-5">
+            <div className="rounded-[8px] bg-gravel-600 p-3 xl:rounded-xl xl:p-5">
+              <Content
+                content={Datas.main.section7.listImages[3].title}
+                className="text-14s text-gravel-100 xl:text-18s"
+              />
+            </div>
+            <div className="flex w-full gap-2 overflow-scroll xl:gap-[28.5px]">
+              {Datas.main.section7.listImages[3].imgs.map((img, index) => (
+                <ZoomableImageWithBlur
+                  imgClassName="w-[175px] aspect-[175/379] xl:w-[160px] xl:aspect-auto"
+                  wrapperClassName="w-[175px] shrink-0 grow xl:w-[150px] xl:aspect-auto xl:shrink"
+                  key={index}
+                  alt=""
+                  src={img}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+        <div className="flex max-w-[714px] flex-col gap-3 xl:gap-5">
+          <div className="rounded-[8px] bg-gravel-600 p-3 xl:rounded-xl xl:p-5">
+            <Content
+              content={Datas.main.section7.listImages[4].title}
+              className="text-14s text-gravel-100 xl:text-18s"
+            />
+          </div>
+          <div className="flex w-full gap-2 overflow-scroll xl:gap-[38px]">
+            {Datas.main.section7.listImages[4].imgs.map((img, index) => (
+              <ZoomableImageWithBlur
+                imgClassName="w-[175px] aspect-[175/379] xl:w-[160px] xl:aspect-auto"
+                wrapperClassName="w-[175px] shrink-0 grow xl:w-[150px] xl:aspect-auto xl:shrink"
+                key={index}
+                alt=""
+                src={img}
+              />
+            ))}
+          </div>
+        </div>
 
-      <div className="flex flex-col gap-6 xl:flex-row">
-        <LayoutProjectSection currentTab={currentTab} listIds={listIds} />
-        <TabsController setCurrentTab={setCurrentTab} currentTab={currentTab} />
-      </div>
+        <div className="flex max-w-[526px] flex-col gap-3 xl:gap-5">
+          <div className="rounded-[8px] bg-gravel-600 p-3 xl:rounded-xl xl:p-5">
+            <Content
+              content={Datas.main.section7.listImages[5].title}
+              className="text-14s text-gravel-100 xl:text-18s"
+            />
+          </div>
+          <div className="flex w-full gap-2 overflow-scroll xl:gap-[38px]">
+            {Datas.main.section7.listImages[5].imgs.map((img, index) => (
+              <ZoomableImageWithBlur
+                imgClassName="w-[175px] aspect-[175/379] xl:w-[160px] xl:aspect-auto"
+                wrapperClassName="w-[175px] shrink-0 grow xl:w-[150px] xl:aspect-auto xl:shrink"
+                key={index}
+                alt=""
+                src={img}
+              />
+            ))}
+          </div>
+        </div>
+      </SectionWrapperNew>
+      <SectionWrapperNew
+        divClassName={cn("flex flex-col gap-6 mb-10", "xl:flex xl:gap-10 xl:mb-0")}
+      >
+        <Header type="h3" title={Datas.main.section8.title} />
+        <Content content={Datas.main.section8.content} />
+        {Datas.main.section8.listImages.map((item, index) => (
+          <div key={index} className="flex flex-col gap-3 xl:gap-5">
+            <p className="text-14s text-gravel-25 xl:text-18s">{item.title}</p>
+            <ZoomableImageWithBlur alt="" src={item.img || ""} />
+          </div>
+        ))}
+      </SectionWrapperNew>
     </div>
   );
 }

@@ -8,7 +8,7 @@ function LayoutV2() {
     <div className="no-scrollbar relative w-full">
       <SideBar />
       <div className={cn("no-scrollbar mb-8 mt-[60px]", "xl:mb-[100px]")}>
-        <div className={cn("mx-auto w-full bg-background px-4 py-10", "xl:max-w-[864px]")}>
+        <div className={cn("mx-auto w-full bg-background px-4 py-10 xl:px-0", "xl:max-w-[864px]")}>
           <Outlet />
         </div>
       </div>

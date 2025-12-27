@@ -112,7 +112,7 @@ export const DataHomeV3 = {
       active: true,
     },
     {
-      img: "/home-new/images/circa.png",
+      img: "/circa/images/section-1.png",
       href: siteConfig.subPage.circa.href,
       title: "CIRCA - B2C Medical Ecommerce",
       content:
