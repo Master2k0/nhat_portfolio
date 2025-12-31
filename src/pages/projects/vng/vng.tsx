@@ -25,19 +25,19 @@ function VNG() {
           className={cn("mt-5 text-20b text-yellow", "xl:text-32b")}
         />
         <Divider type="dashed" className={cn("my-5 xl:my-10")} />
-        <div className={cn("mt-5 flex gap-4", "xl:mt-8 xl:gap-[100px]")}>
-          <div className={cn("flex flex-col gap-2", "xl:gap-5")}>
-            <Content content="Duration:" className="text-gravel-25" />
+        <div className={cn("mt-5 flex gap-8", "xl:mt-8 xl:gap-[100px]")}>
+          <div className={cn("flex flex-col gap-5")}>
+            <Content content="Duration:" className="text-14s text-gravel-25" />
             <Content content={Datas.main.section1.durations} />
           </div>
-          <div className={cn("flex flex-col gap-2", "xl:gap-5")}>
-            <Content content="Team:" className="text-gravel-25" />
+          <div className={cn("flex flex-col gap-5")}>
+            <Content content="Team:" className="text-14s text-gravel-25" />
             {Datas.main.section1.teams.map((team, index) => (
               <Content content={team} key={index} />
             ))}
           </div>
-          <div className={cn("flex flex-col gap-2", "xl:gap-5")}>
-            <Content content="Mt contribution:" className="text-gravel-25" />
+          <div className={cn("flex flex-col gap-5")}>
+            <Content content="My contribution:" className="text-14s text-gravel-25" />
             {Datas.main.section1.contributions.map((contribution, index) => (
               <Content content={contribution} key={index} />
             ))}

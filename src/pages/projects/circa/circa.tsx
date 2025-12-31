@@ -19,18 +19,18 @@ function Circa() {
         />
         <Divider type="dashed" className={cn("my-5 xl:my-10")} />
         <div className={cn("mt-5 flex gap-8", "xl:mt-8 xl:gap-[100px]")}>
-          <div className={cn("flex flex-col gap-2", "xl:gap-5")}>
-            <Content content="Duration:" className="text-gravel-25" />
+          <div className={cn("flex flex-col gap-5")}>
+            <Content content="Duration:" className="text-14s text-gravel-25" />
             <Content content={Datas.main.section1.duration} />
           </div>
-          <div className={cn("flex flex-col gap-2", "xl:gap-5")}>
-            <Content content="Team:" className="text-gravel-25" />
+          <div className={cn("flex flex-col gap-5")}>
+            <Content content="Team:" className="text-14s text-gravel-25" />
             {Datas.main.section1.teams.map((team, index) => (
               <Content content={team} key={index} />
             ))}
           </div>
-          <div className={cn("flex flex-col gap-2", "xl:gap-5")}>
-            <Content content="Mt contribution:" className="text-gravel-25" />
+          <div className={cn("flex flex-col gap-5")}>
+            <Content content="My contribution:" className="text-14s text-gravel-25" />
             {Datas.main.section1.contributions.map((contribution, index) => (
               <Content content={contribution} key={index} />
             ))}
@@ -163,7 +163,13 @@ function Circa() {
         <Header type="h3" title={Datas.main.section6.title} />
         <div className="flex flex-col gap-5 xl:gap-10">
           <Content content={Datas.main.section6.content} />
-          <ZoomableImageWithBlur alt="" src={Datas.main.section6.img || ""} />
+          <ZoomableImageWithBlur
+            alt=""
+            src={Datas.main.section6.img || ""}
+            wrapperClassName="rounded-none xl:rounded-none"
+            imgClassName="rounded-none xl:rounded-none"
+            imgOpenClassName="rounded-none xl:rounded-none"
+          />
         </div>
       </SectionWrapperNew>
       <SectionWrapperNew

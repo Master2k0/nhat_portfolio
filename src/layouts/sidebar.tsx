@@ -37,7 +37,12 @@ function SideBar() {
   return (
     <div className="fixed left-0 top-0 z-50 w-full bg-block-bg">
       <div className="mx-auto flex h-[60px] items-center justify-between bg-block-bg px-4 xl:h-20 xl:max-w-[1040px] xl:justify-between xl:px-0">
-        <p className={cn("text-14s text-gravel-25 xl:text-18s", "xl:px-6")}>@jamesdes</p>
+        <Link
+          className={cn("text-14s text-gravel-25 xl:text-18s", "xl:px-6")}
+          to={siteConfig.mainPage.home.href}
+        >
+          nhatdesign
+        </Link>
         <div className="flex">
           {SidebarItems.map((item) => (
             <SidebarItemsRender key={item.id} item={item} />
