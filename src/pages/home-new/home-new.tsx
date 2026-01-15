@@ -8,17 +8,25 @@ function HomeNew() {
       <meta name="Home" content="Home JamesDes" />
       <div className="">
         {/* Banner */}
-        <div className={cn("bg-block-bg px-4 py-5", "lg:pb-0 lg:pt-20")}>
+        <div className={cn("bg-block-bg px-4 py-5", "lg:pb-0 lg:pt-0")}>
           <div
             className={cn(
               "flex flex-col gap-5",
               "lg:mx-auto lg:max-w-[1040px] lg:flex-row-reverse lg:items-center",
             )}
           >
-            <img
-              src={DataHomeV3.banner.img}
-              className={cn("w-full", "lg:aspect-[1/1] lg:min-w-0 lg:max-w-[740px] lg:flex-1")}
-            />
+            <div
+              className={cn(
+                "relative aspect-[1/1] max-w-[358px]",
+                "lg:aspect-[561/797] lg:min-w-0 lg:max-w-[561px] lg:flex-1",
+              )}
+            >
+              <img
+                src={DataHomeV3.banner.img}
+                className={cn("h-full w-full object-cover object-top")}
+              />
+              <div className="bg-image-home-mb lg:bg-image-home-pc pointer-events-none absolute bottom-0 left-0 right-0 h-[132px] lg:h-[214px]" />
+            </div>
             <div className={cn("flex flex-col gap-5", "lg:w-[468px] lg:gap-6")}>
               <div className="flex flex-col gap-1">
                 <p className={cn("text-32b text-gravel-25", "lg:text-60b")}>

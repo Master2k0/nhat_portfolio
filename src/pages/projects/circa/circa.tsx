@@ -18,22 +18,36 @@ function Circa() {
           className={cn("mt-5 text-20b text-yellow", "xl:text-32b")}
         />
         <Divider type="dashed" className={cn("my-5 xl:my-10")} />
-        <div className={cn("mt-5 flex gap-8", "xl:mt-8 xl:gap-[100px]")}>
-          <div className={cn("flex flex-col gap-5")}>
-            <Content content="Duration:" className="text-14s text-gravel-25" />
-            <Content content={Datas.main.section1.duration} />
-          </div>
-          <div className={cn("flex flex-col gap-5")}>
-            <Content content="Team:" className="text-14s text-gravel-25" />
-            {Datas.main.section1.teams.map((team, index) => (
-              <Content content={team} key={index} />
-            ))}
-          </div>
-          <div className={cn("flex flex-col gap-5")}>
+        <div className={cn("mt-5 flex flex-col gap-5", "xl:mt-8 xl:flex-row")}>
+          <div className={cn("flex flex-col gap-2 xl:w-[274px] xl:gap-3")}>
             <Content content="My contribution:" className="text-14s text-gravel-25" />
-            {Datas.main.section1.contributions.map((contribution, index) => (
-              <Content content={contribution} key={index} />
-            ))}
+            <div className="flex items-center gap-2 xl:flex-col xl:items-start xl:gap-3">
+              {Datas.main.section1.contributions.map((contribution, index) => (
+                <>
+                  <Content content={contribution} key={index} className="text-gravel-300" />
+                  {index !== Datas.main.section1.contributions.length - 1 && (
+                    <div className="h-4 border-[0.5px] border-gravel-800 xl:hidden" />
+                  )}
+                </>
+              ))}
+            </div>
+          </div>
+          <div className={cn("flex flex-col gap-2 xl:w-[274px] xl:gap-3")}>
+            <Content content="Team:" className="text-14s text-gravel-25" />
+            <div className="flex items-center gap-2 xl:flex-col xl:items-start xl:gap-3">
+              {Datas.main.section1.teams.map((team, index) => (
+                <>
+                  <Content content={team} key={index} className="text-gravel-300" />
+                  {index !== Datas.main.section1.teams.length - 1 && (
+                    <div className="h-4 border-[0.5px] border-gravel-800 xl:hidden" />
+                  )}
+                </>
+              ))}
+            </div>
+          </div>
+          <div className={cn("flex flex-col gap-2 xl:w-[274px] xl:gap-3")}>
+            <Content content="Duration:" className="text-14s text-gravel-25" />
+            <Content content={Datas.main.section1.duration} className="text-gravel-300" />
           </div>
         </div>
         <ImageWithBlur

@@ -13,8 +13,8 @@ export const VNG = {
         "How we upgraded the postal tool to reduce overload and help users manage orders better",
       img: "/vng/images/section-1.png",
       durations: "2 months",
-      teams: ["1BA - 1PM", "1 Designer", "6 Engineers"],
-      contributions: ["User Research", "Concepts & Ideation", "Usability Test"],
+      teams: ["1 PM", "1 BA", "6 Engineers", "1 Designer"],
+      contributions: ["User Research", "Ideation", "Usability Test"],
     },
     section2: {
       title: "Context",

@@ -4,7 +4,7 @@ export const CircaNew = {
       title: "Circa - Medical Ecommerce",
       content: "How we launched an online pharmaceutical marketplace in just a few months",
       duration: "4 months",
-      teams: ["1 PO", "12 Engineers", "1 Designer"],
+      teams: ["1 Product Owner", "12 Engineers", "1 Designer"],
       img: "/circa/images/section-1.png",
       contributions: ["Desk Research", "Concepts & Ideation"],
     },

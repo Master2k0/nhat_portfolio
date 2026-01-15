@@ -96,6 +96,19 @@
     opacity: 1;
   }
 
+  .bg-image-home-pc {
+    background: linear-gradient(
+      360deg,
+      #242427 0%,
+      rgba(36, 36, 39, 0.496338) 50.37%,
+      rgba(36, 36, 39, 0) 100%
+    );
+  }
+
+  .bg-image-home-mb {
+    background: linear-gradient(180deg, rgba(36, 36, 39, 0) 0%, #242427 81.52%);
+  }
+
   .bg-gradient-new::after {
     content: "";
     position: absolute;

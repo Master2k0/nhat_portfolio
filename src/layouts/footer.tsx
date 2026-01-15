@@ -7,7 +7,7 @@ const Footer = () => {
       <div className={cn("flex flex-col gap-5", "xl:mx-auto xl:max-w-[1080px]")}>
         <p className={cn("text-24b text-white-footer", "xl:text-32b")}>Contact info</p>
         <div className="flex flex-col gap-2">
-          <span className={cn("text-14r text-gravel-100", "xl:text-16r")}>
+          <span className={cn("text-14r text-gravel-300", "xl:text-16r")}>
             Please feel free to contact me via&nbsp;
             <a
               className={cn("text-14m text-yellow", "xl:text-16m")}
@@ -17,9 +17,9 @@ const Footer = () => {
               Linkedin
             </a>
           </span>
-          <span className={cn("text-14r text-gravel-100", "xl:text-16r")}>
+          <span className={cn("text-14r text-gravel-300", "xl:text-16r")}>
             {" "}
-            or send an email to&nbsp;
+            or email &nbsp;
             <a
               className={cn("text-14m text-yellow", "xl:text-16m")}
               href={siteConfig.contact.email.href}
@@ -29,7 +29,7 @@ const Footer = () => {
             </a>
           </span>
         </div>
-        <p className="flex gap-3 text-14r text-gravel-100">
+        <p className="flex gap-3 text-14r text-gravel-25">
           I hope to collaborate with you in the future.
           <img src="/footer/icons/rocket.svg" alt="" />
         </p>
