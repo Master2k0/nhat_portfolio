@@ -8,12 +8,17 @@ interface ProjectCardNewProps {
     title: string;
     content: string;
     active: boolean;
+    target?: "_blank" | "_self";
   };
 }
 
 const ProjectCardNew = ({ item }: ProjectCardNewProps) => {
   return (
-    <Link to={item.active ? item.href : "#"} className={cn("flex flex-col gap-3")}>
+    <Link
+      to={item.active ? item.href : "#"}
+      className={cn("flex flex-col gap-3")}
+      target={item.target}
+    >
       <div
         className={cn(
           "image-border relative h-full w-full rounded-[8px]",

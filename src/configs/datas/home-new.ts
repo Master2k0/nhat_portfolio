@@ -106,11 +106,13 @@ export const DataHomeV3 = {
   projects: [
     {
       img: "/home-new/images/urbox.png",
-      href: siteConfig.subPage.urBox.href,
+      href: "https://www.figma.com/deck/BKPgbBN6ZOd9fTd56jSZV9/UrBox_Case-study?node-id=1-28&viewport=-148%2C-157%2C0.72&t=XLGZtSKJAMCyl6tf-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1",
+      // href: siteConfig.subPage.urBox.href,
       title: "UrBox - UX Research",
       content:
         "How can I optimize the “Redeem Rewards” page for users who prefer exploring rather than searching?",
-      active: false,
+      active: true,
+      target: "_blank" as const,
     },
     {
       img: "/home-new/images/vng.png",
