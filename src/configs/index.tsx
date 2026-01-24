@@ -14,7 +14,7 @@ const SEO = {
       },
     ],
   },
-}
+};
 
 const contact = {
   linkedin: {
@@ -22,7 +22,6 @@ const contact = {
     as: "Linkedin",
   },
   email: {
-
     // href: "mailto:nhatnguyen.wk@gmail.com",
     href: "https://mail.google.com/mail/?view=cm&fs=1&to=nhatnguyen.wk@gmail.com",
     as: "nhatnguyen.wk@gmail.com",
@@ -39,8 +38,7 @@ const contact = {
     href: "https://drive.google.com/file/d/1NtQrQSp3dCASxeqFD2CXemCV07IPNSOZ/view?usp=drive_link",
     as: "My Resume",
   },
-}
-
+};
 
 const mainPage = {
   home: {
@@ -79,7 +77,7 @@ const mainPage = {
     href: "*",
     as: "Not Found",
   },
-}
+};
 
 export const subPage = {
   washUp: {
@@ -118,9 +116,11 @@ export const subPage = {
     href: "/projects/vp-bank",
     as: "VP Bank",
   },
-
-
-}
+  urBox: {
+    href: "/projects/ur-box",
+    as: "UR Box",
+  },
+};
 
 export const siteConfig = {
   seo: SEO,
@@ -128,14 +128,13 @@ export const siteConfig = {
   url: "http://jamesnguyendesign.com",
   mainPage: mainPage,
   subPage: subPage,
-}
+};
 
 export const SidebarItems: ISidebarItem[] = [
   {
     id: "home",
     href: siteConfig.mainPage.home.href,
     name: "Home",
-
   },
   // {
   //   id: "otherProjects",
@@ -147,6 +146,5 @@ export const SidebarItems: ISidebarItem[] = [
     id: "about",
     href: siteConfig.mainPage.about.href,
     name: "About me",
-
   },
 ];

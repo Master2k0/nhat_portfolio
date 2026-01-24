@@ -105,6 +105,14 @@ export const DataHomeV3 = {
   },
   projects: [
     {
+      img: "/home-new/images/urbox.png",
+      href: siteConfig.subPage.urBox.href,
+      title: "UrBox - UX Research",
+      content:
+        "How can I optimize the “Redeem Rewards” page for users who prefer exploring rather than searching?",
+      active: false,
+    },
+    {
       img: "/home-new/images/vng.png",
       href: siteConfig.subPage.vng.href,
       title: "MyVNG - POSTAL TOOL",
