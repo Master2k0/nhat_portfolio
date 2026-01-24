@@ -1,20 +1,24 @@
 import { siteConfig } from "@/configs";
 import { Layout } from "@/layouts";
 import LayoutV2 from "@/layouts/layout-v2";
-import AboutMeNew from "@/pages/about-me-new";
-import HomeNew from "@/pages/home-new";
 import NotFound from "@/pages/not-found/not-found";
-import { Circa, VPBank, WashUp, WaveB, VNG } from "@/pages/projects";
 import { createBrowserRouter, Navigate, RouteObject } from "react-router-dom";
 
 const publicRoutes: RouteObject[] = [
   {
     index: true,
-    element: <HomeNew />,
+    async lazy() {
+      const { default: HomeNew } = await import("@/pages/home-new");
+      return { Component: HomeNew };
+    },
+    // element: <HomeNew />,
   },
   {
     path: siteConfig.mainPage.about.href,
-    element: <AboutMeNew />,
+    async lazy() {
+      const { default: AboutMeNew } = await import("@/pages/about-me-new");
+      return { Component: AboutMeNew };
+    },
   },
 ];
 
@@ -29,23 +33,38 @@ const projects: RouteObject[] = [
   },
   {
     path: siteConfig.subPage.circa.href,
-    element: <Circa />,
+    async lazy() {
+      const { Circa } = await import("@/pages/projects");
+      return { Component: Circa };
+    },
   },
   {
     path: siteConfig.subPage.washUp.href,
-    element: <WashUp />,
+    async lazy() {
+      const { WashUp } = await import("@/pages/projects");
+      return { Component: WashUp };
+    },
   },
   {
     path: siteConfig.subPage.vpBank.href,
-    element: <VPBank />,
+    async lazy() {
+      const { VPBank } = await import("@/pages/projects");
+      return { Component: VPBank };
+    },
   },
   {
     path: siteConfig.subPage.waveB.href,
-    element: <WaveB />,
+    async lazy() {
+      const { WaveB } = await import("@/pages/projects");
+      return { Component: WaveB };
+    },
   },
   {
     path: siteConfig.subPage.vng.href,
-    element: <VNG />,
+    async lazy() {
+      const { VNG } = await import("@/pages/projects");
+      return { Component: VNG };
+    },
   },
 ];
 
